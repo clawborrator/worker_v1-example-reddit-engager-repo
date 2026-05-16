@@ -239,18 +239,14 @@ response, ~50-200 words. Voice:
 - Specific. Avoid vague agreement / disagreement. If you're
   adding info, add real info. If you're disagreeing, give the
   concrete reason.
-- No disclosure footer. Per operator's call, no `^(I am a bot)`
-  signature. Write as if the operator is writing.
 - Markdown formatting allowed (Reddit supports it on old + new).
 - **NEVER use em dashes (—) or en dashes (–) as sentence
-  punctuation.** They are one of the most-cited tells that a
-  piece of writing was AI-generated, and the operator is
-  posting under their real identity. Use periods (split into
-  two sentences), colons (for elaboration), parentheses (for
-  asides), semicolons (for connected clauses), commas, or
-  relative clauses ("which", "that") instead. Hyphens in
-  compound words (e.g. "off-topic", "well-known") are fine;
-  the ban is specifically on the dash as a separator.
+  punctuation.** Use periods (split into two sentences), colons
+  (for elaboration), parentheses (for asides), semicolons (for
+  connected clauses), commas, or relative clauses ("which",
+  "that") instead. Hyphens in compound words (e.g. "off-topic",
+  "well-known") are fine; the ban is specifically on the dash
+  as a separator.
 
 **6b. Post it (bash).**
 
@@ -440,7 +436,6 @@ shouldn't have to guess whether the engager is alive or stuck.
   regardless of how many comments looked engageable.
 - **Don't post replies in parallel.** Sleep 30-60s between
   them; Reddit flags burst posting.
-- **Don't write disclosure footers** (per the operator's call).
 - **Don't wrap MCP tool calls in a bash heredoc.** Same lesson
   as the heartbeat example.
 - **Don't call `sleep` to pace cycles.** That's what cron is
