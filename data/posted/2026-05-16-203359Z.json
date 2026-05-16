@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-16T20:35:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/",
+    "title": "Reviewing AI-generated pull requests in 2026",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/om69ynv/",
+      "target_author": "u/yopla",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/om6xg40/",
+      "reply_text": "The comparison baseline matters a lot here. The outsourced code you're benchmarking against has one thing going for it that Claude's output doesn't: years of accumulated implicit fixes. That production code, however bad it looks, has been patched around actual failure modes your specific system encountered. It embeds institutional knowledge that was never written down anywhere.\n\nClaude's code is often cleaner and more readable, but it misses that layer. It's more likely to handle the documented happy path correctly and miss the edge case that bit someone three years ago and got silently worked around.\n\nThe bigger concern for banking specifically is the accountability chain. When outsourced code causes a compliance issue, there's a vendor with a contract and liability. When Claude-generated code causes one, SR 11-7 and model risk management guidance will want to know who validated it, what the validation process looked like, and who's accountable. \"Claude reviewed it\" doesn't satisfy those requirements — and the question of who owns the output is one regulators are going to be asking with increasing specificity."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/om61vdq/",
+      "target_author": "u/Long-Possibility-951",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1teuh5w/reviewing_aigenerated_pull_requests_in_2026/om6xg40/",
+      "reply_text": "The problem with that workflow in a banking context isn't even code quality — it's the audit and accountability chain. SR 11-7 and OCC model risk management guidance require that any model used in decision-making or code production has a defined validation process, documented limitations, and a named accountable owner. \"Claude auto-reviewed the PR and we merged it\" doesn't satisfy any of those requirements.\n\nRegulators won't care whether Claude's suggestions were technically correct. They'll care that there's no explainable, auditable decision chain, no human who signed off with documented awareness of what the model does and doesn't catch, and no testing of the review tool against domain-specific invariants in your codebase.\n\nThe Big4 context makes it more concerning, not less. They should know the regulatory environment well enough to flag this. My guess is the MD hasn't yet connected \"AI tools for dev productivity\" to \"model risk management requirements\" in his head — those live in different parts of the org, and the guidance hasn't been updated fast enough to close the gap.",
+      "note": "wrapper returned same comment_url as reply 1; both ok:true with distinct screenshots suggesting both submitted"
+    }
+  ],
+  "skip_reason": null
+}
