@@ -103,6 +103,27 @@ function loadCookies() {
     if (out.session === true) delete out.expires;
     if (!out.domain) out.domain = '.reddit.com';
     if (!out.path) out.path = '/';
+    // sameSite — Playwright accepts ONLY "Strict" | "Lax" | "None"
+    // (case-sensitive). Different exporters emit different strings:
+    //   Cookie-Editor (Chrome): "no_restriction" | "lax" | "strict" | "unspecified"
+    //   EditThisCookie:         "no_restriction" | "lax" | "strict" | "unspecified"
+    //   Firefox Cookie Quick:   "Strict" | "Lax" | "None" | "Unset"
+    //   Raw devtools export:    sometimes missing entirely
+    // Map to canonical form; if unmappable (or "unspecified"), drop
+    // the field so Playwright applies its default rather than rejecting.
+    const ss = (() => {
+      if (out.sameSite == null) return null;
+      const v = String(out.sameSite).toLowerCase();
+      switch (v) {
+        case 'strict':          return 'Strict';
+        case 'lax':             return 'Lax';
+        case 'none':            return 'None';
+        case 'no_restriction':  return 'None';  // Cookie-Editor synonym
+        default:                return null;    // "unspecified", "unset", etc.
+      }
+    })();
+    if (ss) out.sameSite = ss;
+    else delete out.sameSite;
     // Strip extension-specific bookkeeping fields Playwright doesn't accept.
     delete out.hostOnly;
     delete out.storeId;
