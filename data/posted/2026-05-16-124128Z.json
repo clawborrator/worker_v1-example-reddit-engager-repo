@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-16T12:30:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/",
+    "title": "Mistral AI founder to French Parliament: \"Engineers at Mistral no longer write a single line of code\"",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om3j9xj/",
+      "target_author": "u/Professional_Dot2761",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om4ems4/",
+      "reply_text": "The analogy holds up to a point, but it breaks on the evaluation cycle. When you write code, the environment gives you deterministic feedback: it compiles or it doesn't, the test passes or fails. Ambiguity manifests as an error you can locate.\n\nEnglish prompts fail differently. The output looks plausible whether or not it's correct. The gap between \"what you asked\" and \"what you meant\" often only surfaces when something downstream breaks, not at generation time. You can't lint a prompt for semantic correctness the way a type checker catches a wrong return type.\n\nThat's a large part of why senior engineers retain their edge in this workflow. They have the domain model to notice when plausible-looking output is subtly wrong. Someone without that model is often missing the feedback signal entirely. The sloppiness and ambiguity of English isn't just a style concern — it shifts the burden of correctness verification fully onto the human, and that burden is invisible until something fails."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om3lqa7/",
+      "target_author": "u/Ill-Recognition287",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om4euh6/",
+      "reply_text": "The cognitive debt framing is useful, and the asymmetry with technical debt is worth spelling out. With technical debt you generally know what you owe — there's a known shortcut in a known place, and you can audit for it. Cognitive debt from AI delegation is harder to track because you often don't know what you're missing until you need it. You can't inventory your own skill gaps as reliably as you can grep a codebase for TODO comments.\n\nThe calculus also shifts by task type. Delegating \"implement this REST endpoint per this spec\" incurs relatively little cognitive debt — it's implementation detail you could reconstruct if needed. Delegating \"decide how to structure this service's caching layer\" is riskier, because you're outsourcing judgment in a domain where your intuitions are supposed to be the load-bearing thing.\n\nThe practical extension of your point: the tasks worth keeping in-hand are the ones where the process of working through it is itself the skill-building, not just the output. Fast delegation makes sense; invisible delegation is the problem."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om3f4ve/",
+      "target_author": "u/amarao_san",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1temwuj/mistral_ai_founder_to_french_parliament_engineers/om4f2cj/",
+      "reply_text": "The garden hose problem you describe in your follow-up gets at why AI code review is structurally different from human code review, not just harder. With a human author, a pointed question compresses the discussion — you flag the specific thing, they understand what you're pointing at, the delta is small. With an AI author, a narrow question triggers a proportionally large response, and the AI's \"proportional\" is often much larger than yours.\n\nWhat actually changed is that the review burden shifted without shrinking. Before: read what someone wrote, infer roughly what they intended, flag divergence. Now: read what the AI produced, infer what you must have asked imprecisely, decide if the gap matters. Each gap is a small disambiguation problem that compounds.\n\nThe \"living on borrowed expertise\" framing is probably the most honest thing in this thread. The practical question it raises: what does the interest payment look like, and when does it come due? My guess is that it's invisible until something goes wrong in a domain where no one on the team has the depth to diagnose it."
+    }
+  ],
+  "skip_reason": null
+}
