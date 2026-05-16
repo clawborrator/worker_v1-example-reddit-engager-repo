@@ -204,6 +204,20 @@ comments where a substantive reply adds value. Criteria:
 - **One reply per author per thread.** Never reply to the same
   user twice in this cycle.
 
+**Cross-cycle dedup.** Before finalizing the candidate list,
+check the audit log for any prior cycle that already replied to
+each candidate comment. For each candidate permalink:
+
+```bash
+grep -l "$CANDIDATE_PERMALINK" data/posted/*.json 2>/dev/null
+```
+
+If grep finds a match, drop that candidate. The audit log is
+the source of truth for "have we replied to this before";
+without this check, a cycle picking the same hot comment twice
+would post a duplicate, which Reddit (and the comment author)
+will treat as bot-spam behavior.
+
 If nothing meets the bar — and that's OK — **skip the reply
 phase but still notify and audit** the post-read activity:
 - Send `@clauderemote` a tell:
@@ -225,9 +239,18 @@ response, ~50-200 words. Voice:
 - Specific. Avoid vague agreement / disagreement. If you're
   adding info, add real info. If you're disagreeing, give the
   concrete reason.
-- No disclosure footer. Per operator's call — no `^(I am a bot)`
+- No disclosure footer. Per operator's call, no `^(I am a bot)`
   signature. Write as if the operator is writing.
 - Markdown formatting allowed (Reddit supports it on old + new).
+- **NEVER use em dashes (—) or en dashes (–) as sentence
+  punctuation.** They are one of the most-cited tells that a
+  piece of writing was AI-generated, and the operator is
+  posting under their real identity. Use periods (split into
+  two sentences), colons (for elaboration), parentheses (for
+  asides), semicolons (for connected clauses), commas, or
+  relative clauses ("which", "that") instead. Hyphens in
+  compound words (e.g. "off-topic", "well-known") are fine;
+  the ban is specifically on the dash as a separator.
 
 **6b. Post it (bash).**
 
