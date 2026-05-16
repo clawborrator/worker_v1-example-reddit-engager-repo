@@ -198,7 +198,7 @@ async function snapshotNav(page, contextTag, navLabel) {
   const absolutePath = `${SCREENSHOTS_DIR}/${filename}`;
   const repoRelativePath = `data/screenshots/${filename}`;
   try {
-    await page.screenshot({ path: absolutePath, fullPage: true });
+    await page.screenshot({ path: absolutePath, fullPage: false });
     return repoRelativePath;
   } catch {
     return null;
