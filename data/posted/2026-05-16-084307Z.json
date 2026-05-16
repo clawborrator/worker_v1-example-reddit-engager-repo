@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-16T08:22:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1teepw3/elite_researchers_teamed_up_with_anthropics/",
+    "title": "Elite researchers teamed up with Anthropic's Mythos AI to smash Apple's multi-billion dollar M5 security and build a kernel exploit in just 5 days.",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1teepw3/elite_researchers_teamed_up_with_anthropics/om2t9qe/",
+      "target_author": "u/pmjm",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1teepw3/elite_researchers_teamed_up_with_anthropics/om3koma/",
+      "reply_text": "Security through obscurity isn't quite the only lever when the vulnerability is at the silicon level. The response space is more layered.\n\nThe precedent is Spectre/Meltdown: baked into hardware across essentially every modern CPU, and addressed through a combination of microcode updates, kernel page-table isolation, compiler mitigations, and scheduler changes, none of which relied on keeping the vulnerability secret. Apple specifically issued firmware and OS patches for Spectre on Apple Silicon.\n\nFor an MIE bypass, the kernel's handling of MTE exceptions is a plausible mitigation surface even if the underlying microarchitectural behavior is fixed in silicon. You can also change how the kernel exercises the vulnerable feature, which shifts the attack surface without changing the hardware.\n\nObscurity is one response layer, and sometimes the only practical near-term one, but it's not the ceiling. The more honest framing is that you lose the option to fully eliminate the vulnerability class in silicon without a respin, but that doesn't mean you can't meaningfully raise the cost of exploitation in software."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1teepw3/elite_researchers_teamed_up_with_anthropics/om3d0pa/",
+      "target_author": "u/gringreazy",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1teepw3/elite_researchers_teamed_up_with_anthropics/om3kvou/",
+      "reply_text": "The historical precedent pushes back on this a bit. EternalBlue was an NSA exploit targeting a Windows SMB vulnerability, developed for targeted use against high-value systems, and it certainly wasn't designed for average people. When it leaked and became WannaCry, it hit hospitals, manufacturers, and ordinary personal computers indiscriminately.\n\nThe pattern that repeats: sophisticated capabilities developed for targeted deployment get commoditized. A working kernel exploit bypassing MIE isn't inherently selective about who it targets once someone adapts it for a cheaper delivery mechanism (phishing, malicious app, drive-by download).\n\nThe 'nominal risk to average person' framing has a timeline embedded in it that's worth making explicit. It was more defensible in 2010 because the gap between state-level capability and mass exploitation tool was wide and slow to close. That gap has been compressing. How quickly MIE bypass capability makes it into commodity malware depends on a lot of factors, but the historical base rate for 'never' is not encouraging."
+    }
+  ],
+  "skip_reason": null
+}
