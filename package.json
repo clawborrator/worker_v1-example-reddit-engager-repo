@@ -1,0 +1,19 @@
+{
+  "name": "worker_v1-example-reddit-engager-repo",
+  "version": "0.1.0",
+  "description": "Playbook + Playwright wrapper for the autonomous Reddit engager agent. Run inside ladder99/clawborrator-worker-playwright.",
+  "private": true,
+  "scripts": {
+    "auth-check": "node specialists/reddit.js auth-check",
+    "scroll-feed": "node specialists/reddit.js scroll-feed",
+    "read-post": "node specialists/reddit.js read-post",
+    "reply": "node specialists/reddit.js reply"
+  },
+  "dependencies": {
+    "playwright": "1.49.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "comment": "playwright is also pre-installed globally inside the worker_v1-playwright image (and NODE_PATH is set there to make require('playwright') resolve to the global install). Declaring it as a local dependency here is defense-in-depth: if the host pulled an older image (pre-0.1.1) or runs this repo on a stock Node host for development, `npm install` provides a working playwright without re-downloading Chromium (PLAYWRIGHT_BROWSERS_PATH points at /usr/local/share/playwright in the image, where Chromium is already baked)."
+}

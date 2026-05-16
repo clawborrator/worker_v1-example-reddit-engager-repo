@@ -73,6 +73,15 @@ cd /workspace/repo
 node specialists/reddit.js auth-check
 ```
 
+**If you see `Cannot find module 'playwright'`:** the container is
+running a pre-0.1.1 image where `NODE_PATH` wasn't set. One-time
+fix from the agent's side — run `npm install --no-audit --no-fund`
+in `/workspace/repo` (fast: Chromium is already at
+`PLAYWRIGHT_BROWSERS_PATH=/usr/local/share/playwright`, the install
+just pulls the JS wrapper). Subsequent cycles will find the local
+copy via Node's normal resolution. The operator can pull a newer
+image at their convenience to remove the need for this step.
+
 Expected output on success:
 
 ```json
