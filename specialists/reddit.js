@@ -151,6 +151,29 @@ async function newContext() {
   return { browser, ctx };
 }
 
+async function gotoWithRetry(page, url) {
+  // page.goto with one cheap retry on TimeoutError. Reddit slows
+  // responses to authenticated sessions immediately after a
+  // successful POST (anti-spam pacing), so the second goto of a
+  // cycle is the one that times out 3-4x more often than the
+  // first. 60s + a 3s backoff retry catches the common case
+  // without making the failure path absurdly long when the
+  // session is genuinely throttled / down.
+  let lastErr;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60_000 });
+      return;
+    } catch (e) {
+      lastErr = e;
+      const isTimeout = e?.name === 'TimeoutError' || /Timeout/i.test(e?.message ?? '');
+      if (!isTimeout || attempt === 1) throw e;
+      await page.waitForTimeout(3_000);
+    }
+  }
+  throw lastErr;
+}
+
 async function assertNotChallenged(page) {
   // After any navigation, check for captcha / rate-limit pages.
   // If found, bail with a typed error so the agent can react.
@@ -188,7 +211,7 @@ async function cmdAuthCheck() {
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   try {
-    await page.goto(BASE + '/', { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await gotoWithRetry(page, BASE + '/');
     await assertNotChallenged(page);
     const userLink = page.locator(SELECTORS.loggedInUser).first();
     const count = await userLink.count();
@@ -221,7 +244,7 @@ async function cmdScrollFeed(args) {
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await gotoWithRetry(page, url);
     await assertNotChallenged(page);
 
     // Scroll until we have at least `count` posts visible, or hit
@@ -286,7 +309,7 @@ async function cmdReadPost(postUrl) {
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   try {
-    await page.goto(postUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await gotoWithRetry(page, postUrl);
     await assertNotChallenged(page);
 
     // Post body
@@ -356,7 +379,7 @@ async function cmdReply(permalink, args) {
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   try {
-    await page.goto(permalink, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+    await gotoWithRetry(page, permalink);
     await assertNotChallenged(page);
 
     // Find the highlighted comment (Reddit puts ?context= on

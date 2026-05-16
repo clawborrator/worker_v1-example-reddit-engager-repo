@@ -263,12 +263,19 @@ OR on failure:
 
 ### Step 7 — Wait between replies (bash)
 
-If you posted multiple replies, sleep 30-60s between them. Not
+If you posted multiple replies, sleep 60-90s between them. Not
 back-to-back. (Cron paces cycles; this paces replies within a
 cycle.)
 
+Reddit deliberately slows responses to authenticated sessions
+immediately after a successful post — anti-spam pacing. A 60-90s
+window covers the slowdown without making the cycle absurdly
+long. Was 30-60s pre-fix; got bumped after observing
+`page.goto` 30s timeouts on the second reply of a cycle that
+the first reply succeeded for.
+
 ```bash
-sleep $((30 + RANDOM % 30))
+sleep $((60 + RANDOM % 30))
 ```
 
 ### Step 8 — Compile + commit audit (bash)
