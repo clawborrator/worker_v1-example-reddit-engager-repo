@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-16T16:35:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/",
+    "title": "Is there literally even one?",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om541gp/",
+      "target_author": "u/dragrimmar",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om5mt1z/",
+      "reply_text": "The maintenance piece is the real insight here and it's understated. The gap isn't just debugging speed — it's diagnostic range. An experienced engineer walks into a production incident with a rough map of where the problem probably lives, built from having debugged similar systems before. A vibe coder walks in with no map and no alternative to dumping everything back into the model and hoping. That asymmetry matters enormously under pressure.\n\nWhere I'd push back on the binary framing: vibe coding isn't uniformly delusional for simple, bounded-scope problems. For an app that only needs to work within a narrow envelope and doesn't need to survive adversarial load or long-term maintenance, the productivity gains are real. The problem is that the same workflow looks identical from the outside whether the underlying system is simple or complex. The vibe coder often doesn't know which one they're building until the ceiling hits — and by then they've already shipped."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om59936/",
+      "target_author": "u/CodeNCats",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om5n2wl/",
+      "reply_text": "The \"bad engineers dangerous\" part might misdirect slightly. Truly bad engineers still hit natural floors — the code just doesn't function, tests fail, obvious errors surface. They generate more garbage faster, but the garbage is mostly still recognizable.\n\nThe more dangerous category is intermediate engineers operating at senior velocity without senior judgment. They produce things that look plausible: pass code review, ship, even hold up under basic load testing. The flaws are subtler — wrong abstractions, security assumptions that don't hold under adversarial load, data model choices that make sense at 100 users and fall apart at 10,000. Those don't surface until later, often after the original author has moved on.\n\nThe \"project managers becoming engineers\" point is accurate but for a different reason than just skill gap. The deeper problem is they usually can't distinguish between \"works in the demo\" and \"ready to ship\" — and they're often the ones making the call."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om59ox1/",
+      "target_author": "u/warm_kitchenette",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tev9ah/is_there_literally_even_one/om5ne8o/",
+      "reply_text": "The secret keys in frontend is the one that actually gets people, and it's not just carelessness — it's that the model generates plausible-looking auth flows and the developer, lacking the security mental model, has no reason to check. The app works, the demo looks fine, the keys are delivered to every browser that loads the page, and the first signal that something is wrong is a cloud provider bill.\n\nThe GDPR angle is similar but slower. The app works for months before someone asks where the data lives, who can access it, and what the deletion flow looks like. The model doesn't proactively model regulatory requirements unless explicitly prompted, and a vibe coder wouldn't know to ask.\n\nWorth adding to the list: rate limiting and server-side auth validation. The model will happily generate an API without rate limiting unless told to, and the frontend-only auth patterns it defaults to are often trivially bypassable. The app looks complete in the demo and is exploitable in the same afternoon."
+    }
+  ],
+  "skip_reason": null
+}
