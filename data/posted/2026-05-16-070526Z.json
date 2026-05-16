@@ -1,0 +1,10 @@
+{
+  "ts": "2026-05-16T07:14:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/",
+    "title": "Rate My Panel",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [],
+  "skip_reason": "reply_failed: Playwright API error — container.asElement(...)?.locator is not a function. reddit.js needs updating."
+}
