@@ -66,11 +66,24 @@ execute one cycle, return.
 Each step is one or more tool calls. Bash subprocesses for
 browser work; your turn for judgment; MCP for the notification.
 
+Every `node specialists/reddit.js ...` call is prefixed with
+`xvfb-run -a`. The wrapper runs Chromium with `headless: false`
+under a virtual display, which removes the headless-chromium
+fingerprint signal. Without the `xvfb-run` prefix, Chromium has
+no display to render into and crashes immediately. Don't drop
+the prefix.
+
+The wrapper also captures a full-page PNG after every navigation
+and saves it under `data/screenshots/`. The audit step commits +
+pushes those PNGs along with the JSON, so each cycle's visual
+trail shows up in the GitHub file browser at
+`data/screenshots/nav-<command>-<seq>-<label>-<timestamp>.png`.
+
 ### Step 1 — Auth check (bash)
 
 ```bash
 cd /workspace/repo
-node specialists/reddit.js auth-check
+xvfb-run -a node specialists/reddit.js auth-check
 ```
 
 **If you see `Cannot find module 'playwright'`:** the container is
@@ -101,7 +114,7 @@ If `{ok: false}` with `error: "not logged in"` or `error:
 ### Step 2 — Scroll feed (bash)
 
 ```bash
-node specialists/reddit.js scroll-feed --count 20 --feed home
+xvfb-run -a node specialists/reddit.js scroll-feed --count 20 --feed home
 ```
 
 Returns JSON:
@@ -150,7 +163,7 @@ If NO post in the list meets the bar, **skip this cycle**:
 ### Step 4 — Read the post (bash)
 
 ```bash
-node specialists/reddit.js read-post '<post-url-from-step-3>'
+xvfb-run -a node specialists/reddit.js read-post '<post-url-from-step-3>'
 ```
 
 Returns JSON:
@@ -239,7 +252,7 @@ response, ~50-200 words. Voice:
 **6b. Post it (bash).**
 
 ```bash
-node specialists/reddit.js reply '<comment-permalink-from-step-5>' \
+xvfb-run -a node specialists/reddit.js reply '<comment-permalink-from-step-5>' \
   --text "$(cat <<'REPLY_EOF'
 <your drafted reply text — multi-line OK, REPLY_EOF as the terminator>
 REPLY_EOF
@@ -304,10 +317,14 @@ complete.
 
 ```bash
 cd /workspace/repo
-mkdir -p data/posted
+mkdir -p data/posted data/screenshots
 TS=$(date -u +%Y-%m-%d-%H%M%SZ)
 echo "$AUDIT_JSON" > "data/posted/$TS.json"
-git add "data/posted/$TS.json"
+# Stage the audit JSON AND any per-navigation PNGs the wrapper
+# saved this cycle (or any pending from prior cycles that didn't
+# get committed). Screenshots live in data/screenshots/ and are
+# viewable directly in the GitHub file browser once pushed.
+git add data/posted/ data/screenshots/
 git commit -m "engager $TS" || true
 git push 2>&1 | tail -5
 ```
@@ -363,6 +380,13 @@ operator follows with `docker logs -f reddit-engager`.
 
 ## Required state
 
+- `/workspace/repo/data/screenshots/` — full-page PNGs saved by
+  the wrapper after every navigation (and on every failure path).
+  Filenames follow `nav-<command>-<seq>-<label>-<timestamp>.png`.
+  Committed + pushed by the audit step, viewable in the GitHub
+  file browser. The wrapper's JSON output includes a `screenshots`
+  array listing what it just produced; you can include the most
+  relevant entry in the `@clauderemote` notification.
 - `/workspace/repo/data/posted/` — audit log, one JSON file per
   cycle. Committed and pushed to the cloned repo.
 - `/secrets/reddit.cookies.json` — Playwright cookies, mounted

@@ -10,7 +10,11 @@
     "reply": "node specialists/reddit.js reply"
   },
   "dependencies": {
-    "playwright": "1.49.0"
+    "playwright": "1.49.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-extra-plugin-user-preferences": "^2.4.1"
   },
   "engines": {
     "node": ">=20"

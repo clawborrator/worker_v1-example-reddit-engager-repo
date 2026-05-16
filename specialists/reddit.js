@@ -24,7 +24,19 @@
 
 'use strict';
 
-const { chromium } = require('playwright');
+// playwright-extra is a drop-in wrapper around playwright that
+// supports plugins. The stealth plugin patches navigator.webdriver,
+// chrome.runtime, the plugins array, WebGL fingerprint, canvas
+// hash, language headers, and ~10 other detectable headless
+// signals. Combined with `headless: false` under Xvfb (see
+// CLAUDE.md, every node call is wrapped in `xvfb-run -a`), this
+// extends session lifetime on Reddit and any other site doing
+// fingerprint-based bot detection. Not bulletproof, but the
+// default headless Chromium signature is the loudest single tell.
+const { chromium } = require('playwright-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+chromium.use(StealthPlugin());
+
 const fs = require('fs');
 const path = require('path');
 
@@ -34,6 +46,15 @@ const COOKIES_PATH = process.env.REDDIT_COOKIES_PATH
   || '/secrets/reddit.cookies.json';
 
 const BASE = 'https://old.reddit.com';
+
+// Where every-navigation screenshots land. In-repo so the agent
+// commits them as part of its audit step and they show up on
+// GitHub directly in the file browser. Operator-specified: a
+// PNG per navigation, not just on failure. Builds a complete
+// visual trace of what the engager saw at each step. Storage
+// cost: ~500KB-2MB per PNG * ~5-10 PNGs per cycle * 4h cadence
+// = ~50MB/day, ~18GB/year. Pruning is the operator's call.
+const SCREENSHOTS_DIR = '/workspace/repo/data/screenshots';
 
 // Selectors centralized so DOM updates are one-line fixes.
 const SELECTORS = {
@@ -134,11 +155,17 @@ function loadCookies() {
 }
 
 async function newContext() {
+  // headless: false plus Xvfb (see CLAUDE.md) removes the
+  // headless-chromium fingerprint. The stealth plugin imported
+  // at the top of this file patches the remaining common tells.
+  // Requires DISPLAY env to be set, which xvfb-run does
+  // automatically.
   const browser = await chromium.launch({
-    headless: true,
+    headless: false,
     args: [
       '--disable-blink-features=AutomationControlled',
       '--no-sandbox',
+      '--disable-dev-shm-usage',
     ],
   });
   const ctx = await browser.newContext({
@@ -149,6 +176,33 @@ async function newContext() {
   });
   await ctx.addCookies(loadCookies());
   return { browser, ctx };
+}
+
+// Counter to disambiguate screenshots from a single command run
+// (multiple navigations in the same millisecond are common).
+let navSeq = 0;
+
+async function snapshotNav(page, contextTag, navLabel) {
+  // Save a full-page PNG to the in-repo screenshots dir on every
+  // navigation. The agent commits + pushes data/screenshots/ in
+  // its audit step so screenshots show up directly in the GitHub
+  // file browser. Returns the repo-relative path so the caller
+  // can include it in JSON output.
+  try {
+    fs.mkdirSync(SCREENSHOTS_DIR, { recursive: true });
+  } catch {
+    // continue; screenshot() below will surface the real error
+  }
+  navSeq++;
+  const filename = `nav-${contextTag}-${String(navSeq).padStart(2, '0')}-${navLabel}-${Date.now()}.png`;
+  const absolutePath = `${SCREENSHOTS_DIR}/${filename}`;
+  const repoRelativePath = `data/screenshots/${filename}`;
+  try {
+    await page.screenshot({ path: absolutePath, fullPage: true });
+    return repoRelativePath;
+  } catch {
+    return null;
+  }
 }
 
 async function gotoWithRetry(page, url) {
@@ -210,19 +264,22 @@ function parseAgeHours(ageText) {
 async function cmdAuthCheck() {
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
+  const screenshots = [];
   try {
     await gotoWithRetry(page, BASE + '/');
+    screenshots.push(await snapshotNav(page, 'auth-check', 'post-goto'));
     await assertNotChallenged(page);
     const userLink = page.locator(SELECTORS.loggedInUser).first();
     const count = await userLink.count();
     if (count === 0) {
-      emit({ ok: false, error: 'not logged in', hint: 'cookies likely expired; re-export from a logged-in browser' });
+      emit({ ok: false, error: 'not logged in', hint: 'cookies likely expired; re-export from a logged-in browser', screenshots: screenshots.filter(Boolean) });
       process.exit(2);
     }
     const username = (await userLink.textContent())?.trim();
-    emit({ ok: true, logged_in_as: username });
+    emit({ ok: true, logged_in_as: username, screenshots: screenshots.filter(Boolean) });
   } catch (e) {
-    die('auth_check_failed', e.message);
+    emit({ ok: false, error: 'auth_check_failed', details: e.message, screenshots: screenshots.filter(Boolean) });
+    process.exit(1);
   } finally {
     await browser.close();
   }
@@ -243,8 +300,10 @@ async function cmdScrollFeed(args) {
 
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
+  const screenshots = [];
   try {
     await gotoWithRetry(page, url);
+    screenshots.push(await snapshotNav(page, 'scroll-feed', 'post-goto'));
     await assertNotChallenged(page);
 
     // Scroll until we have at least `count` posts visible, or hit
@@ -256,6 +315,7 @@ async function cmdScrollFeed(args) {
       if (posts.length >= count) break;
       await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
       await page.waitForTimeout(800);
+      screenshots.push(await snapshotNav(page, 'scroll-feed', `after-scroll-${scrollPass + 1}`));
     }
 
     const out = [];
@@ -293,9 +353,10 @@ async function cmdScrollFeed(args) {
         continue;
       }
     }
-    emit({ ok: true, feed: feedArg, posts: out });
+    emit({ ok: true, feed: feedArg, posts: out, screenshots: screenshots.filter(Boolean) });
   } catch (e) {
-    die('scroll_feed_failed', e.message);
+    emit({ ok: false, error: 'scroll_feed_failed', details: e.message, screenshots: screenshots.filter(Boolean) });
+    process.exit(1);
   } finally {
     await browser.close();
   }
@@ -308,8 +369,10 @@ async function cmdReadPost(postUrl) {
 
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
+  const screenshots = [];
   try {
     await gotoWithRetry(page, postUrl);
+    screenshots.push(await snapshotNav(page, 'read-post', 'post-goto'));
     await assertNotChallenged(page);
 
     // Post body
@@ -361,9 +424,11 @@ async function cmdReadPost(postUrl) {
       ok: true,
       post: { id, title, subreddit: subredditAttr, author, self_text: selfText, url: postUrl },
       comments,
+      screenshots: screenshots.filter(Boolean),
     });
   } catch (e) {
-    die('read_post_failed', e.message);
+    emit({ ok: false, error: 'read_post_failed', details: e.message, screenshots: screenshots.filter(Boolean) });
+    process.exit(1);
   } finally {
     await browser.close();
   }
@@ -378,8 +443,10 @@ async function cmdReply(permalink, args) {
 
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
+  const screenshots = [];
   try {
     await gotoWithRetry(page, permalink);
+    screenshots.push(await snapshotNav(page, 'reply', 'post-goto'));
     await assertNotChallenged(page);
 
     // Find the highlighted comment (Reddit puts ?context= on
@@ -402,6 +469,7 @@ async function cmdReply(permalink, args) {
       die('comment_form_not_found', 'no reply trigger — comment locked / archived / banned / Reddit DOM changed');
     }
     await replyLink.click();
+    screenshots.push(await snapshotNav(page, 'reply', 'after-click-reply'));
 
     // The textarea should now be visible nested inside the comment.
     const textarea = targetCommentLoc.locator(SELECTORS.replyTextarea).first();
@@ -412,10 +480,12 @@ async function cmdReply(permalink, args) {
     // Type with small random delays — slightly slower than instant
     // fill, which helps avoid trivial bot detection.
     await textarea.fill(text);
+    screenshots.push(await snapshotNav(page, 'reply', 'after-fill'));
 
     // Click save.
     const saveBtn = targetCommentLoc.locator(SELECTORS.replySaveButton).first();
     await saveBtn.click();
+    screenshots.push(await snapshotNav(page, 'reply', 'after-submit'));
 
     // Wait for the new comment to appear. Old reddit injects it
     // inline as a child of the target comment after a brief AJAX
@@ -467,13 +537,15 @@ async function cmdReply(permalink, args) {
       note: newCommentUrl
         ? null
         : `posted (assertNotChallenged passed post-click) but URL extraction failed: ${urlExtractionError ?? 'no match for own author in tree'} — audit via target_comment_url`,
+      screenshots: screenshots.filter(Boolean),
     });
   } catch (e) {
     // Only true reply failures (form not found, captcha during
     // submit, rate-limit detected by assertNotChallenged) reach
     // here. URL-extraction failures are caught above and emit
     // ok:true with a null comment_url + diagnostic note.
-    die('reply_failed', e.message);
+    emit({ ok: false, error: 'reply_failed', details: e.message, screenshots: screenshots.filter(Boolean) });
+    process.exit(1);
   } finally {
     await browser.close();
   }
