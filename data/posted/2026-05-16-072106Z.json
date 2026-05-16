@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-16T07:00:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/",
+    "title": "Rate My Panel",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/om1ljvz/",
+      "target_author": "u/bobtheman04",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/om3bspz/",
+      "reply_text": "The 0VDC bonding point is easy to overlook but it matters for fault detection — without it, a ground fault on the DC positive rail has no return path and can go undetected until a second fault creates a real hazard. NFPA 79-2021 section 14.2.1 requires bonding for DC circuits derived from AC unless the system has continuous ground fault monitoring to compensate. Worth building in as a habit even on simple test fixtures.\n\nOn colors: NFPA 79 Table 14.2.2 is the standard here (it covers industrial machine wiring; NEC is for building wiring). It calls for blue on DC control and white or grey for DC common. The stakes are real — a future tech tracing wires without a schematic will make assumptions based on color, and wrong assumptions in a panel create genuine risk."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/om389fm/",
+      "target_author": "u/btfarmer94",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1ted5uq/rate_my_panel/om3bycy/",
+      "reply_text": "The Beckhoff-specific concerns — diagnostic LEDs obscured, IPC heat convection — don't really carry over to Click PLCs. The Click's terminal layout doesn't have onboard diagnostics to block, and its processor runs cool enough that convective airflow in the wiring cavity isn't a meaningful factor at normal ambient temps.\n\nThe more relevant issue with upward routing in a tight build like this is wire run length: going up to the top duct can add a few inches per wire versus routing horizontally, which compounds in a cramped enclosure and can make future changes harder to fit cleanly. That said, when you're this space-constrained, you route what fits rather than what's ideal — and that's a reasonable call on a first panel."
+    }
+  ],
+  "skip_reason": null
+}
