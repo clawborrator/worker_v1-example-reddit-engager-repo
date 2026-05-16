@@ -138,18 +138,14 @@ most worth engaging with. Criteria — apply, don't recite:
   (questions, design choices, postmortems) beats one that
   announces (release notes, screenshots).
 - **Active but not stale.** `num_comments` between ~10 and ~200
-  is the sweet spot — enough discussion to engage with, not so
-  much that your reply gets buried.
-- **Age < 12h.** Newer than that = your reply gets seen; older
-  = necro-posting territory, gets reported.
+  is the sweet spot.
+- **Age < 12h.**
 
 If NO post in the list meets the bar, **skip this cycle**:
 - Send a brief notification to `@clauderemote` via
   `route_to_peer` mode: tell:
   `"Cycle skipped: nothing in the feed met the bar this round."`
 - Return.
-
-Don't lower the bar to force a reply. Quiet cycles are fine.
 
 ### Step 4 — Read the post (bash)
 
@@ -198,9 +194,8 @@ comments where a substantive reply adds value. Criteria:
   complicate, or constructively push back on. Avoid replying to
   comments that are just jokes, low-effort, or already correct
   + complete.
-- **Comment age < 48h.** Older replies look like necro-posting.
-- **Comment depth ≤ 2.** Deep-nested threads are read by fewer
-  people and tend to be where flame wars live; stay near the top.
+- **Comment age < 48h.**
+- **Comment depth ≤ 2.**
 - **One reply per author per thread.** Never reply to the same
   user twice in this cycle.
 
@@ -212,11 +207,7 @@ each candidate comment. For each candidate permalink:
 grep -l "$CANDIDATE_PERMALINK" data/posted/*.json 2>/dev/null
 ```
 
-If grep finds a match, drop that candidate. The audit log is
-the source of truth for "have we replied to this before";
-without this check, a cycle picking the same hot comment twice
-would post a duplicate, which Reddit (and the comment author)
-will treat as bot-spam behavior.
+If grep finds a match, drop that candidate.
 
 If nothing meets the bar — and that's OK — **skip the reply
 phase but still notify and audit** the post-read activity:
@@ -227,14 +218,12 @@ phase but still notify and audit** the post-read activity:
 
 ### Step 6 — Draft + post replies (your turn + bash)
 
-For each picked comment, in sequence (not parallel — Reddit will
-flag rapid-fire posting from one session):
+For each picked comment, in sequence (not parallel):
 
 **6a. Draft the reply (your turn).** Write a substantive
 response, ~50-200 words. Voice:
 
-- Conversational, not lecture-y. Imagine you're DMing a
-  thoughtful peer, not writing documentation.
+- Conversational, not lecture-y.
 - On-topic. Address what the comment actually said.
 - Specific. Avoid vague agreement / disagreement. If you're
   adding info, add real info. If you're disagreeing, give the
@@ -245,8 +234,7 @@ response, ~50-200 words. Voice:
   (for elaboration), parentheses (for asides), semicolons (for
   connected clauses), commas, or relative clauses ("which",
   "that") instead. Hyphens in compound words (e.g. "off-topic",
-  "well-known") are fine; the ban is specifically on the dash
-  as a separator.
+  "well-known") are fine.
 
 **6b. Post it (bash).**
 
@@ -271,27 +259,15 @@ OR on failure:
 ```
 
 **6c. If posting fails:**
-- `rate_limited` or `captcha`: STOP. Don't try the next reply
-  in this cycle. The session is being throttled / challenged.
-  Notify `@clauderemote` of the failure + skip step 7 for any
-  unposted drafts.
-- `comment_form_not_found` (DOM changed): same — STOP. Reddit
-  changed their UI; selectors in `reddit.js` need updating.
-  Notify `@clauderemote`.
+- `rate_limited` or `captcha`: STOP. Notify `@clauderemote` of
+  the failure + skip step 7 for any unposted drafts.
+- `comment_form_not_found`: STOP. Selectors in `reddit.js` need
+  updating. Notify `@clauderemote`.
 - Other transient errors: log + continue with the next reply.
 
 ### Step 7 — Wait between replies (bash)
 
-If you posted multiple replies, sleep 60-90s between them. Not
-back-to-back. (Cron paces cycles; this paces replies within a
-cycle.)
-
-Reddit deliberately slows responses to authenticated sessions
-immediately after a successful post — anti-spam pacing. A 60-90s
-window covers the slowdown without making the cycle absurdly
-long. Was 30-60s pre-fix; got bumped after observing
-`page.goto` 30s timeouts on the second reply of a cycle that
-the first reply succeeded for.
+If you posted multiple replies, sleep 60-90s between them.
 
 ```bash
 sleep $((60 + RANDOM % 30))
@@ -423,29 +399,23 @@ operator follows with `docker logs -f reddit-engager`.
 | Anthropic rate-limit / token expiry      | Log. Return. 4h cron is plenty of natural backoff.                    |
 
 Every skip path **still notifies @clauderemote and commits an
-audit record** (with `skip_reason` filled in). Operators
-shouldn't have to guess whether the engager is alive or stuck.
+audit record** (with `skip_reason` filled in).
 
 ## What you don't do
 
-- **Don't lower the interestingness bar to force a reply.** A
-  quiet cycle is healthier than a forced one.
+- **Don't lower the interestingness bar to force a reply.**
 - **Don't reply to the same author twice in one cycle.**
-- **Don't reply to comments older than 48h.** Necro-posting.
-- **Don't post more than 3 replies in one cycle.** Hard cap
-  regardless of how many comments looked engageable.
-- **Don't post replies in parallel.** Sleep 30-60s between
-  them; Reddit flags burst posting.
-- **Don't wrap MCP tool calls in a bash heredoc.** Same lesson
-  as the heartbeat example.
-- **Don't call `sleep` to pace cycles.** That's what cron is
-  for. (`sleep` BETWEEN replies inside a cycle is fine.)
+- **Don't reply to comments older than 48h.**
+- **Don't post more than 3 replies in one cycle.**
+- **Don't post replies in parallel.** Sleep 60-90s between them.
+- **Don't wrap MCP tool calls in a bash heredoc.**
+- **Don't call `sleep` to pace cycles.** (`sleep` between
+  replies inside a cycle is fine.)
 - **Don't modify `reddit.js` during a cycle.** If selectors
   break, notify and return; the operator updates the file
   out-of-band.
 - **Don't reply on subreddits that have an obvious bot ban**
-  (rule sidebars mention "no bots"). The wrapper doesn't enforce
-  this — your judgment does.
+  (rule sidebars mention "no bots").
 
 ---
 
@@ -465,9 +435,7 @@ To change the feed (e.g. /r/programming only):
 
 To change the per-cycle reply cap:
 
-- Step 5 says "up to three" — change to whatever you want.
-  Don't go above ~5; rapid posting from one session triggers
-  Reddit's anti-spam.
+- Step 5 says "up to three". Change to whatever you want.
 
 ---
 
@@ -479,5 +447,5 @@ To change the per-cycle reply cap:
   for each comment: draft reply (your turn) + post (bash) +
   sleep 30-60s → audit (bash) → notify @clauderemote (MCP) →
   return.
-- Bash for browser work and git. Your turn for judgment. MCP for
-  notification. Never the twain meet inside a heredoc.
+- Bash for browser work and git. Your turn for judgment. MCP
+  for notification.
