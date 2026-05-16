@@ -396,33 +396,60 @@ async function cmdReply(permalink, args) {
 
     // Wait for the new comment to appear. Old reddit injects it
     // inline as a child of the target comment after a brief AJAX
-    // round-trip.
+    // round-trip. If captcha or rate-limit happens here, that's
+    // the only post-click failure mode we can detect — Reddit
+    // doesn't surface "your comment was filtered" anywhere
+    // machine-readable. assertNotChallenged() throws via die() on
+    // those, so if we get past it the comment is almost
+    // certainly live.
     await page.waitForTimeout(2_500);
     await assertNotChallenged(page);
 
-    // Find the freshly-posted comment — it's the most recent
-    // child of targetComment authored by the logged-in user.
+    // Best-effort: find the freshly-posted comment's permalink for
+    // the audit log. This is metadata, NOT a success signal. The
+    // reply is already posted at this point — see comment above —
+    // so a failure to extract the URL must not flip the whole
+    // command to {ok: false}, which would cause the agent to
+    // think it should retry (it would, posting a duplicate). We
+    // emit {ok: true, comment_url: null} on extraction failure
+    // and let the audit's target_comment_url carry the trail.
     const me = (await page.locator(SELECTORS.loggedInUser).first().textContent().catch(() => null))?.trim();
     let newCommentUrl = null;
+    let urlExtractionError = null;
     if (me) {
-      const myComments = await targetCommentLoc.locator(`div.comment p.tagline a.author:has-text("${me}")`).all();
-      if (myComments.length > 0) {
-        // Walk up to the comment container, grab its permalink.
-        const newest = myComments[myComments.length - 1];
-        const container = await newest.evaluateHandle((el) => el.closest('div.comment'));
-        const permalinkLoc = await container.asElement()
-          ?.locator(SELECTORS.commentPermalink).first();
-        const href = await permalinkLoc?.getAttribute('href').catch(() => null);
+      try {
+        // CSS :has() lets us select comment containers whose
+        // tagline author text matches the logged-in user. .last()
+        // picks the most recently rendered one (Reddit appends
+        // new comments as the deepest sibling under targetCommentLoc).
+        // Using Locator-chain end-to-end (no evaluateHandle +
+        // ElementHandle dance) avoids the API mismatch that bit us
+        // pre-fix.
+        const myCommentLoc = targetCommentLoc
+          .locator(`div.comment:has(> div.entry p.tagline > a.author:text-is("${me}"))`)
+          .last();
+        const href = await myCommentLoc
+          .locator(SELECTORS.commentPermalink)
+          .first()
+          .getAttribute('href', { timeout: 3_000 });
         newCommentUrl = href?.startsWith('http') ? href : (href ? BASE + href : null);
+      } catch (e) {
+        urlExtractionError = e.message;
       }
     }
 
     emit({
       ok: true,
       comment_url: newCommentUrl,
-      note: newCommentUrl ? null : 'posted, but URL detection failed (still in audit log via target permalink)',
+      note: newCommentUrl
+        ? null
+        : `posted (assertNotChallenged passed post-click) but URL extraction failed: ${urlExtractionError ?? 'no match for own author in tree'} — audit via target_comment_url`,
     });
   } catch (e) {
+    // Only true reply failures (form not found, captcha during
+    // submit, rate-limit detected by assertNotChallenged) reach
+    // here. URL-extraction failures are caught above and emit
+    // ok:true with a null comment_url + diagnostic note.
     die('reply_failed', e.message);
   } finally {
     await browser.close();
