@@ -272,6 +272,12 @@ OR on failure:
 ```
 
 **6c. If posting fails:**
+- `forbidden_chars`: Your draft contains an em dash or en dash.
+  The tool refused to post it. Rewrite the draft without those
+  characters (use periods, semicolons, colons, parentheses, or
+  commas instead) and re-invoke `specialists/reddit.js reply`
+  with the corrected text. Do NOT skip the comment, do NOT notify
+  the operator. This is a normal correctable error.
 - `rate_limited` or `captcha`: STOP. Notify `@clauderemote` of
   the failure + skip step 7 for any unposted drafts.
 - `comment_form_not_found`: STOP. Selectors in `reddit.js` need

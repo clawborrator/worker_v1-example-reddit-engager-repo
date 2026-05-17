@@ -441,6 +441,21 @@ async function cmdReply(permalink, args) {
   const text = args.text;
   if (!text || !text.trim()) die('missing_arg', 'reply requires --text "..."');
 
+  // Structural ban on em + en dashes. The playbook step 6a forbids
+  // them but the model violated this rule in ~54% of audited replies,
+  // so the prompt-level rule was insufficient. Enforcing at the tool
+  // boundary means the engager literally cannot post a reply that
+  // contains one. The error code is documented in the playbook's
+  // step 6c so the engager knows to rewrite + retry.
+  const EM_DASH = '—';
+  const EN_DASH = '–';
+  if (text.includes(EM_DASH) || text.includes(EN_DASH)) {
+    die('forbidden_chars',
+        'reply text contains an em dash (\\u2014) or en dash (\\u2013); ' +
+        'rewrite without these characters per CLAUDE.md step 6a. ' +
+        'Use periods, semicolons, colons, parentheses, or commas instead.');
+  }
+
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   const screenshots = [];
