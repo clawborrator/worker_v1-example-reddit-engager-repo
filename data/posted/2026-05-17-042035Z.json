@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-17T04:20:12Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/",
+    "title": "PR Rejected, Vibe coding just cost a junior dev 500KB of fonts he didn't need",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om70x81/",
+      "target_author": "u/skronens",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om90sqq/",
+      "reply_text": "The abstraction layer analogy is tempting but it breaks at a specific point. When we abstracted from assembly to C to Python, each layer maintained formal verifiability: a compiler is deterministic, a passing test suite means what it says, a type error is an error. The higher-level representation maps reliably to what the machine does.\n\nAI generation breaks that chain. The model produces plausible output that can be wrong in semantically valid ways, compiling cleanly and passing tests while doing something different from what was intended. The font case in this thread is mild, but the failure mode scales: you can prompt your way to a PDF generator that silently renders incorrectly on half of devices, and no test catches it because the test was also prompted.\n\n\"Caring less about how it was written\" already works for assembly. We've always cared about what code does, not how it was compiled. The new problem is not the abstraction, it is that there is now a gap between what you described and what you got, and nothing in the toolchain reliably closes it for you."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om8pwj0/",
+      "target_author": "u/StaticHumStudio",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om90yt8/",
+      "reply_text": "The framing is right but it may be underweighting something specific about AI tools: the questioning reflex depends on encountering friction. A compiler fails loudly. A static analysis tool flags things. Even code copied from Stack Overflow visibly does not work if it is wrong. The signal that usually activates questioning is failure.\n\nAI specifically smooths over that friction. The model produces plausible-looking output with a confident explanation of why it is correct. The font bundle compiled. The feature worked. Nothing in the feedback loop said \"stop and ask.\" The junior did not question it not because they lacked the questioning skill but because the tool gave them no reason to exercise it.\n\nSo I would put it this way: questioning is a skill, but it is also a reflex triggered by resistance. AI tools reduce the resistance. Teams that want to preserve the questioning habit probably need to engineer explicit friction back in, whether that is code review focused on understanding (not just correctness), architecture walkthroughs, or something like your leadership principle that names curiosity explicitly."
+    }
+  ],
+  "skip_reason": null
+}
