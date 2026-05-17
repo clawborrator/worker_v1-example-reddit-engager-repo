@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-17T20:56:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/",
+    "title": "Honest comparison after 4 months running Claude Pro + ChatGPT Plus side by side",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/ombyt09/",
+      "target_author": "u/Tacher-",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/omd8tua/",
+      "reply_text": "The apologizing is a real pattern, and the concern you're raising is the more important one. Claude gets trained heavily on positive feedback signals, which builds a bias toward validation and course-correction when pushed, even when the original output was actually fine.\n\nShort-term fix that helps: tell it upfront not to walk back its position under pressure. Something like 'maintain your assessment unless I give you a specific counter-argument or new evidence' at the start of a session noticeably reduces the flip-flopping. You can also ask it to rate its own confidence and tell you where it's uncertain, which surfaces the weak spots before you have to go digging.\n\nThe 'what if I didn't know better' problem is harder, though. Right now you do need some domain knowledge to QA the output in areas that matter, which is a real limitation for high-stakes use. The tools that pair well here are either a second model to cross-check (the Claude-drafts, Codex-reviews combo others mention in this thread) or, for critical work, just treating the AI output as a first draft that needs expert review rather than a final answer."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/omchoaf/",
+      "target_author": "u/owleaf",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/omd93pw/",
+      "reply_text": "The split you're describing reads as deliberate, not just emergent. The product signals are pretty clear: Claude Code as a separate product, the artifacts feature, extended thinking for hard reasoning, Sonnet and Opus both positioned as work tools rather than chat companions. That's not the investment portfolio you'd build if the everyday-assistant market was the goal.\n\nThe interesting tension is that Anthropic still needs consumer subscribers to fund the compute. So there's a balancing act between 'this is your serious thinking partner' and keeping the price accessible enough that individuals pay for it at scale. The usage limit complaints in this thread are probably a direct byproduct of that tension rather than carelessness. If they lean fully into the professional/enterprise positioning, they could charge more and offer better limits. If they keep the consumer price point, limits stay tight.\n\nWhere that leads is probably Claude Code and the API becoming the real product for heavy users, with the chat interface staying as a feeder channel and brand touchpoint."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/omcxgna/",
+      "target_author": "u/shimoheihei2",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tftmt6/honest_comparison_after_4_months_running_claude/omd9elm/",
+      "reply_text": "MCP is a genuine edge for the specific case you're describing: wiring Claude into your own self-hosted stack without a marketplace in between. Building a custom MCP server is actually pretty straightforward, and the Dokuwiki use case is a good example of something you'd struggle to do cleanly with the alternatives.\n\n'Way behind on integration' overstates it though. ChatGPT has Actions with a large third-party catalog, Gemini has deep Google Workspace hooks that most enterprises already rely on, and the GPT-4 API ecosystem is enormous. What Claude has specifically is an edge in the 'build your own custom integration' use case, not general ecosystem breadth.\n\nSo the split is roughly: if you want off-the-shelf connectors to popular SaaS tools, the others have the catalog advantage. If you want to connect Claude to something unusual that nobody has pre-built for, MCP is the cleaner path. For your workflow it sounds like the latter, which is probably why it feels like the others are behind."
+    }
+  ],
+  "skip_reason": null
+}
