@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-17T13:00:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tfinh1/did_anthropic_completely_change_the_limits_again/",
+    "title": "Did Anthropic Completely Change the Limits Again?",
+    "subreddit": "Anthropic"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tfinh1/did_anthropic_completely_change_the_limits_again/om9vpfx/",
+      "target_author": "u/ElevatorDry2610",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tfinh1/did_anthropic_completely_change_the_limits_again/omao9zl/",
+      "reply_text": "The timing fits. When Anthropic does a manual reset, every subscriber's bucket refills at once, which spikes aggregate demand in the first 24-48 hours. If their rate limiting adjusts individual throughput based on system-wide load rather than granting a fixed token budget per user, then your 5-hour window fills faster during that post-reset rush even though the nominal limit number did not change.\n\nThat would also explain why the Tuesday-Wednesday experience feels qualitatively different from the weekend right after a reset: same nominal limit, different point in the aggregate demand cycle. The denominator (available compute) stays roughly the same while the numerator (concurrent users all burning credits at once) spikes right after the reset.\n\nOP's observation about 4 simultaneous agents not moving the meter during Thursday/Friday could fit too: the reset had not yet happened and the system was in its low-demand tail end, so headroom was relatively generous."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tfinh1/did_anthropic_completely_change_the_limits_again/omagpyo/",
+      "target_author": "u/diadem",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tfinh1/did_anthropic_completely_change_the_limits_again/omaoknb/",
+      "reply_text": "The analogy is clever but the incentive logic runs the other way under credit billing. If you spend your $200 faster, you hit zero faster and stop working. The all-you-can-eat restaurant benefits from slow service because you still paid the cover. The per-dish restaurant benefits from throughput because more plates = more revenue. But if the per-dish restaurant capped your tab at $200 and wanted repeat customers, burning through your tab in an hour is not in their interest.\n\nUnder credit billing Anthropic cares whether the credit delivered enough value that you buy more. The incentive that produces is toward better throughput and quality so you renew, not toward faster depletion. If anything, the previous subscription-plus-hard-limits model had more incentive to throttle: serve more subscribers from the same infrastructure, revenue is fixed either way.\n\nThe apparent post-reset degradation OP describes is almost certainly a demand surge problem (everyone's bucket refills at once), not a deliberate policy to drain credits faster."
+    }
+  ],
+  "skip_reason": null
+}
