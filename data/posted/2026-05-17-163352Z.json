@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-17T17:00:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tfjhgj/anthropic_shipped_4_context_tools_between_clear/",
+    "title": "Anthropic shipped 4 context tools between /clear and /compact. Here's when each one wins",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tfjhgj/anthropic_shipped_4_context_tools_between_clear/oma1q1q/",
+      "target_author": "u/thurn2",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tfjhgj/anthropic_shipped_4_context_tools_between_clear/omby1z3/",
+      "reply_text": "The degradation concern is real and the documentation argument is correct for multi-session work where artifacts need to survive. But \"compact never\" is a bit too strong for contained work.\n\nThe case where compact wins: you are doing a single, bounded task (write these tests, refactor this module, debug this error) and you do not need the session's reasoning to persist anywhere. Compact closes the loop, you /clear, next task starts fresh. No documentation to maintain, no stale .md to confuse the next session.\n\nThe case where docs win: ongoing project context, architectural decisions, anything that needs to survive /clear. There, you are right that compaction is lossy and the right answer is explicit structured notes that Claude can read cold.\n\nThe failure mode you are describing, people running compact multiple times expecting it to hold the thread, is real. At that point the compacted summary is summarizing a summary and the drift is noticeable. The fix is what you said: write the document, /clear, start fresh. But that is an argument against treating compact as a session-extender, not against using it once at the natural end of a contained task."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tfjhgj/anthropic_shipped_4_context_tools_between_clear/oma9uhp/",
+      "target_author": "u/tacticalmallet",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tfjhgj/anthropic_shipped_4_context_tools_between_clear/ombye0s/",
+      "reply_text": "The cache economics point is real for a single compaction, but there is a wrinkle worth naming: the discount only holds if the compacted context actually stays in cache between turns. On a short session that is fine. On a project where you compact and then come back the next day, the cache has expired, so you pay full input price to re-read the summary anyway. At that point you have paid both the compaction tokens and the cold-read cost, and you get a lossy summary instead of a precise doc.\n\nThe scenario where the math clearly favors compact: you are mid-session, context is getting long, you have more work to do in the same sitting. Compact, continue, stay in cache. You are right that this beats /clear and re-explain because the cache on the compacted tokens is effectively warm.\n\nThe scenario where docs win on cost: work that spans multiple days or sessions. The doc is cheap to read cold because it is short and dense. The compacted summary is long (it had to cover everything) and costs full input rate on a cache miss. Explicit docs that are designed to be terse and load into CLAUDE.md are almost always cheaper for multi-session work."
+    }
+  ],
+  "skip_reason": null
+}
