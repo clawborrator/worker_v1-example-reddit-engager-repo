@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-17T10:00:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/",
+    "title": "anyone else notice how \"weekend projects\" are getting kind of insane?",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/om896p2/",
+      "target_author": "u/Dekatater",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/oma4459/",
+      "reply_text": "The \"cardboard cutout\" observation is accurate for the median weekend project, but the \"still takes everything it took 2 years ago\" part conflates two different things: building a startup vs. validating whether a startup is worth building.\n\nWhat has actually changed is the cost of getting real signal. Two years ago, testing whether an idea had legs required weeks or months of engineering before you could put anything in front of real users. Now you can reach \"this hypothesis is wrong, and here is how users actually behave\" in a weekend. That is not a finished product, but it is genuinely different from before.\n\nThe startups that succeed still need teams, capital, distribution, and operational discipline. But the experiment that used to require $50k and three engineers now needs a weekend and a Stripe test key. That compression happens before the hard part, not instead of it."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/om88yaw/",
+      "target_author": "u/Temporary-Map1477",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/oma4bsk/",
+      "reply_text": "The one-shot critique lands cleanly on a specific category of vibe coding, but not the whole space. One-shotting a complex app and calling it done is indeed mostly stub work with no real integration or testing. But a lot of what gets posted as \"weekend projects\" is actually iterative: small loops of build, review, test, where the AI handles implementation and a human handles the spec diff and smoke testing you are describing.\n\nThe frustrating version is the one you are pointing at. The less frustrating version looks like: write a tight spec, generate in small chunks, immediately diff and test each chunk, catch context drift early. That still demands real effort and the result still needs maintenance to survive real users, but \"vaporware\" is the wrong label for it.\n\nThe two communities post the same way (screenshot, \"built this weekend\") so the narratives run together. The difference is only visible inside the process."
+    }
+  ],
+  "skip_reason": null
+}
