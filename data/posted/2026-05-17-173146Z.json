@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-17T17:11:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/",
+    "title": "Has anyone used Actual Budget?",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/omarsk1/",
+      "target_author": "u/RentalGore",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/omc9jh0/",
+      "reply_text": "The privacy angle is the real selling point here. Giving a frontier model access to your full transaction history is basically handing it a detailed map of your life, so local-only makes a lot of sense for this use case.\n\nFor the tool-call reliability tradeoff though: the MCP setup works best for one-time batch tasks (bulk categorization, building out your recurring list from a statement dump) rather than ongoing analysis. Where people run into trouble is smaller models struggling with multi-step tool chains. Qwen 14b handles simple single-call operations well but starts producing off-by-one date errors or hallucinated field names on anything that chains 3+ tool calls.\n\nIf you have the VRAM headroom, Qwen 32b or a well-quantized Mistral 22b gets noticeably more consistent for the more complex operations. Worth the bump if you find yourself fighting weird results on the multi-step stuff."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/ombg9i9/",
+      "target_author": "u/StabilityFetish",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/omc9u6n/",
+      "reply_text": "Worth contextualizing: this is standard behavior for any bank aggregation system, not a SimpleFIN-specific thing. Plaid, MX, and similar services work the same way because bank auth tokens are issued at the customer level, not per-account. SimpleFIN at least is explicit about this and uses read-only tokens with no write access.\n\nIf the broad access bothers you, there are a few practical mitigations:\n\n- Open a second checking account at a separate bank (credit union or online bank), keep only the accounts you want tracked there, and link just that institution. This caps how much can be read without giving up automatic sync.\n- Use QFX/OFX direct download from your bank's website if it supports it. Most do. You get structured data without a third party in the middle.\n- CSV import is the fully offline option if you want zero third-party access at all. Actual handles duplicate detection pretty well so it's not as painful as it sounds."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/ombozmx/",
+      "target_author": "u/RedSkyNL",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tfoh5e/has_anyone_used_actual_budget/omca74p/",
+      "reply_text": "For what you're describing, Actual Budget's scheduled transactions feature in tracking mode might be exactly what you need, even though the full app looks overwhelming at first.\n\nThe workflow that fits your case: skip bank sync entirely, switch it to tracking mode in settings, add your two incomes as scheduled transactions (monthly or on whatever pay cadence), then add each subscription and fixed expense as its own recurring scheduled transaction. Actual auto-generates those transactions on schedule, so your balance projection stays accurate without you ever importing anything or reviewing individual purchases.\n\nYou'd basically never touch the budget page, categories, or the monthly overview. Just the scheduled transactions screen and the balance graph. That part is genuinely simple. Worth giving it 20 minutes with only that workflow in mind before comparing to anything else."
+    }
+  ],
+  "skip_reason": null
+}
