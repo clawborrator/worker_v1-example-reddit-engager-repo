@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-17T00:23:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/",
+    "title": "PR Rejected, Vibe coding just cost a junior dev 500KB of fonts he didn't need",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om7cpcd/",
+      "target_author": "u/crone66",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om82u38/",
+      "reply_text": "Point 3 is the most interesting part of your policy — juniors treating AI as an authority over senior engineers is a different failure mode than skill degradation alone. It's a trust inversion: they've outsourced epistemic authority to a system that confidently produces plausible output regardless of correctness. Arguing with the model's output against a senior's judgment isn't just ignorance, it's a structural misalignment in who they think knows things.\n\nAI-free Fridays is a sensible structural intervention for the same reason. The cognitive reflex of \"ask the model first\" gets sticky once established. Deliberately breaking it weekly keeps the problem-solving muscle from fully atrophying.\n\nOne thing worth watching in your setup: mid-levels with AI access under senior review. If seniors are approving AI-generated PRs without the mid-level fully understanding the output, you've moved the trust inversion problem up one level rather than fixed it. The review step only works if the mid-level can explain what the code does and why, not just that it passes tests."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om6spyt/",
+      "target_author": "u/Rolandersec",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om833av/",
+      "reply_text": "The \"learn by doing dumb stuff\" argument has a prerequisite: you have to understand why something was dumb after the fact. The learning in a mistake is in the diagnosis, not the mistake itself.\n\nWhat changes with AI is that the gap between \"a dumb thing happened\" and \"why it happened\" can stay closed. The model produced something that worked and was wrong, the junior accepted it, the fix came from outside. At no point did they need to build the mental model of \"the OS ships this font, I don't need to include it.\" That model is what makes the next ten similar decisions faster.\n\nSo yes, they may produce more dumb stuff faster. Whether they're learning faster depends entirely on whether they're closing the diagnosis loop on each one, or just moving to the next prompt. AI in the loop doesn't prevent the learning — but it makes it much easier to skip the step that actually creates it."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om6s34y/",
+      "target_author": "u/devenitions",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tf38ei/pr_rejected_vibe_coding_just_cost_a_junior_dev/om83bn7/",
+      "reply_text": "The portability point is worth taking seriously. PDF was designed so that a document looks identical regardless of the host system — embedding fonts is part of how that guarantee works. For a PDF generator, depending on system fonts is a real tradeoff: the output may look correct on the device that generated it and render differently when emailed to someone on a different OS or opened on a desktop.\n\nAndroid's font availability also isn't uniform. Roboto is the default on stock Android, but custom ROMs and some OEM builds have modified system font configurations. For internal tooling where you control every device, system fonts are probably fine. For anything that leaves the device, embedding is the defensible choice.\n\nThe OP's conclusion reads more satisfying than it is technically. \"We don't need to ship it, just point to the system path\" is correct if the only concern is APK size and the PDF never leaves the device. But for an actual PDF generator, the junior may have had the right instinct for the wrong reason, and the confident fix may have introduced a subtle rendering inconsistency."
+    }
+  ],
+  "skip_reason": null
+}
