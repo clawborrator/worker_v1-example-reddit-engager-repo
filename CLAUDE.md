@@ -221,10 +221,17 @@ commit the partial audit (step 8) with `skip_reason: "read-post
 command_timeout"`, and return. Do NOT retry the same URL this
 cycle.
 
-### Step 5 — Pick 0-3 comments to engage with (your turn)
+### Step 5 — Pick 0 or 1 comment to engage with (your turn)
 
-Read the comments. Use your judgment to pick UP TO THREE
-comments where a substantive reply adds value. Criteria:
+Read the comments. Use your judgment to pick AT MOST ONE
+comment where a substantive reply adds value. **Hard cap: one
+reply per post per cycle.** If two or three comments look
+equally worth engaging with, pick the single best one and skip
+the rest — they'll still be there next cycle, or another
+operator may surface them. The point of the cap is to avoid
+the engager looking like a bot that's "covering" a thread.
+
+Criteria for the one you pick:
 
 - **The comment makes a specific claim** you can extend,
   complicate, or constructively push back on. Avoid replying to
@@ -232,8 +239,6 @@ comments where a substantive reply adds value. Criteria:
   + complete.
 - **Comment age < 48h.**
 - **Comment depth ≤ 2.**
-- **One reply per author per thread.** Never reply to the same
-  user twice in this cycle.
 
 **Cross-cycle dedup.** Before finalizing the candidate list,
 check the audit log for any prior cycle that already replied to
@@ -252,9 +257,9 @@ phase but still notify and audit** the post-read activity:
   but no comments warranted a reply this cycle."`
 - Skip to step 8 (audit / commit).
 
-### Step 6 — Draft + post replies (your turn + bash)
+### Step 6 — Draft + post the reply (your turn + bash)
 
-For each picked comment, in sequence (not parallel):
+You picked one comment in step 5. Draft + post it:
 
 **6a. Draft the reply (your turn).** Write a substantive
 response. Voice:
@@ -310,18 +315,16 @@ OR on failure:
   with the corrected text. Do NOT skip the comment, do NOT notify
   the operator. This is a normal correctable error.
 - `rate_limited` or `captcha`: STOP. Notify `@clauderemote` of
-  the failure + skip step 7 for any unposted drafts.
+  the failure. Skip to step 8 (audit) with `skip_reason` set.
 - `comment_form_not_found`: STOP. Selectors in `reddit.js` need
   updating. Notify `@clauderemote`.
-- Other transient errors: log + continue with the next reply.
+- Other transient errors: log, skip the reply, proceed to audit.
 
-### Step 7 — Wait between replies (bash)
+### Step 7 — (reserved)
 
-If you posted multiple replies, sleep 60-90s between them.
-
-```bash
-sleep $((60 + RANDOM % 30))
-```
+Previously held inter-reply pacing. The cycle now caps at one
+reply per post, so no inter-reply sleep is required. Step number
+kept stable so step references downstream don't shift.
 
 ### Step 8 — Compile + commit audit (bash)
 
@@ -455,7 +458,7 @@ operator follows with `docker logs -f reddit-engager`.
 | `read-post` errors                       | Notify "post read failed: <err>", skip the post but still commit audit, return. |
 | Any wrapper returns `command_timeout`    | Notify "<cmd> timed out", skip the cycle, commit audit with skip_reason, return. Do NOT retry the same call this cycle. |
 | No comments meet bar                     | Notify "found post but no comments warranted reply", commit audit, return. |
-| `reply` returns `rate_limited`/`captcha` | STOP further replies this cycle. Notify with details. Commit audit. Return. |
+| `reply` returns `rate_limited`/`captcha` | Notify @clauderemote with details. Commit audit with skip_reason. Return. |
 | `reply` returns `comment_form_not_found` | STOP. Selectors in reddit.js need updating. Notify @clauderemote, commit audit. Return. |
 | `git push` rejected                      | Log, return. Audit lives only locally this cycle; next cycle's audit will include it. |
 | Anthropic rate-limit / token expiry      | Log. Return. 4h cron is plenty of natural backoff.                    |
@@ -466,14 +469,12 @@ audit record** (with `skip_reason` filled in).
 ## What you don't do
 
 - **Don't write replies longer than 3 sentences.** Hard cap.
+- **Don't post more than one reply per post per cycle.** Hard
+  cap. The cycle picks one post and one comment on it. Stop.
 - **Don't lower the interestingness bar to force a reply.**
-- **Don't reply to the same author twice in one cycle.**
 - **Don't reply to comments older than 48h.**
-- **Don't post more than 3 replies in one cycle.**
-- **Don't post replies in parallel.** Sleep 60-90s between them.
 - **Don't wrap MCP tool calls in a bash heredoc.**
-- **Don't call `sleep` to pace cycles.** (`sleep` between
-  replies inside a cycle is fine.)
+- **Don't call `sleep` to pace cycles.** Cron drives cadence.
 - **Don't modify `reddit.js` during a cycle.** If selectors
   break, notify and return; the operator updates the file
   out-of-band.
@@ -498,7 +499,10 @@ To change the feed (e.g. /r/programming only):
 
 To change the per-cycle reply cap:
 
-- Step 5 says "up to three". Change to whatever you want.
+- Step 5 currently caps at one reply per post per cycle. If you
+  want to allow more, update step 5, step 6's intro ("post the
+  reply" → "post replies"), the "What you don't do" entry, and
+  re-introduce the inter-reply sleep guidance in step 7.
 
 ---
 
@@ -506,9 +510,8 @@ To change the per-cycle reply cap:
 
 - Boot: install cron `0 */4 * * *`, run one warmup cycle, return.
 - Each fire: auth-check (bash) → scroll-feed (bash) → pick post
-  (your turn) → read-post (bash) → pick comments (your turn) →
-  for each comment: draft reply (your turn) + post (bash) +
-  sleep 30-60s → audit (bash) → notify @clauderemote (MCP) →
-  return.
+  (your turn) → read-post (bash) → pick at most one comment
+  (your turn) → draft reply (your turn) + post (bash) → audit
+  (bash) → notify @clauderemote (MCP) → return.
 - Bash for browser work and git. Your turn for judgment. MCP
   for notification.
