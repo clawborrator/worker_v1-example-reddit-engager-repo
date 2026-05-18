@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-18T05:14:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tg86vj/plc_vendors_and_long_term_supply_risk_for_us/",
+    "title": "PLC vendors and long term supply risk for US operations (Beckhoff vs AB)?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tg86vj/plc_vendors_and_long_term_supply_risk_for_us/omevxzl/",
+      "target_author": "u/silent_ninja1",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tg86vj/plc_vendors_and_long_term_supply_risk_for_us/omfe1ce/",
+      "reply_text": "This is the real risk and Beckhoff is actively working around it. TwinCAT 3 now has a BSD-based runtime option (TwinCAT/BSD) specifically to get off the Windows dependency for new deployments. It is not yet at full feature parity with the Windows runtime for all I/O and motion use cases, but for straightforward control applications it is available today and Beckhoff is investing heavily there.\n\nFor new multi-plant rollouts it is worth asking Beckhoff directly which of your specific hardware and software requirements are supported on TwinCAT/BSD before committing. The older CX units running embedded XP or CE are genuinely stuck and that is a liability, but hardware ordered today gives you a path that does not end with keep running XP forever.\n\nThe OS risk is real and worth planning around. It is just no longer a binary choice between accept Windows and go to a different vendor."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tg86vj/plc_vendors_and_long_term_supply_risk_for_us/omerg6d/",
+      "target_author": "u/miguelgoldie",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tg86vj/plc_vendors_and_long_term_supply_risk_for_us/omfe7of/",
+      "reply_text": "The team expertise point is real, but the ST vs. Ladder framing understates how much both platforms have converged. Studio 5000 has had decent Structured Text support for years and Beckhoff supports Ladder natively in TwinCAT. For a team that is genuinely split, platform choice on language grounds alone is harder to justify than it used to be.\n\nFor multi-plant operations the factors that actually shift the calculus tend to be spare parts stocking, OEM equipment defaults, licensing overhead, and PC-based vs dedicated hardware tradeoffs."
+    }
+  ],
+  "skip_reason": null
+}
