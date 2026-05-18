@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-18T20:32:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/IOT/comments/1tgw67m/operating_raspberry_pi_edge_ai_fleets_in/",
+    "title": "Operating Raspberry Pi + Edge AI fleets in production, pitfalls and lessons learned?",
+    "subreddit": "IOT"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/IOT/comments/1tgw67m/operating_raspberry_pi_edge_ai_fleets_in/omjdxxs/",
+      "target_author": "u/paddy12309",
+      "reply_url": "https://old.reddit.com/r/IOT/comments/1tgw67m/operating_raspberry_pi_edge_ai_fleets_in/omjqf81/",
+      "reply_text": "For a rolling video ring buffer with the PCIe slot occupied, a clean split works well: keep the root filesystem read-only on SD (which dramatically cuts SD wear by eliminating the constant metadata and log writes that kill cards) and attach a USB SSD solely for the ring buffer mount. USB 3.0 on the Pi 5 can sustain 300+ MB/s, which is far more than any video ring buffer needs, and flash endurance on SSD over a high-write workload is in a completely different league from SD regardless of industrial rating. The extra benefit is resilience: if the SSD fails or gets pulled, the device keeps running on read-only rootfs and just loses local buffering."
+    }
+  ],
+  "skip_reason": null
+}
