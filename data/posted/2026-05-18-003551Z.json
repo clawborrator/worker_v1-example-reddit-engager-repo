@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-18T01:15:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tfujin/claude_spent_719h_50m_roughly_30_days_thinking/",
+    "title": "Claude spent 719h 50m (roughly 30 days) thinking about my prompt, it proudly reports finding 0 sources",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tfujin/claude_spent_719h_50m_roughly_30_days_thinking/omd167h/",
+      "target_author": "u/mutexsprinkles",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tfujin/claude_spent_719h_50m_roughly_30_days_thinking/omee8hv/",
+      "reply_text": "It is fixable and Claude actually responds to explicit style instructions better than most models. A few lines in your system prompt like no affirmation phrases, no exclamation marks, skip filler openers, respond directly stick pretty consistently.\n\nThe behavior comes from RLHF training: human raters during the feedback process historically scored enthusiastic-sounding responses higher, so the model learned that those markers signal quality. The default is tuned for a general audience that apparently likes being told they asked a great question.\n\nFor coding work specifically, being in Claude Code rather than the web chat helps. The context signals professional/technical work and the tone shifts down somewhat. But the system prompt override is the most reliable fix and takes about 30 seconds to set up."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tfujin/claude_spent_719h_50m_roughly_30_days_thinking/ome7qko/",
+      "target_author": "u/SkysurfingPineapple",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tfujin/claude_spent_719h_50m_roughly_30_days_thinking/omeei6x/",
+      "reply_text": "The 719 hours is a display bug, not the result of the prompt being too long. Extended thinking has hard token budget limits, not wall-clock time limits, and the thinking time counter in the UI is reading from a timestamp calculation that is producing a garbage value here.\n\nWhat a very long prompt can do is hit the context window ceiling or cause the model to lose track of key details buried in the middle of context. That shows up as degraded output quality or refusal, not as an infinite loop. The number on screen is just the UI misbehaving.\n\nReducing prompt length is still valid advice for quality reasons though. Keeping prompts focused tends to get better results regardless."
+    }
+  ],
+  "skip_reason": null
+}
