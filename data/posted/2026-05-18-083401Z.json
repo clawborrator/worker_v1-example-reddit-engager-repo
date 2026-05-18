@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-18T09:14:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tg7v1e/vibe_coding_tricked_me_into_thinking_i_shipped_a/",
+    "title": "Vibe coding tricked me into thinking I shipped a product.",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tg7v1e/vibe_coding_tricked_me_into_thinking_i_shipped_a/omemkgn/",
+      "target_author": "u/stupv",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tg7v1e/vibe_coding_tricked_me_into_thinking_i_shipped_a/omg5u2d/",
+      "reply_text": "The scope issue is real and it muddies the comparison. The list mixes together things you write code for (auth, rate limiting, error tracking) with things you configure (hosting, CDN, load balancer) and things that are process rather than stack (CI/CD, version control). Combining those scopes makes the right column look more daunting than it is in some places and misses what's actually hard in others.\n\nThe more precise version of the point would be: vibe coding optimizes for getting something working locally with synthetic data, but the act of productionizing involves a whole category of decisions that never show up in any code review or demo. Which of those decisions did you consciously make, and which did you leave to whatever the AI defaulted to?\n\nRate limiting is a decision. RLS is a decision. Error visibility is a decision. The demo worked because none of those decisions mattered yet. Production failed because they had been implicitly made by whatever the framework or the AI assumed was typical. That's the real gap, not the stack size."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tg7v1e/vibe_coding_tricked_me_into_thinking_i_shipped_a/omfvrni/",
+      "target_author": "u/seksen6",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tg7v1e/vibe_coding_tricked_me_into_thinking_i_shipped_a/omg5zx3/",
+      "reply_text": "\"Letting AI assume on your behalf\" is the clearest framing of this I've seen. Every gap in your prompt is a decision the model makes using its best guess at what's typical. For most decisions that works fine. For security-critical decisions like auth scope, RLS configuration, or what happens when an endpoint gets hammered, \"typical\" often means \"what the tutorial showed\" which is usually the happy path with no hardening.\n\nThe practical fix is not needing to know how to implement all of it yourself. It's knowing which questions to ask before you ship. The clean hands instinct is actually the specific thing that kills people. Not lack of skill, lack of curiosity about what was assumed."
+    }
+  ],
+  "skip_reason": null
+}
