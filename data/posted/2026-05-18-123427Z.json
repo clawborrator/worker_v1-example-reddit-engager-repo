@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-18T13:15:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tgfu9b/why_bitwise_and/",
+    "title": "Why Bitwise AND",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tgfu9b/why_bitwise_and/omgqqsk/",
+      "target_author": "u/HarveysBackupAccount",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tgfu9b/why_bitwise_and/omh12om/",
+      "reply_text": "Worth adding context: in modern PLCs the performance benefit of bitwise operations is fairly negligible. Scan times run in the millisecond range and a bitwise mask is one instruction either way. The reason this pattern appears in current code is the data format, not speed.\n\nA lot of field devices (IO-Link sensors, drives, smart instruments) pack multiple signals into one word because it's compact over the wire. When the device sends it that way, bitwise masking is not optional: you have to strip the bits you don't want before the value means anything. Scaling the raw packed word directly would give you a number that includes the status bits, which would be wrong.\n\nSo it's less \"this is faster\" and more \"this is what the data actually requires.\""
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tgfu9b/why_bitwise_and/omg6zbg/",
+      "target_author": "u/CPAPGas",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tgfu9b/why_bitwise_and/omh1d53/",
+      "reply_text": "Right, and the full pattern for extracting the upper word properly is mask-then-shift: AND with 0xFFFF0000 to zero the lower bits, then shift right by 16. That brings the upper 16 bits down to bit positions 0-15, putting it in the same 0-65535 range as the lower word so the two can be compared or scaled the same way.\n\nOn some platforms you can skip the explicit mask and just shift right by 16 directly, since a logical right shift fills the vacated upper bits with zeros anyway. Whether you need the mask step depends on how the platform handles signed vs unsigned types during the shift.\n\nFor 4-20mA analog over EtherNet/IP the data usually arrives as a single 16-bit value in its own tag, so the pack-and-extract step may not actually be needed in this case. The pattern matters most for IO-Link and similar devices that deliberately pack multiple readings into one word to reduce communication overhead."
+    }
+  ],
+  "skip_reason": null
+}
