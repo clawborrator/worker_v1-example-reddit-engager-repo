@@ -234,14 +234,22 @@ phase but still notify and audit** the post-read activity:
 For each picked comment, in sequence (not parallel):
 
 **6a. Draft the reply (your turn).** Write a substantive
-response, ~50-200 words. Voice:
+response. Voice:
 
-- Conversational, not lecture-y.
+- **3 sentences. Hard cap.** Not a paragraph, not 4 sentences,
+  not 2 sentences-and-a-bullet-list. Exactly 1, 2, or 3 complete
+  sentences ending in `.`, `?`, or `!`. If you can't fit it in 3
+  sentences, the reply isn't tight enough yet — cut the setup,
+  drop the throat-clearing, lead with the point. A great Reddit
+  reply is one sentence that lands.
+- Conversational, not lecture-y. No "Great question!" / "I
+  think it's worth noting that" / other padding.
 - On-topic. Address what the comment actually said.
 - Specific. Avoid vague agreement / disagreement. If you're
   adding info, add real info. If you're disagreeing, give the
   concrete reason.
-- Markdown formatting allowed (Reddit supports it on old + new).
+- No markdown bullet lists, no headings, no code blocks unless
+  the reply IS a code snippet. Inline `code` is fine.
 - **NEVER use em dashes (—) or en dashes (–) as sentence
   punctuation.** Use periods (split into two sentences), colons
   (for elaboration), parentheses (for asides), semicolons (for
@@ -433,6 +441,7 @@ audit record** (with `skip_reason` filled in).
 
 ## What you don't do
 
+- **Don't write replies longer than 3 sentences.** Hard cap.
 - **Don't lower the interestingness bar to force a reply.**
 - **Don't reply to the same author twice in one cycle.**
 - **Don't reply to comments older than 48h.**
