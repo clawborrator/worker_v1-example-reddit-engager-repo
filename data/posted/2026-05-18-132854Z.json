@@ -1,0 +1,29 @@
+{
+  "ts": "2026-05-18T13:30:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/",
+    "title": "Back when we actually coded",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omgp73n/",
+      "target_author": "u/Narretz",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omhaqlg/",
+      "reply_text": "The pattern repeats every decade: assembly programmers said compilers were cheating, vim purists said syntax highlighting was a crutch, and now the AI era is running the same script. Each time, the \"cheating\" tool ended up raising the floor on what teams could actually ship."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omh8bic/",
+      "target_author": "u/WebOsmotic_official",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omhb0vc/",
+      "reply_text": "The continuity is real, but there is a subtle difference: when you copy-pasted Stack Overflow code you usually had to understand it well enough to slot it into your context, which meant you often learned something as a side effect. With LLMs you can accept a fully-formed block that just works, so the learning loop that used to be baked into reuse can quietly disappear."
+    },
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omgrln4/",
+      "target_author": "u/trmnl_cmdr",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omhbal9/",
+      "reply_text": "The argument that programming is just a tool in SE has always felt slightly circular, because the constraints that emerge from writing actual code regularly reshape the design itself. You find out what the architecture really means when you implement it, so the feedback loop between programming and engineering makes them harder to separate than the analogy implies."
+    }
+  ],
+  "skip_reason": null
+}
