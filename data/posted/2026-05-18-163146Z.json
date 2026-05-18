@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-18T16:31:46Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1tgl22u/tool_control_program/",
+    "title": "Tool Control Program",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1tgl22u/tool_control_program/omhwqpn/",
+      "target_author": "u/Living_Diver2432",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1tgl22u/tool_control_program/omie44g/",
+      "reply_text": "The transaction log replacing the periodic audit is the key insight here: an audit tells you where things are on a schedule, but a checkout log tells you who had what and for how long, which is a much stronger accountability lever. When tools start walking it's almost always because checkout is anonymous, not because audits are infrequent. The 400-item cut is also right, but one more triage axis worth adding is: anything that requires calibration or can create a product-quality escape if it's wrong belongs on the controlled list regardless of how cheap or common it looks."
+    }
+  ],
+  "skip_reason": null
+}
