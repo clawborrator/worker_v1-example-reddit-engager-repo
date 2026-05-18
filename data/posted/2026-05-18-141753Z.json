@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-18T14:17:53Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tggzm5/cowork_just_removed_my_contact_data_from_all/",
+    "title": "Cowork just removed my contact data from all major providers in a few hours!",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tggzm5/cowork_just_removed_my_contact_data_from_all/omgsjvf/",
+      "target_author": "u/PmMeSmileyFacesO_O",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tggzm5/cowork_just_removed_my_contact_data_from_all/omhkzf3/",
+      "reply_text": "The reprocessing risk depends heavily on where you are: for EU residents, GDPR's right to erasure creates an ongoing obligation so a broker who re-adds your data is technically in violation and faces real enforcement risk. For US residents outside California, most data brokers operate under no equivalent constraint, so the whack-a-mole scenario is genuinely how it plays out. The suppression-list approach some brokers mention (keeping your email on a do-not-reprocess list) is one mitigation, but how consistently they honor it varies a lot by vendor."
+    }
+  ],
+  "skip_reason": null
+}
