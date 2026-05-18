@@ -73,6 +73,20 @@ fingerprint signal. Without the `xvfb-run` prefix, Chromium has
 no display to render into and crashes immediately. Don't drop
 the prefix.
 
+**Run every wrapper invocation in the foreground.** Don't use
+the Bash tool's `run_in_background` flag for these. The wrapper
+has its own internal wall-clock cap (90-180s per subcommand)
+that exits cleanly with `{ok:false, error:"command_timeout"}`,
+so a foreground call returns within 3 minutes maximum even on
+the pathological case. Background bash in this runtime has no
+enforced kill — a hung wrapper sits forever and the engager can
+end up firing a second copy while the first is still wedged.
+
+**Never re-fire a wrapper call that hasn't returned yet.** If
+the same `read-post` / `scroll-feed` / `reply` invocation is
+already in flight, wait for it. If you need to abort, kill the
+shell explicitly first.
+
 The wrapper also captures a full-page PNG after every navigation
 and saves it under `data/screenshots/`. The audit step commits +
 pushes those PNGs along with the JSON, so each cycle's visual
@@ -197,6 +211,15 @@ Returns JSON:
 
 Top-level comments first, then nested. Expect 20-100 comments
 depending on the thread.
+
+**If the wrapper returns `{ok:false, error:"command_timeout"}`**
+(the 150s overall cap fired — page hung, Reddit served a slow
+or blocked render, etc.): notify `@clauderemote` via
+`route_to_peer` mode: tell with
+`"Cycle skipped: read-post timed out on <post-title> (r/<sub>)."`,
+commit the partial audit (step 8) with `skip_reason: "read-post
+command_timeout"`, and return. Do NOT retry the same URL this
+cycle.
 
 ### Step 5 — Pick 0-3 comments to engage with (your turn)
 
@@ -430,6 +453,7 @@ operator follows with `docker logs -f reddit-engager`.
 | `scroll-feed` returns empty / errors     | Notify "feed empty or errored: <err>", skip cycle, return.            |
 | Nothing in feed meets bar                | Notify "nothing met the bar this round", skip cycle, return.          |
 | `read-post` errors                       | Notify "post read failed: <err>", skip the post but still commit audit, return. |
+| Any wrapper returns `command_timeout`    | Notify "<cmd> timed out", skip the cycle, commit audit with skip_reason, return. Do NOT retry the same call this cycle. |
 | No comments meet bar                     | Notify "found post but no comments warranted reply", commit audit, return. |
 | `reply` returns `rate_limited`/`captcha` | STOP further replies this cycle. Notify with details. Commit audit. Return. |
 | `reply` returns `comment_form_not_found` | STOP. Selectors in reddit.js need updating. Notify @clauderemote, commit audit. Return. |

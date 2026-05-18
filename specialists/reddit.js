@@ -174,6 +174,13 @@ async function newContext() {
     locale:     'en-US',
     timezoneId: 'America/New_York',
   });
+  // Default per-action / per-locator timeout. Playwright defaults to
+  // 30s which silently stretches read-post into minutes when a
+  // single selector misses across many comments. We don't need 30s
+  // to decide a selector missed on a page that's already rendered.
+  // Navigation timeouts are set explicitly in gotoWithRetry (60s)
+  // and are unaffected by this.
+  ctx.setDefaultTimeout(5_000);
   await ctx.addCookies(loadCookies());
   return { browser, ctx };
 }
@@ -589,35 +596,65 @@ function parseArgs(argv) {
   return out;
 }
 
+// Per-command overall wall-clock cap. Even with the 5s per-locator
+// default and 60s navigation timeouts, a hung Chromium subprocess
+// can stall the whole run silently. Race the command against this
+// timeout; on expiry, emit a typed error and bail. The engager
+// playbook treats this as a skip-the-cycle signal.
+const COMMAND_TIMEOUT_MS = {
+  'auth-check':  90_000,
+  'scroll-feed': 150_000,
+  'read-post':   150_000,
+  'reply':       180_000,
+};
+
+function withTimeout(promise, ms, cmd) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      setTimeout(() => {
+        const err = new Error(`command_timeout: ${cmd} exceeded ${ms}ms`);
+        err.code = 'command_timeout';
+        reject(err);
+      }, ms).unref(); // unref so a fast-finishing promise doesn't keep node alive
+    }),
+  ]);
+}
+
 async function main() {
   const [, , cmd, ...rest] = process.argv;
   const args = parseArgs(rest);
+  const timeoutMs = COMMAND_TIMEOUT_MS[cmd] ?? 150_000;
 
-  switch (cmd) {
-    case 'auth-check':
-      await cmdAuthCheck();
-      break;
-    case 'scroll-feed':
-      await cmdScrollFeed(args);
-      break;
-    case 'read-post':
-      await cmdReadPost(args._[0]);
-      break;
-    case 'reply':
-      await cmdReply(args._[0], args);
-      break;
-    default:
-      emit({
-        ok: false,
-        error: 'unknown_command',
-        usage: [
-          'reddit.js auth-check',
-          'reddit.js scroll-feed --count 20 --feed home|all|sub:<name>',
-          'reddit.js read-post <post-url>',
-          'reddit.js reply <comment-permalink> --text "..."',
-        ],
-      });
+  const dispatch = (() => {
+    switch (cmd) {
+      case 'auth-check':  return cmdAuthCheck();
+      case 'scroll-feed': return cmdScrollFeed(args);
+      case 'read-post':   return cmdReadPost(args._[0]);
+      case 'reply':       return cmdReply(args._[0], args);
+      default:
+        emit({
+          ok: false,
+          error: 'unknown_command',
+          usage: [
+            'reddit.js auth-check',
+            'reddit.js scroll-feed --count 20 --feed home|all|sub:<name>',
+            'reddit.js read-post <post-url>',
+            'reddit.js reply <comment-permalink> --text "..."',
+          ],
+        });
+        process.exit(1);
+    }
+  })();
+
+  try {
+    await withTimeout(dispatch, timeoutMs, cmd);
+  } catch (e) {
+    if (e?.code === 'command_timeout') {
+      emit({ ok: false, error: 'command_timeout', details: e.message });
       process.exit(1);
+    }
+    throw e;
   }
 }
 
