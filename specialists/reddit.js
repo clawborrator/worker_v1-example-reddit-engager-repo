@@ -382,9 +382,40 @@ async function cmdReadPost(postUrl) {
     screenshots.push(await snapshotNav(page, 'read-post', 'post-goto'));
     await assertNotChallenged(page);
 
-    // Post body
-    const postContainer = page.locator('div.sitetable.linklisting > div.thing.link').first();
-    const id = await postContainer.getAttribute('data-fullname');
+    // Resolve the post container with selector fallbacks. The canonical
+    // path is `div.sitetable.linklisting > div.thing.link`, but a few
+    // post types break it: quarantine banners and brigaded-comments
+    // warnings wrap `sitetable` in an extra container, and some old-
+    // reddit error layouts replace `sitetable.linklisting` entirely.
+    // We try the canonical first, then fall back to broader selectors
+    // that share the same `data-fullname`/`data-subreddit` attributes.
+    // 1.5s per-selector timeout (4 candidates × 1.5s = 6s worst case).
+    const POST_CONTAINER_SELECTORS = [
+      'div.sitetable.linklisting > div.thing.link',
+      'div.thing.link[data-type="link"]',
+      'div.thing[data-type="link"]',
+      'div[id^="thing_t3_"]',
+    ];
+    let postContainer = null;
+    let id = null;
+    for (const sel of POST_CONTAINER_SELECTORS) {
+      const loc = page.locator(sel).first();
+      const candidate = await loc.getAttribute('data-fullname', { timeout: 1500 }).catch(() => null);
+      if (candidate) {
+        postContainer = loc;
+        id = candidate;
+        break;
+      }
+    }
+    if (!postContainer || !id) {
+      emit({
+        ok: false,
+        error: 'post_container_not_found',
+        details: `no selector matched on ${postUrl}. tried: ${POST_CONTAINER_SELECTORS.join(' | ')}. check the post-goto screenshot — quarantine banner, age gate, or removed post are common causes.`,
+        screenshots: screenshots.filter(Boolean),
+      });
+      process.exit(1);
+    }
     const title = (await postContainer.locator('a.title').first().textContent())?.trim();
     const subredditAttr = await postContainer.getAttribute('data-subreddit');
     const author = (await postContainer.locator(SELECTORS.postAuthor).first().textContent().catch(() => null))?.trim();

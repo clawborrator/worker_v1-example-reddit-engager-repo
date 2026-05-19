@@ -168,7 +168,22 @@ most worth engaging with. Criteria — apply, don't recite:
   is the sweet spot.
 - **Age < 12h.**
 
-If NO post in the list meets the bar, **skip this cycle**:
+**Cross-cycle POST dedup.** Before committing to the pick,
+check the audit log for any prior cycle that already touched
+this exact post — successful reply OR skip. For each candidate
+post URL:
+
+```bash
+grep -l "$CANDIDATE_POST_URL" data/posted/*.json 2>/dev/null
+```
+
+If grep finds a match, the post has been seen. Drop it and pick
+the next one. This is what prevents the same selector-resistant
+post (e.g. one that consistently times out read-post) from
+getting re-picked every cycle and burning cycles to no effect.
+
+If NO post in the list meets the bar (or every interesting one
+has been seen), **skip this cycle**:
 - Send a brief notification to `@clauderemote` via
   `route_to_peer` mode: tell:
   `"Cycle skipped: nothing in the feed met the bar this round."`
