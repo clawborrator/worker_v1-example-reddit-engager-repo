@@ -1,0 +1,10 @@
+{
+  "ts": "2026-05-19T04:32:13Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1th3ype/creator_of_c_aigenerated_code_isnt_ready_it/",
+    "title": "Creator of C++: AI-generated code isn't ready - it generates more bugs, more bloat, more security holes, and is nearly impossible to validate",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [],
+  "skip_reason": "read-post failed: read_post_failed (locator timeout on link listing selector — post may have been removed or served a non-standard layout)"
+}
