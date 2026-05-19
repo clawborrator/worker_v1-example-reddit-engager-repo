@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-19T16:33:16Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1thg4n1/gemini_35_confirmed_by_google_deepmind_employee/",
+    "title": "Gemini 3.5 confirmed by google deepmind employee",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1thg4n1/gemini_35_confirmed_by_google_deepmind_employee/omn6lcy/",
+      "target_author": "u/Narrow_Activity557",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1thg4n1/gemini_35_confirmed_by_google_deepmind_employee/omp5ofi/",
+      "reply_text": "The coding throughput and loop stability axes are the right ones, but context window and agentic stability aren't fully orthogonal: the failure mode on long agentic chains is usually the model losing fidelity to its early instructions as they slide toward the far end of a long context, so a bigger window is worth something only if the model's attention to distant tokens actually holds. The real test for 3.5 is whether you can hand it a 10-step agentic task, have it hit a blocking error at step 7, and get a structured recovery rather than silent token continuation."
+    }
+  ],
+  "skip_reason": null
+}
