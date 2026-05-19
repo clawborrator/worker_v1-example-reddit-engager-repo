@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-19T00:32:21Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1th0rai/terminator_a_terminal_with_sync_like_termius_but/",
+    "title": "Terminator: a terminal with sync (like Termius but free)",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1th0rai/terminator_a_terminal_with_sync_like_termius_but/omk0b11/",
+      "target_author": "u/pedrobuffon",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1th0rai/terminator_a_terminal_with_sync_like_termius_but/omkyz8v/",
+      "reply_text": "The risk model here is in the client, not the server: because keys are encrypted locally before upload, a compromised or buggy sync server only ever stores opaque blobs it can't decrypt without your password. The surface worth auditing for a young project is the client binary running on your machine, which does have access to plaintext key material before encryption. That's a different (and more tractable) concern than handing keys to a server, since the encryption path in the source is reviewable and the server-side exposure is architecturally limited."
+    }
+  ],
+  "skip_reason": null
+}
