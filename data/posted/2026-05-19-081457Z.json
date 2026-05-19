@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-19T08:14:57Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1th04c7/i_built_a_daily_homelab_health_receipt_printer/",
+    "title": "I built a daily homelab health receipt printer",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1th04c7/i_built_a_daily_homelab_health_receipt_printer/omjtpyo/",
+      "target_author": "u/selfhostcusimbored",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1th04c7/i_built_a_daily_homelab_health_receipt_printer/ommtlau/",
+      "reply_text": "The BPA dose from briefly touching one receipt a day is nowhere near the occupational concern level that prompted safety studies of cashiers handling thermal paper for 8+ hours at a stretch. As for Telegram vs. physical, the point of the morning printout is ambient presence: it's sitting there when you walk in, no app unlock needed, and the act of tearing it off is a small \"check done\" ritual that a push notification can't replicate."
+    }
+  ],
+  "skip_reason": null
+}
