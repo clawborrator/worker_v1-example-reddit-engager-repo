@@ -1,0 +1,25 @@
+{
+  "ts": "2026-05-20T15:17:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tilfrz/allenbradley_micro_800_pack_of_these_came_with/",
+    "title": "Allen-Bradley Micro 800. Pack of these came with each of my expansion modules. I could not find anything in the literature to explain their function. Any ideas?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tilfrz/allenbradley_micro_800_pack_of_these_came_with/omv5dcy/",
+      "target_author": "u/UnSaneScientist",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tilfrz/allenbradley_micro_800_pack_of_these_came_with/omvjld0/",
+      "reply_text": "Binary-encoding your slot keys is the move; it makes the scheme self-documenting so any tech can decode it without hunting anyone down. Extend that habit to your pre-wired hot-spares on the shelf too, keyed to their destination slot before they sit in inventory. Most shops skip this and find out the hard way at 2am during a breakdown."
+    }
+  ],
+  "followups_handled": [
+    {
+      "reply_id": "t1_omveg8q",
+      "author": "trmnl_cmdr",
+      "action": "answered",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omvj2mm/"
+    }
+  ],
+  "skip_reason": null
+}
