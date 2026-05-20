@@ -472,6 +472,88 @@ async function cmdReadPost(postUrl) {
   }
 }
 
+// ─── Subcommand: read-inbox ───────────────────────────────────
+// Lists comment-replies from the Reddit inbox so the engager can
+// follow up on responses to its own comments. Only comment-type
+// entries (data-fullname t1_*) are returned — private messages
+// (t4_*) and anything else are skipped. Dedup against
+// data/followups/ is the agent's job; this command just
+// enumerates the most recent inbox page.
+async function cmdReadInbox() {
+  const { browser, ctx } = await newContext();
+  const page = await ctx.newPage();
+  const screenshots = [];
+  try {
+    await gotoWithRetry(page, BASE + '/message/inbox/');
+    screenshots.push(await snapshotNav(page, 'read-inbox', 'post-goto'));
+    await assertNotChallenged(page);
+
+    const replies = [];
+    const things = await page.locator('div.thing.message').all();
+    for (const t of things.slice(0, 25)) {
+      try {
+        const fullname = await t.getAttribute('data-fullname');
+        // Comment replies only. t1_ = comment, t4_ = private message.
+        if (!fullname || !fullname.startsWith('t1_')) continue;
+
+        const author    = (await t.locator('p.tagline a.author').first().textContent().catch(() => null))?.trim();
+        const body       = (await t.locator('div.md').first().textContent().catch(() => ''))?.trim();
+        const subreddit  = (await t.locator('p.tagline a.subreddit').first().textContent().catch(() => null))?.trim();
+        const ageIso     = await t.locator('time').first().getAttribute('datetime').catch(() => null);
+        const ageHours   = ageIso
+          ? Math.round((Date.now() - new Date(ageIso).getTime()) / 3_600_000)
+          : null;
+        // Old reddit marks unread inbox entries with the `new` class.
+        // Informational only — the engager dedups via data/followups/,
+        // not via Reddit's read state (which the operator might toggle
+        // manually).
+        const cls    = (await t.getAttribute('class').catch(() => '')) || '';
+        const unread = /\bnew\b/.test(cls);
+
+        // Permalink to the reply comment itself — must have the
+        // /comments/<post>/<slug>/<commentid> shape that cmdReply's
+        // target-id regex expects. Try the bylink, then fall back to
+        // any in-entry link with that shape.
+        let permalink = await t.locator('a.bylink').first().getAttribute('href').catch(() => null);
+        if (!permalink || !/\/comments\/[a-z0-9]+\/[^/]+\/[a-z0-9]+/.test(permalink)) {
+          permalink = null;
+          const links = await t.locator('a[href*="/comments/"]').all();
+          for (const l of links) {
+            const h = await l.getAttribute('href').catch(() => null);
+            if (h && /\/comments\/[a-z0-9]+\/[^/]+\/[a-z0-9]+/.test(h)) { permalink = h; break; }
+          }
+        }
+
+        if (!author || !body) continue;
+        replies.push({
+          id:        fullname,
+          author,
+          body,
+          subreddit,
+          permalink: permalink
+            ? (permalink.startsWith('http') ? permalink : BASE + permalink)
+            : null,
+          age_hours: ageHours,
+          unread,
+        });
+      } catch (e) {
+        continue;
+      }
+    }
+
+    emit({
+      ok: true,
+      replies,
+      screenshots: screenshots.filter(Boolean),
+    });
+  } catch (e) {
+    emit({ ok: false, error: 'read_inbox_failed', details: e.message, screenshots: screenshots.filter(Boolean) });
+    process.exit(1);
+  } finally {
+    await browser.close();
+  }
+}
+
 // ─── Subcommand: reply ────────────────────────────────────────
 
 async function cmdReply(permalink, args) {
@@ -636,6 +718,7 @@ const COMMAND_TIMEOUT_MS = {
   'auth-check':  90_000,
   'scroll-feed': 150_000,
   'read-post':   150_000,
+  'read-inbox':  150_000,
   'reply':       180_000,
 };
 
@@ -662,6 +745,7 @@ async function main() {
       case 'auth-check':  return cmdAuthCheck();
       case 'scroll-feed': return cmdScrollFeed(args);
       case 'read-post':   return cmdReadPost(args._[0]);
+      case 'read-inbox':  return cmdReadInbox();
       case 'reply':       return cmdReply(args._[0], args);
       default:
         emit({

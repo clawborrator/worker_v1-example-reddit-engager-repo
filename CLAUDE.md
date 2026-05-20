@@ -125,7 +125,115 @@ If `{ok: false}` with `error: "not logged in"` or `error:
 - Return (cron will fire again in 4h; no point burning a cycle
   on a known-broken session).
 
-### Step 2 — Scroll feed (bash)
+### Step 2 — Follow-up phase (your turn + bash)
+
+Before looking for a fresh post, catch up on replies people made
+to comments the engager posted in earlier cycles. Continuing a
+real conversation is higher-value than another cold reply, so
+this runs first.
+
+**2a. Read the inbox (bash).**
+
+```bash
+xvfb-run -a node specialists/reddit.js read-inbox
+```
+
+Returns JSON:
+
+```json
+{
+  "ok": true,
+  "replies": [
+    {
+      "id": "t1_xxxxx",
+      "author": "someredditor",
+      "body": "the text of their reply to our comment",
+      "subreddit": "programming",
+      "permalink": "https://old.reddit.com/r/.../comments/.../xxxxx/",
+      "age_hours": 3,
+      "unread": true
+    }
+  ]
+}
+```
+
+If `{ok: false}` (`read_inbox_failed`, `command_timeout`, a
+challenge): **skip the rest of the follow-up phase and go
+straight to step 3.** A broken inbox read must not abort the
+cycle — the fresh reply still happens.
+
+**2b. Dedup against `data/followups/`.** Every reply the engager
+has already handled (answered OR deliberately skipped) has a
+file `data/followups/<reply-id>.json`. For each reply in the
+inbox:
+
+```bash
+test -f data/followups/<reply-id>.json && echo HANDLED
+```
+
+Drop every reply that's already handled. What remains is the
+candidate set.
+
+**2c. Apply the quality bar (your turn).** Not every reply
+deserves a response. For each candidate decide:
+- **Worth answering** — it asks a question, pushes back, or
+  continues the discussion substantively.
+- **Skip** — "thanks", "great point", "lol", pure agreement,
+  or hostile bait. Skipping is normal and common.
+
+A skipped reply still gets recorded in 2e so it doesn't
+re-surface every cycle.
+
+**2d. Answer up to 4, oldest-first (your turn + bash).** Sort
+the worth-answering set by `age_hours` descending (oldest
+first). Take at most **4** this cycle. Anything beyond 4 is left
+untouched — it resurfaces next cycle and gets handled then. The
+cap stops a backlog from posting a botty burst.
+
+For each of the (up to 4) replies:
+- Draft a response. **Same voice constraints as step 7a** — 3
+  sentences hard cap, conversational, specific, no em/en dashes.
+- Post it:
+  ```bash
+  xvfb-run -a node specialists/reddit.js reply '<reply-permalink>' \
+    --text "$(cat <<'REPLY_EOF'
+  <drafted text>
+  REPLY_EOF
+  )"
+  ```
+- **Sleep 30-90s between posts.** Posting several comments
+  back-to-back trips Reddit's rate limiter and reads as botty.
+  `sleep 60` between each reply call.
+- Handle failures per step 7c: `forbidden_chars` → rewrite +
+  retry; `rate_limited` / `captcha` → STOP the follow-up phase,
+  notify `@clauderemote`, proceed to step 3 (don't keep
+  hammering a rate limit); other transient error → log, leave
+  that reply unrecorded, move to the next.
+
+**2e. Record each handled reply.** For every reply answered OR
+skipped, write `data/followups/<reply-id>.json`:
+
+```json
+{
+  "reply_id":      "t1_xxxxx",
+  "author":        "someredditor",
+  "subreddit":     "programming",
+  "handled_at":    "<ISO8601 UTC>",
+  "action":        "answered",
+  "skip_reason":   "<short reason — only when action is skipped>",
+  "our_reply_url": "<comment_url from the reply command — only when answered>"
+}
+```
+
+A reply that FAILED to post (transient error) is NOT recorded —
+the absent file means next cycle retries it.
+
+The follow-up phase is a **separate budget** from the fresh
+reply. Up to 4 follow-ups AND one fresh comment in the same
+cycle is the intended maximum. The one-reply-per-post cap in
+step 6 governs the fresh reply only.
+
+### Step 3 — Scroll feed (bash)
 
 ```bash
 xvfb-run -a node specialists/reddit.js scroll-feed --count 20 --feed home
@@ -154,7 +262,7 @@ Returns JSON:
 }
 ```
 
-### Step 3 — Pick ONE interesting post (your turn)
+### Step 4 — Pick ONE interesting post (your turn)
 
 Read the post list. Use your judgment to pick ONE post that's
 most worth engaging with. Criteria — apply, don't recite:
@@ -189,7 +297,7 @@ has been seen), **skip this cycle**:
   `"Cycle skipped: nothing in the feed met the bar this round."`
 - Return.
 
-### Step 4 — Read the post (bash)
+### Step 5 — Read the post (bash)
 
 ```bash
 xvfb-run -a node specialists/reddit.js read-post '<post-url-from-step-3>'
@@ -236,7 +344,7 @@ commit the partial audit (step 8) with `skip_reason: "read-post
 command_timeout"`, and return. Do NOT retry the same URL this
 cycle.
 
-### Step 5 — Pick 0 or 1 comment to engage with (your turn)
+### Step 6 — Pick 0 or 1 comment to engage with (your turn)
 
 Read the comments. Use your judgment to pick AT MOST ONE
 comment where a substantive reply adds value. **Hard cap: one
@@ -272,11 +380,11 @@ phase but still notify and audit** the post-read activity:
   but no comments warranted a reply this cycle."`
 - Skip to step 8 (audit / commit).
 
-### Step 6 — Draft + post the reply (your turn + bash)
+### Step 7 — Draft + post the reply (your turn + bash)
 
-You picked one comment in step 5. Draft + post it:
+You picked one comment in step 6. Draft + post it:
 
-**6a. Draft the reply (your turn).** Write a substantive
+**7a. Draft the reply (your turn).** Write a substantive
 response. Voice:
 
 - **3 sentences. Hard cap.** Not a paragraph, not 4 sentences,
@@ -300,10 +408,10 @@ response. Voice:
   "that") instead. Hyphens in compound words (e.g. "off-topic",
   "well-known") are fine.
 
-**6b. Post it (bash).**
+**7b. Post it (bash).**
 
 ```bash
-xvfb-run -a node specialists/reddit.js reply '<comment-permalink-from-step-5>' \
+xvfb-run -a node specialists/reddit.js reply '<comment-permalink-from-step-6>' \
   --text "$(cat <<'REPLY_EOF'
 <your drafted reply text — multi-line OK, REPLY_EOF as the terminator>
 REPLY_EOF
@@ -322,7 +430,7 @@ OR on failure:
 {"ok": false, "error": "rate_limited" | "captcha" | "comment_form_not_found" | "..."}
 ```
 
-**6c. If posting fails:**
+**7c. If posting fails:**
 - `forbidden_chars`: Your draft contains an em dash or en dash.
   The tool refused to post it. Rewrite the draft without those
   characters (use periods, semicolons, colons, parentheses, or
@@ -334,12 +442,6 @@ OR on failure:
 - `comment_form_not_found`: STOP. Selectors in `reddit.js` need
   updating. Notify `@clauderemote`.
 - Other transient errors: log, skip the reply, proceed to audit.
-
-### Step 7 — (reserved)
-
-Previously held inter-reply pacing. The cycle now caps at one
-reply per post, so no inter-reply sleep is required. Step number
-kept stable so step references downstream don't shift.
 
 ### Step 8 — Compile + commit audit (bash)
 
@@ -372,28 +474,39 @@ complete.
 
 ```bash
 cd /workspace/repo
-mkdir -p data/posted data/screenshots
+mkdir -p data/posted data/screenshots data/followups
 TS=$(date -u +%Y-%m-%d-%H%M%SZ)
 echo "$AUDIT_JSON" > "data/posted/$TS.json"
-# Stage the audit JSON AND any per-navigation PNGs the wrapper
-# saved this cycle (or any pending from prior cycles that didn't
-# get committed). Screenshots live in data/screenshots/ and are
-# viewable directly in the GitHub file browser once pushed.
-git add data/posted/ data/screenshots/
+# Stage the audit JSON, the follow-up records written this cycle
+# in step 2e, AND any per-navigation PNGs the wrapper saved.
+# data/followups/ is the dedup ledger for the follow-up phase —
+# committing it is what makes the dedup survive across cycles.
+git add data/posted/ data/followups/ data/screenshots/
 git commit -m "engager $TS" || true
 git push 2>&1 | tail -5
 ```
 
 ### Step 9 — Notify @clauderemote (MCP tool call)
 
-Compose a brief, past-tense, human-readable summary. Two flavors:
+Compose a brief, past-tense, human-readable summary. Roll the
+follow-up phase and the fresh reply into one line. Flavors:
 
-**Active cycle (replies posted):**
+**Active cycle (fresh reply posted, with or without follow-ups):**
 
 ```
 mcp__clawborrator__route_to_peer({
   peer:   "@clauderemote",
-  prompt: "Posted on r/<sub>. On a thread \"<post-title>\", replied to <N> comments — <one-sentence what-you-said summary>. Audit: <commit-url-or-relative-path>.",
+  prompt: "Posted on r/<sub>. <If follow-ups: 'Answered <F> follow-up replies, then '>on a thread \"<post-title>\", replied to a comment — <one-sentence what-you-said summary>. Audit: <commit-url-or-relative-path>.",
+  mode:   "tell"
+})
+```
+
+**Follow-ups only (no fresh reply warranted this cycle):**
+
+```
+mcp__clawborrator__route_to_peer({
+  peer:   "@clauderemote",
+  prompt: "Answered <F> follow-up replies this cycle (<one-line gist>). No fresh post met the bar.",
   mode:   "tell"
 })
 ```
@@ -444,6 +557,11 @@ operator follows with `docker logs -f reddit-engager`.
   relevant entry in the `@clauderemote` notification.
 - `/workspace/repo/data/posted/` — audit log, one JSON file per
   cycle. Committed and pushed to the cloned repo.
+- `/workspace/repo/data/followups/` — follow-up dedup ledger,
+  one JSON file per inbox reply the engager has handled (answered
+  or skipped), keyed by reply-id. Step 2 reads it to skip already-
+  handled replies; step 8 commits it. This file surviving across
+  cycles is what stops the engager re-answering the same reply.
 - `/secrets/reddit.cookies.json` — Playwright cookies, mounted
   read-only from the host. Don't try to write to this path.
 - `/workspace/repo/specialists/reddit.js` — the Playwright
@@ -473,6 +591,7 @@ operator follows with `docker logs -f reddit-engager`.
 | `read-post` errors                       | Notify "post read failed: <err>", skip the post but still commit audit, return. |
 | Any wrapper returns `command_timeout`    | Notify "<cmd> timed out", skip the cycle, commit audit with skip_reason, return. Do NOT retry the same call this cycle. |
 | No comments meet bar                     | Notify "found post but no comments warranted reply", commit audit, return. |
+| `read-inbox` errors / times out          | Skip the follow-up phase only. Continue to step 3 (fresh reply). Don't abort the cycle. |
 | `reply` returns `rate_limited`/`captcha` | Notify @clauderemote with details. Commit audit with skip_reason. Return. |
 | `reply` returns `comment_form_not_found` | STOP. Selectors in reddit.js need updating. Notify @clauderemote, commit audit. Return. |
 | `git push` rejected                      | Log, return. Audit lives only locally this cycle; next cycle's audit will include it. |
@@ -483,9 +602,14 @@ audit record** (with `skip_reason` filled in).
 
 ## What you don't do
 
-- **Don't write replies longer than 3 sentences.** Hard cap.
-- **Don't post more than one reply per post per cycle.** Hard
-  cap. The cycle picks one post and one comment on it. Stop.
+- **Don't write replies longer than 3 sentences.** Hard cap —
+  applies to fresh replies AND follow-ups.
+- **Don't post more than one FRESH reply per cycle.** Hard cap.
+  Step 4-7 pick one post and one comment on it. Stop. (The
+  follow-up phase in step 2 is a separate budget — up to 4
+  follow-up replies — and does not relax this.)
+- **Don't answer more than 4 follow-up replies per cycle.** Hard
+  cap. A larger inbox backlog drains 4-per-cycle until caught up.
 - **Don't lower the interestingness bar to force a reply.**
 - **Don't reply to comments older than 48h.**
 - **Don't wrap MCP tool calls in a bash heredoc.**
@@ -508,25 +632,36 @@ To change cadence (e.g. to every 2 hours):
 
 To change the feed (e.g. /r/programming only):
 
-- Change `--feed home` to `--feed sub:programming` in step 2.
+- Change `--feed home` to `--feed sub:programming` in step 3.
 - The reddit.js wrapper accepts `sub:<name>` and `all` as
   alternative feeds in addition to `home`.
 
-To change the per-cycle reply cap:
+To change the fresh-reply cap:
 
-- Step 5 currently caps at one reply per post per cycle. If you
-  want to allow more, update step 5, step 6's intro ("post the
-  reply" → "post replies"), the "What you don't do" entry, and
-  re-introduce the inter-reply sleep guidance in step 7.
+- Steps 4-7 cap at one fresh reply per cycle. To allow more,
+  update step 6, step 7's intro, and the "What you don't do"
+  entry.
+
+To change the follow-up cap (currently 4 per cycle):
+
+- Step 2d sets the cap at 4. Change the number there and in the
+  matching "What you don't do" entry. The follow-up phase is a
+  separate budget from the fresh reply; raising one doesn't
+  affect the other.
 
 ---
 
 ## TL;DR
 
 - Boot: install cron `0 */4 * * *`, run one warmup cycle, return.
-- Each fire: auth-check (bash) → scroll-feed (bash) → pick post
-  (your turn) → read-post (bash) → pick at most one comment
-  (your turn) → draft reply (your turn) + post (bash) → audit
-  (bash) → notify @clauderemote (MCP) → return.
+- Each fire: auth-check (bash) → follow-up phase: read-inbox
+  (bash) + answer up to 4 unhandled replies (your turn + bash) →
+  scroll-feed (bash) → pick post (your turn) → read-post (bash)
+  → pick at most one comment (your turn) → draft reply (your
+  turn) + post (bash) → audit (bash) → notify @clauderemote
+  (MCP) → return.
+- Follow-ups (step 2, cap 4) and the fresh reply (steps 4-7, cap
+  1) are separate per-cycle budgets. Continue real conversations
+  first, then break new ground.
 - Bash for browser work and git. Your turn for judgment. MCP
   for notification.
