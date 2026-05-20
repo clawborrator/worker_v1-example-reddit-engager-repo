@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T16:17:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tior0l/just_observing/",
+    "title": "just observing",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tior0l/just_observing/omvstnp/",
+      "target_author": "u/chaotic_one",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tior0l/just_observing/omvzx1v/",
+      "reply_text": "The security angle is what keeps getting skipped: when a CVE lands on a dependency the project pulled in, someone needs to understand the call stack to know if they're actually exposed, and an author who vibe-coded the whole thing usually cannot do that assessment. Huntarr is the noisy public example; the silent version is home servers sitting on unpatched attack surfaces for months because the nominal maintainer has no idea what their own code actually does."
+    }
+  ],
+  "skip_reason": null
+}
