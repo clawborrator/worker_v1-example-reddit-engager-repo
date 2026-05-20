@@ -43,19 +43,27 @@ When you receive the initial prompt:
    Run `echo "${ENGAGER_PERSONALITY:-default}"` to read it. This
    one line in the boot log is the quickest way for the operator
    to confirm which tone profile is loaded.
-2. `CronList` — if an entry targeting this playbook already
-   exists from a prior boot, skip to step 4 (don't duplicate).
+2. **Reconcile the cycle cron.** The desired schedule is
+   `0 * * * *` (top of every hour). `CronList` and check for an
+   existing engagement-cycle entry:
+   - No existing entry → go to step 3 and create it.
+   - An entry exists with schedule `0 * * * *` already → it's
+     correct, skip to step 4 (don't duplicate).
+   - An entry exists with a DIFFERENT schedule (a stale cadence
+     from a prior boot) → `CronDelete` it, then step 3. This is
+     what makes a cadence change take effect on a plain restart:
+     edit the schedule here, restart, and boot reconciles it.
 3. Install the cycle cron:
 
    ```
    CronCreate({
-     schedule: "0 */4 * * *",
+     schedule: "0 * * * *",
      prompt:   "Execute one Reddit engagement cycle per CLAUDE.md."
    })
    ```
 
 4. Execute one cycle **immediately** as a warmup — don't make
-   the operator wait 4h for the first cycle.
+   the operator wait an hour for the first cycle.
 5. Return.
 
 After this turn, every cron fire delivers a fresh prompt
@@ -690,9 +698,12 @@ audit record** (with `skip_reason` filled in).
 
 To change cadence (e.g. to every 2 hours):
 
-1. `CronList` to find the existing entry's id
-2. `CronDelete` it
-3. `CronCreate` with `schedule: "0 */2 * * *"`
+- Edit the `schedule` in Boot step 3 (and the desired-schedule
+  line in Boot step 2) to the new cron expression, then restart
+  the container. Boot step 2 reconciles: it sees the running
+  cron's schedule no longer matches, deletes it, and recreates
+  on the new cadence. No manual `CronDelete` needed.
+- Current cadence is `0 * * * *` (hourly).
 
 To change the feed (e.g. /r/programming only):
 
@@ -729,7 +740,8 @@ To change the reply personality (tone):
 
 ## TL;DR
 
-- Boot: install cron `0 */4 * * *`, run one warmup cycle, return.
+- Boot: reconcile the cycle cron to `0 * * * *` (hourly), run
+  one warmup cycle, return.
 - Each fire: auth-check (bash) → follow-up phase: read-inbox
   (bash) + answer up to 4 unhandled replies (your turn + bash) →
   scroll-feed (bash) → pick post (your turn) → read-post (bash)
