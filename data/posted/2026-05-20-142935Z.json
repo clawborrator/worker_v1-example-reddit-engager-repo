@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T14:30:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/",
+    "title": "Leaving GitHub for private repos",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/omvbdnh/",
+      "target_author": "Murrian",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/omvdhc8/",
+      "reply_text": "RAID 10 handles a dead drive, that is it. Gitea/Forgejo also runs a database, so you need scheduled dumps plus `git clone --mirror` going offsite, or ransomware and fire both eat your whole stack. Three copies, two media, one offsite: 3-2-1 is the actual floor."
+    }
+  ],
+  "skip_reason": null
+}
