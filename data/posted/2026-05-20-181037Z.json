@@ -1,0 +1,20 @@
+{
+  "ts": "2026-05-20T18:11:00Z",
+  "follow_ups": [
+    {"reply_id": "t1_omwe3rl", "author": "u/ZealousidealTill2355", "action": "answered", "reply_url": "https://old.reddit.com/r/PLC/comments/1tipqz7/anyone_weak_in_it_ot/omwqwm6/"}
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tis6qj/i_feel_depressed/",
+    "title": "I feel depressed",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tis6qj/i_feel_depressed/omwi9op/",
+      "target_author": "u/ConceptGreen65",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tis6qj/i_feel_depressed/omwra3h/",
+      "reply_text": "The amplifier analogy is closer to the truth: AI lets bad coders produce confidently wrong code at the velocity that used to require decent coders, so the quality problem scales with the volume. Good coders who treat it as a thinking partner do get sharper, but that requires deliberately asking \"why\" before accepting the output, and most people skip that step by default. The gap between someone who reviews what AI writes and someone who just pastes whatever it generates is larger than the senior-junior gap was five years ago."
+    }
+  ],
+  "skip_reason": null
+}
