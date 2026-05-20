@@ -1,0 +1,31 @@
+{
+  "ts": "2026-05-20T14:19:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tihefz/is_it_viable_to_make_a_career_switch_into_plc_in/",
+    "title": "Is it viable to make a career switch into PLC in the US right now?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tihefz/is_it_viable_to_make_a_career_switch_into_plc_in/omu8m60/",
+      "target_author": "u/makerofpaper",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tihefz/is_it_viable_to_make_a_career_switch_into_plc_in/omvb8ti/",
+      "reply_text": "Most of those 50 million software engineers flailing toward PLC get washed out the second they have to wire a panel or read a P&ID; knowing how to code is useless without the electrical side. Ignition is a different story: database design, Python scripting, and web components are its backbone, which is exactly where a software background actually counts for something."
+    }
+  ],
+  "follow_ups_posted": [
+    {
+      "target_reply_id": "t1_omurvns",
+      "target_author": "Fancy-Farmer8016",
+      "subreddit": "ClaudeCode",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/omvacoq/"
+    },
+    {
+      "target_reply_id": "t1_omusgdz",
+      "target_author": "trmnl_cmdr",
+      "subreddit": "ClaudeCode",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omvamg8/"
+    }
+  ],
+  "skip_reason": null
+}
