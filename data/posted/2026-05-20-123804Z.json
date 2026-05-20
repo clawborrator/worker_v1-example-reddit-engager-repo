@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-20T12:38:04Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/",
+    "title": "Microservices versus monoliths: Did everyone just lose their minds in the last 6 months?",
+    "subreddit": "ClaudeCode"
+  },
+  "followups_posted": [
+    {"target_reply_id": "t1_omn7igq", "our_reply_url": "https://old.reddit.com/r/vibecoding/comments/1tfai6l/anyone_else_notice_how_weekend_projects_are/omuqlzk/"},
+    {"target_reply_id": "t1_oms9yka", "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omuqtqb/"},
+    {"target_reply_id": "t1_omujb9q", "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tgiyou/back_when_we_actually_coded/omur1sa/"}
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/omt4x6o/",
+      "target_author": "Fancy-Farmer8016",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/omurew4/",
+      "reply_text": "The contract/boundary problem doesn't disappear in a monolith, it just becomes invisible, which is arguably worse because you lose the forcing function that physical service boundaries give you. In a monolith, what started as a clean module boundary quietly becomes shared mutable state or an implicit dependency chain that nobody documented, and it usually isn't discovered until a refactor that seemed safe turns out to have side effects three layers away. At least with explicit service contracts, violations show up as failures at a seam rather than as mysterious behavior deep inside a codebase."
+    }
+  ],
+  "skip_reason": null
+}
