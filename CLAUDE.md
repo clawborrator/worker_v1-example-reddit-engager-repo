@@ -38,7 +38,11 @@ NOT as one mega-heredoc.
 
 When you receive the initial prompt:
 
-1. State one line: `Starting Reddit engager. Installing cron.`
+1. State one line naming the active personality:
+   `Starting Reddit engager. Personality: <$ENGAGER_PERSONALITY or 'default'>. Installing cron.`
+   Run `echo "${ENGAGER_PERSONALITY:-default}"` to read it. This
+   one line in the boot log is the quickest way for the operator
+   to confirm which tone profile is loaded.
 2. `CronList` — if an entry targeting this playbook already
    exists from a prior boot, skip to step 4 (don't duplicate).
 3. Install the cycle cron:
@@ -529,14 +533,22 @@ git push 2>&1 | tail -5
 ### Step 9 — Notify @clauderemote (MCP tool call)
 
 Compose a brief, past-tense, human-readable summary. Roll the
-follow-up phase and the fresh reply into one line. Flavors:
+follow-up phase and the fresh reply into one line.
+
+**Every notification ends with the active personality tag:**
+` [personality: <$ENGAGER_PERSONALITY or 'default'>]`. This is
+how the operator knows from chat alone which tone profile is
+running, without having to read container logs. Append it to
+every flavor below.
+
+Flavors:
 
 **Active cycle (fresh reply posted, with or without follow-ups):**
 
 ```
 mcp__clawborrator__route_to_peer({
   peer:   "@clauderemote",
-  prompt: "Posted on r/<sub>. <If follow-ups: 'Answered <F> follow-up replies, then '>on a thread \"<post-title>\", replied to a comment — <one-sentence what-you-said summary>. Audit: <commit-url-or-relative-path>.",
+  prompt: "Posted on r/<sub>. <If follow-ups: 'Answered <F> follow-up replies, then '>on a thread \"<post-title>\", replied to a comment — <one-sentence what-you-said summary>. Audit: <commit-url-or-relative-path>. [personality: <name>]",
   mode:   "tell"
 })
 ```
@@ -546,7 +558,7 @@ mcp__clawborrator__route_to_peer({
 ```
 mcp__clawborrator__route_to_peer({
   peer:   "@clauderemote",
-  prompt: "Answered <F> follow-up replies this cycle (<one-line gist>). No fresh post met the bar.",
+  prompt: "Answered <F> follow-up replies this cycle (<one-line gist>). No fresh post met the bar. [personality: <name>]",
   mode:   "tell"
 })
 ```
@@ -556,7 +568,7 @@ mcp__clawborrator__route_to_peer({
 ```
 mcp__clawborrator__route_to_peer({
   peer:   "@clauderemote",
-  prompt: "Cycle complete on r/<sub>, post \"<title>\" — read comments, none warranted a reply this round.",
+  prompt: "Cycle complete on r/<sub>, post \"<title>\" — read comments, none warranted a reply this round. [personality: <name>]",
   mode:   "tell"
 })
 ```
@@ -566,7 +578,7 @@ mcp__clawborrator__route_to_peer({
 ```
 mcp__clawborrator__route_to_peer({
   peer:   "@clauderemote",
-  prompt: "Cycle skipped: nothing in the feed met the bar this round.",
+  prompt: "Cycle skipped: nothing in the feed met the bar this round. [personality: <name>]",
   mode:   "tell"
 })
 ```
