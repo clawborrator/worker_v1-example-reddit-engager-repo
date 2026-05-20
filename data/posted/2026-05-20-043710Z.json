@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T04:37:10Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tht8b6/paid_118_for_claude_max_ignored_by_support_for/",
+    "title": "Paid $118 for Claude Max, ignored by support for days. So I served a formal legal notice to Anthropic's new India office.",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tht8b6/paid_118_for_claude_max_ignored_by_support_for/ompume5/",
+      "target_author": "u/patriot2024",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tht8b6/paid_118_for_claude_max_ignored_by_support_for/omt1m8l/",
+      "reply_text": "The support bot dynamic is worse than just cutting costs: when \"closed without escalation\" is the success metric, a bot that wears people down until they give up produces identical KPIs to one that actually fixes the problem, so there's no internal signal that the customer experience is broken. You only notice support has failed when users start leaving or doing exactly what OP did."
+    }
+  ],
+  "skip_reason": null
+}
