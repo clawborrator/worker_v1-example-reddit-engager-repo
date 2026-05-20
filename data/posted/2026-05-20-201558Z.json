@@ -1,0 +1,21 @@
+{
+  "cycle": 6,
+  "timestamp": "2026-05-20-201558Z",
+  "followups": [
+    {
+      "reply_id": "t1_omx6qq3",
+      "author": "Fancy-Farmer8016",
+      "thread": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/",
+      "our_reply": "https://old.reddit.com/r/ClaudeCode/comments/1tib4ei/microservices_versus_monoliths_did_everyone_just/omxhagn/"
+    }
+  ],
+  "fresh_reply": {
+    "post_url": "https://old.reddit.com/r/ClaudeCode/comments/1tiv005/from_claude_code_to_unicorn_in_7_days/",
+    "post_title": "from claude code to unicorn in 7 days",
+    "subreddit": "ClaudeCode",
+    "target_comment": "t1_omx6cqp",
+    "target_author": "MankyMan0099",
+    "our_reply": "https://old.reddit.com/r/ClaudeCode/comments/1tiv005/from_claude_code_to_unicorn_in_7_days/omxigzu/",
+    "reply_text": "The calculator is not the failure. Spending seven days building before knowing what you are building is the failure. Claude Code delivers exactly what you spec, and your spec was nothing."
+  }
+}
