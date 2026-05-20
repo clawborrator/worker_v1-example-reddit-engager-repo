@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-20T17:11:00Z",
+  "follow_ups": [
+    {"reply_id": "t1_omw7wtd", "author": "u/jakebeans", "action": "answered", "reply_url": "https://old.reddit.com/r/PLC/comments/1tihefz/is_it_viable_to_make_a_career_switch_into_plc_in/omwdd1s/"},
+    {"reply_id": "t1_omwc7c8", "author": "u/TheBear8878", "action": "skipped", "skip_reason": "hostile bait"},
+    {"reply_id": "t1_omwc0uv", "author": "u/Flat-Indication5558", "action": "skipped", "skip_reason": "pure agreement"},
+    {"reply_id": "t1_omw2xvo", "author": "u/dlm2137", "action": "skipped", "skip_reason": "thanks only"}
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tipqz7/anyone_weak_in_it_ot/",
+    "title": "Anyone weak in IT / OT?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tipqz7/anyone_weak_in_it_ot/omw1vue/",
+      "target_author": "u/ZealousidealTill2355",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tipqz7/anyone_weak_in_it_ot/omwdq8l/",
+      "reply_text": "Working around IT controls is exactly how you get a historian server on the same flat network as your PLCs. Colonial Pipeline became a textbook case because attackers pivoted from a single IT credential through a network with no meaningful zone separation between IT and OT. Understanding the Purdue model well enough to defend it, not just tolerate it, is what separates a controls engineer who survives an incident review from one who becomes the root cause."
+    }
+  ],
+  "skip_reason": null
+}
