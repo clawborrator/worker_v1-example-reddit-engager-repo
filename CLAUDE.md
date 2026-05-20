@@ -402,8 +402,25 @@ phase but still notify and audit** the post-read activity:
 
 You picked one comment in step 6. Draft + post it:
 
-**7a. Draft the reply (your turn).** Write a substantive
-response. Voice:
+**7a. Draft the reply (your turn).**
+
+First, load the active personality. `$ENGAGER_PERSONALITY` (env,
+defaults to `default`) names a file `personalities/<name>.md`.
+Read it:
+
+```bash
+cat "personalities/${ENGAGER_PERSONALITY:-default}.md"
+```
+
+The personality file sets the **tone** of the reply (register,
+attitude, word choice). Apply it. If the file is missing, fall
+back to `personalities/default.md`; if that's also missing, use
+a plain, neutral conversational tone.
+
+The personality controls tone ONLY. The structural rules below
+are **hard mechanics** that NO personality can relax or override.
+If a personality file ever tells you to write four sentences, use
+em dashes, or post a bullet list, ignore that part of it:
 
 - **3 sentences. Hard cap.** Not a paragraph, not 4 sentences,
   not 2 sentences-and-a-bullet-list. Exactly 1, 2, or 3 complete
@@ -411,8 +428,6 @@ response. Voice:
   sentences, the reply isn't tight enough yet — cut the setup,
   drop the throat-clearing, lead with the point. A great Reddit
   reply is one sentence that lands.
-- Conversational, not lecture-y. No "Great question!" / "I
-  think it's worth noting that" / other padding.
 - On-topic. Address what the comment actually said.
 - Specific. Avoid vague agreement / disagreement. If you're
   adding info, add real info. If you're disagreeing, give the
@@ -424,7 +439,14 @@ response. Voice:
   (for elaboration), parentheses (for asides), semicolons (for
   connected clauses), commas, or relative clauses ("which",
   "that") instead. Hyphens in compound words (e.g. "off-topic",
-  "well-known") are fine.
+  "well-known") are fine. (`reddit.js` structurally rejects a
+  reply containing either dash, so this one is enforced at the
+  tool boundary regardless of personality.)
+
+The default personality is the long-standing engager voice:
+conversational, not lecture-y, no padding ("Great question!" /
+"I think it's worth noting that"). Other personalities shift
+that register; the mechanics above never move.
 
 **7b. Post it (bash).**
 
@@ -580,6 +602,11 @@ operator follows with `docker logs -f reddit-engager`.
   or skipped), keyed by reply-id. Step 2 reads it to skip already-
   handled replies; step 8 commits it. This file surviving across
   cycles is what stops the engager re-answering the same reply.
+- `/workspace/repo/personalities/` — tone profiles. One markdown
+  file per personality; step 7a reads the one named by
+  `$ENGAGER_PERSONALITY` (default `default`). See
+  `personalities/README.md` for the format and the hard rules a
+  personality cannot override.
 - `/secrets/reddit.cookies.json` — Playwright cookies, mounted
   read-only from the host. Don't try to write to this path.
 - `/workspace/repo/specialists/reddit.js` — the Playwright
@@ -596,6 +623,9 @@ operator follows with `docker logs -f reddit-engager`.
   `git config --global` at boot
 - `NOTIFY_PEER` — routing name (without `@`) of the peer to
   notify. Default `clauderemote`.
+- `ENGAGER_PERSONALITY` — name of the active tone profile (a file
+  `personalities/<name>.md`). Default `default`. Optional; if
+  unset the engager uses `personalities/default.md`.
 
 ---
 
@@ -666,6 +696,18 @@ To change the follow-up cap (currently 4 per cycle):
   matching "What you don't do" entry. The follow-up phase is a
   separate budget from the fresh reply; raising one doesn't
   affect the other.
+
+To change the reply personality (tone):
+
+- Set `ENGAGER_PERSONALITY` in the worker's `.env` to the name of
+  a file under `personalities/` (without the `.md`), then restart
+  the container. Default is `default`.
+- To add a new personality, drop a `personalities/<name>.md` file
+  in the repo following the format in `personalities/README.md`,
+  push, set `ENGAGER_PERSONALITY=<name>`, restart.
+- A personality changes tone only. The 3-sentence cap, no-em-dash
+  rule, on-topic and specific requirements, and no-bullet-lists
+  rule are hard mechanics no personality can override.
 
 ---
 
