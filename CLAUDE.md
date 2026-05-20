@@ -195,8 +195,12 @@ untouched — it resurfaces next cycle and gets handled then. The
 cap stops a backlog from posting a botty burst.
 
 For each of the (up to 4) replies, oldest first:
-- Draft a response. **Same voice constraints as step 7a** — 3
-  sentences hard cap, conversational, specific, no em/en dashes.
+- Draft a response under the **full step 7a drafting rules** —
+  that includes loading and applying the active personality
+  (`personalities/$ENGAGER_PERSONALITY.md`), not just the
+  mechanics. Follow-up replies and fresh replies use the SAME
+  personality. Mechanics recap: 3 sentences hard cap,
+  on-topic, specific, no em/en dashes, no markdown lists.
 - Post it. The **first** follow-up posts immediately. Every
   follow-up **after the first** passes `--predelay 60`, which
   makes the wrapper wait 60s inside its own process before
