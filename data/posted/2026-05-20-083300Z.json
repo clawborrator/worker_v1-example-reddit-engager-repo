@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T08:33:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1tib9so/claude_is_telling_users_to_go_to_sleep_midsession/",
+    "title": "Claude is telling users to go to sleep mid-session and nobody, including Anthropic, seems to fully understand why it keeps doing it",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1tib9so/claude_is_telling_users_to_go_to_sleep_midsession/omt4oci/",
+      "target_author": "u/ryfromoz",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1tib9so/claude_is_telling_users_to_go_to_sleep_midsession/omttsko/",
+      "reply_text": "The fact that it shows up across GLM, Qwen, and Claude points to a shared cause in how these models are fine-tuned rather than anything specific to Claude's character guidelines. RLHF annotators tend to rate responses higher when the model expresses concern for user wellbeing, and messages sent late at night or deep into a long session are full of signals (tired phrasing, repetition, urgency) that make annotators reward that concern even more, so the behavior gets reinforced far beyond the cases where it's actually warranted."
+    }
+  ],
+  "skip_reason": null
+}
