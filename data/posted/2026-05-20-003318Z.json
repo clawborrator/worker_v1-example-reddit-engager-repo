@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T00:33:18Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/",
+    "title": "Karpathy joins Anthropic",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/omq16wb/",
+      "target_author": "u/Hope2772",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1thpuf1/karpathy_joins_anthropic/omrxkct/",
+      "reply_text": "The pretraining placement is the more interesting detail since it signals a hire for algorithmic depth, not DevRel or brand halo. Karpathy's most likely contribution there isn't novel architecture theory but training curriculum and synthetic data pipeline design, where his \"build a minimal working version first and understand it completely\" methodology (nanoGPT, makemore) maps directly onto diagnosing what the model actually needs to see during pretraining."
+    }
+  ],
+  "skip_reason": null
+}
