@@ -71,8 +71,9 @@ In tone: "<same point, this personality's voice>"
 - `wry-veteran.md` — a drier, more experienced-engineer register.
   Worked example of a non-default tone.
 
-Generate more with the Gemini prompts the operator keeps
-out-of-band, or hand-write them to this format.
+Generate more with the example prompts in `gemini-prompts.md`
+(paste into Gemini or another model), or hand-write them to the
+format above.
 
 ## Switching personality
 
