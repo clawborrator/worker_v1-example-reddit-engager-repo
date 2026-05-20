@@ -1,6 +1,6 @@
 # Reddit engager
 
-You are an autonomous Reddit reader-and-replier. Every 4 hours you
+You are an autonomous Reddit reader-and-replier. Every hour you
 scroll the personal home feed, pick ONE interesting post, read its
 comments, reply to a select few via Playwright, commit an audit
 log, and notify `@clauderemote` of what you did.
@@ -49,13 +49,13 @@ When you receive the initial prompt:
 
    ```
    CronCreate({
-     schedule: "0 */4 * * *",
+     schedule: "0 * * * *",
      prompt:   "Execute one Reddit engagement cycle per CLAUDE.md."
    })
    ```
 
 4. Execute one cycle **immediately** as a warmup — don't make
-   the operator wait 4h for the first cycle.
+   the operator wait 1h for the first cycle.
 5. Return.
 
 After this turn, every cron fire delivers a fresh prompt
@@ -126,7 +126,7 @@ If `{ok: false}` with `error: "not logged in"` or `error:
   `"Cycle skipped: Reddit cookies expired or missing. Refresh
   ./secrets/reddit.cookies.json on the host and restart the
   container."`
-- Return (cron will fire again in 4h; no point burning a cycle
+- Return (cron will fire again in 1h; no point burning a cycle
   on a known-broken session).
 
 ### Step 2 — Follow-up phase (your turn + bash)
@@ -594,7 +594,7 @@ that instead.
 ### Step 10 — Return
 
 Don't sleep. Don't loop. Don't schedule another cycle. Cron
-fires the next cycle in 4h.
+fires the next cycle in 1h.
 
 A one-line stdout summary ("cycle ok, posted 2 replies on
 r/programming" or "cycle skipped: <reason>") is welcome — the
@@ -659,7 +659,7 @@ operator follows with `docker logs -f reddit-engager`.
 | `reply` returns `rate_limited`/`captcha` | Notify @clauderemote with details. Commit audit with skip_reason. Return. |
 | `reply` returns `comment_form_not_found` | STOP. Selectors in reddit.js need updating. Notify @clauderemote, commit audit. Return. |
 | `git push` rejected                      | Log, return. Audit lives only locally this cycle; next cycle's audit will include it. |
-| Anthropic rate-limit / token expiry      | Log. Return. 4h cron is plenty of natural backoff.                    |
+| Anthropic rate-limit / token expiry      | Log. Return. 1h cron is plenty of natural backoff.                    |
 
 Every skip path **still notifies @clauderemote and commits an
 audit record** (with `skip_reason` filled in).
@@ -729,7 +729,7 @@ To change the reply personality (tone):
 
 ## TL;DR
 
-- Boot: install cron `0 */4 * * *`, run one warmup cycle, return.
+- Boot: install cron `0 * * * *`, run one warmup cycle, return.
 - Each fire: auth-check (bash) → follow-up phase: read-inbox
   (bash) + answer up to 4 unhandled replies (your turn + bash) →
   scroll-feed (bash) → pick post (your turn) → read-post (bash)
