@@ -1,0 +1,21 @@
+{
+  "ts": "2026-05-20T19:11:00Z",
+  "follow_ups": [
+    {"reply_id": "t1_omwz3cn", "author": "u/trmnl_cmdr", "action": "skipped", "skip_reason": "thin vague pushback, no substantive question"},
+    {"reply_id": "t1_omwvhyi", "author": "u/ZealousidealTill2355", "action": "skipped", "skip_reason": "hostile bait, dismissive tone with meme"}
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tit8ry/honestly_are_people_generally_miserable_in_this/",
+    "title": "Honestly, are people generally miserable in this field?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tit8ry/honestly_are_people_generally_miserable_in_this/omwpyva/",
+      "target_author": "u/apronman2006",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tit8ry/honestly_are_people_generally_miserable_in_this/omx4e2u/",
+      "reply_text": "Food and bev runs on margins where a 30-minute line stoppage costs more than an automation engineer's monthly salary, so there's no political room for \"let the engineer learn\" culture. Pharma is the opposite: regulation forces documented change control, which paradoxically makes it one of the less dysfunctional environments because operators can't just point at the engineer when a process deviates. If the field itself is what you want, the vertical is probably half the battle."
+    }
+  ],
+  "skip_reason": null
+}
