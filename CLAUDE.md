@@ -190,10 +190,16 @@ first). Take at most **4** this cycle. Anything beyond 4 is left
 untouched — it resurfaces next cycle and gets handled then. The
 cap stops a backlog from posting a botty burst.
 
-For each of the (up to 4) replies:
+For each of the (up to 4) replies, oldest first:
 - Draft a response. **Same voice constraints as step 7a** — 3
   sentences hard cap, conversational, specific, no em/en dashes.
-- Post it:
+- Post it. The **first** follow-up posts immediately. Every
+  follow-up **after the first** passes `--predelay 60`, which
+  makes the wrapper wait 60s inside its own process before
+  posting — this paces the replies so Reddit's rate limiter
+  doesn't trip and the account doesn't look botty.
+
+  First follow-up:
   ```bash
   xvfb-run -a node specialists/reddit.js reply '<reply-permalink>' \
     --text "$(cat <<'REPLY_EOF'
@@ -201,9 +207,21 @@ For each of the (up to 4) replies:
   REPLY_EOF
   )"
   ```
-- **Sleep 30-90s between posts.** Posting several comments
-  back-to-back trips Reddit's rate limiter and reads as botty.
-  `sleep 60` between each reply call.
+
+  Second, third, fourth follow-up — add `--predelay 60`:
+  ```bash
+  xvfb-run -a node specialists/reddit.js reply '<reply-permalink>' --predelay 60 \
+    --text "$(cat <<'REPLY_EOF'
+  <drafted text>
+  REPLY_EOF
+  )"
+  ```
+
+  Do NOT pace with a shell `sleep` — the worker runtime blocks
+  standalone `sleep` and `sleep && cmd`. The `--predelay` flag is
+  the pacing mechanism; the wrapper's timeout budget is extended
+  by the delay automatically so the pause is never misread as a
+  hang.
 - Handle failures per step 7c: `forbidden_chars` → rewrite +
   retry; `rate_limited` / `captcha` → STOP the follow-up phase,
   notify `@clauderemote`, proceed to step 3 (don't keep

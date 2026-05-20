@@ -576,6 +576,19 @@ async function cmdReply(permalink, args) {
         'Use periods, semicolons, colons, parentheses, or commas instead.');
   }
 
+  // Optional pre-post pacing. The follow-up phase posts several
+  // replies per cycle and needs to space them out so Reddit's
+  // rate limiter doesn't trip and the account doesn't look botty.
+  // The wait happens HERE, inside the node process, rather than as
+  // a shell `sleep` the agent issues — the worker runtime blocks
+  // standalone `sleep`, so shell-level pacing isn't an option. The
+  // command's withTimeout budget is extended by this delay in
+  // main() so the pause doesn't eat into the actual post window.
+  const predelaySec = Number(args.predelay) || 0;
+  if (predelaySec > 0) {
+    await new Promise((resolve) => setTimeout(resolve, predelaySec * 1000));
+  }
+
   const { browser, ctx } = await newContext();
   const page = await ctx.newPage();
   const screenshots = [];
@@ -738,7 +751,14 @@ function withTimeout(promise, ms, cmd) {
 async function main() {
   const [, , cmd, ...rest] = process.argv;
   const args = parseArgs(rest);
-  const timeoutMs = COMMAND_TIMEOUT_MS[cmd] ?? 150_000;
+  let timeoutMs = COMMAND_TIMEOUT_MS[cmd] ?? 150_000;
+  // `reply --predelay N` waits N seconds inside the process before
+  // posting. Extend the watchdog budget by exactly that delay so a
+  // legitimate pause isn't misread as a hung command.
+  if (cmd === 'reply') {
+    const pd = Number(args.predelay) || 0;
+    if (pd > 0) timeoutMs += pd * 1000;
+  }
 
   const dispatch = (() => {
     switch (cmd) {
