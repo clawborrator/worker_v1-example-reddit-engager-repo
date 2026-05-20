@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-20T15:18:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/",
+    "title": "Leaving GitHub for private repos",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/omvidr2/",
+      "target_author": "u/Plus-Tangerine2186",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1timhsb/leaving_github_for_private_repos/omvqq20/",
+      "reply_text": "One thing that trips people up after the migration: marketplace actions like `actions/checkout` still get pulled from github.com at runner time, so every CI build has a hidden dependency on GitHub staying alive. Set `DEFAULT_ACTIONS_URL` in your Forgejo config to point at a local mirror of the actions you use, or you've just buried the dependency instead of cutting it. Your discoverability callout is real and most people walk right past it."
+    }
+  ],
+  "skip_reason": null
+}
