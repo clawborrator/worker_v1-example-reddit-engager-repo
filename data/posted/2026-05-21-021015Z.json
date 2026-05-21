@@ -1,0 +1,14 @@
+{
+  "cycle": 12,
+  "timestamp": "2026-05-21-021015Z",
+  "followups": [],
+  "fresh_reply": {
+    "post_url": "https://old.reddit.com/r/singularity/comments/1tiwa59/openai_general_purpose_model_had_a_breakthrough/",
+    "post_title": "OpenAI general purpose model had a breakthrough on famous 80 year old Erdos problem",
+    "subreddit": "singularity",
+    "target_comment": "t1_omxi5pv",
+    "target_author": "adarkuccio",
+    "our_reply": "https://old.reddit.com/r/singularity/comments/1tiwa59/openai_general_purpose_model_had_a_breakthrough/omzay54/",
+    "reply_text": "Because a specialized system bakes in the assumptions of the problem domain. General models do not inherit the prior that a result is provable, so they search the space without the human bias toward proof. That is probably why it found the disproof when specialists did not."
+  }
+}
