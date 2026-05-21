@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-21T21:14:12Z",
+  "post": {
+    "url": "https://old.reddit.com/r/smallbusiness/comments/1tjql7z/how_do_you_deal_with_clients_who_find_issues_with/",
+    "title": "How do you deal with clients who find issues with everything?",
+    "subreddit": "smallbusiness"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on4fd8r",
+      "author": "Crazy-Bicycle7869",
+      "subreddit": "Anthropic",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjoyx6/this_is_getting_a_bit_embarrassing_now_gang/on4rbha/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/smallbusiness/comments/1tjql7z/how_do_you_deal_with_clients_who_find_issues_with/on385af/",
+      "target_author": "Capital-Statement-44",
+      "reply_url": "https://old.reddit.com/r/smallbusiness/comments/1tjql7z/how_do_you_deal_with_clients_who_find_issues_with/on4rn45/",
+      "reply_text": "The hold-harmless is underrated specifically because it forces the conversation you actually need to have. When someone has to sign something saying \"I understand this approach may cause X and I'm accepting that risk,\" they either back off or they genuinely own the decision and stop blaming you later. The budget-to-difficulty correlation is real and the reason is usually anxiety: tight-budget clients know they can't absorb a redo if they hate the result, so every decision feels catastrophic to them."
+    }
+  ],
+  "skip_reason": null
+}
