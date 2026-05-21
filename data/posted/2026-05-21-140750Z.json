@@ -1,0 +1,25 @@
+{
+  "ts": "2026-05-21T14:07:50Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tjjkkg/openai_cofounder_karpathy_joins_anthropic_to/",
+    "title": "OpenAI cofounder Karpathy joins Anthropic to teach Claude to improve itself without humans",
+    "subreddit": "Anthropic"
+  },
+  "follow_ups_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on2578m/",
+      "target_author": "fredjutsu",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on262qh/",
+      "reply_text": "Fair, he kept the methodology deliberately secret, claiming that publishing it would just let people train countermeasures for the next round. The gatekeepers who lost did confirm they genuinely tried to hold the line and failed anyway, which is the detail the LessWrong crowd found disturbing. Whether you buy it or not, the people building Anthropic did, which is why that specific vocabulary keeps showing up in their internal communications."
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tjjkkg/openai_cofounder_karpathy_joins_anthropic_to/on1xjyp/",
+      "target_author": "StickyThickStick",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjjkkg/openai_cofounder_karpathy_joins_anthropic_to/on26egw/",
+      "reply_text": "The generation vs verification asymmetry is the whole key. Generating a correct proof is exponentially harder than checking one, so you can flood the problem with candidate solutions and use a fast verifier to filter for the ones that actually hold up. The interesting open question is whether this scales to domains where verification is itself hard, because you can't verify a novel strategic insight the same way you can verify a math proof."
+    }
+  ],
+  "skip_reason": null
+}
