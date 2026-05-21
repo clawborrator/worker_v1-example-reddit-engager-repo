@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-21T22:16:14Z",
+  "post": {
+    "url": "https://old.reddit.com/r/computervision/comments/1tjusgj/did_sam3_changed_the_image_annotation_game/",
+    "title": "Did SAM3 changed the Image Annotation game completely?",
+    "subreddit": "computervision",
+    "score": 11,
+    "num_comments": 10,
+    "age": "3h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on4cnmx",
+      "parent_author": "0bi_nx",
+      "parent_text": "SAM3 is decent for general domain stuff, but still fails on niche domains. I think for most use cases you still want to train your own custom model on top of a good backbone. LLMs are much simpler to train on all sorts of tasks, because everything can be formulated as text. For vision, you need different formats and there is no common language.",
+      "our_reply_url": "https://old.reddit.com/r/computervision/comments/1tjusgj/did_sam3_changed_the_image_annotation_game/on53gb5/",
+      "our_reply_text": "The 'no common language' point is real, though patch embeddings are getting close to a lingua franca for vision. Domain-specific stuff wrecks that fast though, SAM3 sees something its training never touched and guesses confidently wrong. Still running fine-tuned models on a SAM backbone for anything production-critical."
+    }
+  ],
+  "skip_reason": null
+}
