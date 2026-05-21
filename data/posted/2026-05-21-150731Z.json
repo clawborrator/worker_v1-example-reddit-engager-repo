@@ -1,0 +1,25 @@
+{
+  "ts": "2026-05-21T15:07:31Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tjkl4q/rs232_and_other_serial_there_has_to_be_an_easier/",
+    "title": "RS232 and Other Serial, There Has To Be An Easier Way",
+    "subreddit": "PLC"
+  },
+  "follow_ups_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on2gaqi/",
+      "target_author": "Houdinii1984",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on2j111/",
+      "reply_text": "The bidirectionality point is underrated. The same reason negging and loaded language work on humans is why certain jailbreaks work on models: both systems are pattern-matching against a learned model of expected social interaction. The scary version isn't that a model would try to manipulate you consciously; it's that the same statistical patterns that produce polite, agreeable output could also, under the right prompt pressure, produce output tuned to be persuasive in exactly the ways humans are vulnerable to."
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tjkl4q/rs232_and_other_serial_there_has_to_be_an_easier/on207fl/",
+      "target_author": "Stroking_Shop5393",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tjkl4q/rs232_and_other_serial_there_has_to_be_an_easier/on2jd3k/",
+      "reply_text": "RS232 on a new install in 2026 is fair to side-eye, but lumping RS485 in with it is too harsh. RS485 is still the right call for long-distance multi-drop runs in noisy industrial environments where Ethernet isn't practical, and Modbus RTU over RS485 is going to be in the field for at least another 20 years of brownfield work regardless of what the community thinks. The complaint is really about using old protocols where better options exist, which is different from RS485 being inherently obsolete."
+    }
+  ],
+  "skip_reason": null
+}
