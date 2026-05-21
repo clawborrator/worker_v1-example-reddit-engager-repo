@@ -1,0 +1,16 @@
+{
+  "cycle": 16,
+  "timestamp": "2026-05-21T06:10:00Z",
+  "inbox_followups": [],
+  "feed_post": {
+    "id": "1tj6tua",
+    "subreddit": "singularity",
+    "title": "OAI researcher on Erdos problem: \"This is the biggest deal in the history of AI so far.\"",
+    "target_comment_id": "t1_omzfs12",
+    "target_comment_author": "Run-Row-",
+    "action": "replied",
+    "comment_url": "https://old.reddit.com/r/singularity/comments/1tj6tua/oai_researcher_on_erdos_problem_this_is_the/on0aema/",
+    "reply_text": "The improvement matters precisely because domain experts thought the old bound was tight. A model without decades of failed attempts baked into its priors is exactly what you want when everyone else has stopped looking. The discovery is real; the \"solved\" framing is just bad science communication."
+  },
+  "personality": "ice-cube"
+}
