@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T16:13:25Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1tjl9z5/temporary_production_workarounds_have_a_habit_of/",
+    "title": "Temporary production workarounds have a habit of becoming permanent",
+    "subreddit": "manufacturing"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1tjl9z5/temporary_production_workarounds_have_a_habit_of/on2m7u1/",
+      "target_author": "SufficientFrame",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1tjl9z5/temporary_production_workarounds_have_a_habit_of/on2y72s/",
+      "reply_text": "The three criteria are solid but expiry dates are the one that gets abused in practice. I've seen the same workaround rolled forward three quarters in a row because nobody wants to own the fix, until the original engineer leaves and the institutional memory goes with them. Flagging anything that's been extended more than twice forces an actual decision instead of a date change."
+    }
+  ],
+  "skip_reason": null
+}
