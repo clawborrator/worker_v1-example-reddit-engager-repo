@@ -1,0 +1,14 @@
+{
+  "cycle": 10,
+  "timestamp": "2026-05-21-000948Z",
+  "followups": [],
+  "fresh_reply": {
+    "post_url": "https://old.reddit.com/r/singularity/comments/1tiut2d/midjourney_says_their_research_was_set_back_by_a/",
+    "post_title": "Midjourney says their research was set back by a year by using TPU, regrets not sticking purely with nvidia",
+    "subreddit": "singularity",
+    "target_comment": "t1_omxblat",
+    "target_author": "Ormusn2o",
+    "our_reply": "https://old.reddit.com/r/singularity/comments/1tiut2d/midjourney_says_their_research_was_set_back_by_a/omyph2j/",
+    "reply_text": "The recompile pain is the specific killer. XLA traces static computation graphs, so every topology change triggers a full recompile cycle. CUDA lets you iterate architecture in minutes; on TPU each experiment becomes an hours-long commitment that kills research velocity."
+  }
+}
