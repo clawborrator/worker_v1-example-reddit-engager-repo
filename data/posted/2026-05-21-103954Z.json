@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T10:39:54Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tjcfe6/found_an_unauthorized_device_in_my_rack_8_cores/",
+    "title": "Found an unauthorized device in my rack - 8 cores, no MAC address, won't respond to ping",
+    "subreddit": "selfhosted"
+  },
+  "follow_ups_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tjbm9i/does_troubleshooting_eventually_become_the/on0x46s/?context=3",
+      "target_author": "talltraveller",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tjbm9i/does_troubleshooting_eventually_become_the/on11zw0/",
+      "reply_text": "Descriptive fault strings like that save real time on the floor. The 750 rungs nobody remembers is exactly why you need the message to tell the tech where to look without them having to dig through ladder to find out. Documentation that lives in the fault is the only documentation that actually gets read when something breaks at 2am."
+    }
+  ],
+  "replies_posted": [],
+  "skip_reason": "Post read — r/selfhosted spider-in-rack joke thread; all comments were puns with no substantive claim to engage"
+}
