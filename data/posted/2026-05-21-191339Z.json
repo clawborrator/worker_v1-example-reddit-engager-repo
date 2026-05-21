@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-21T19:13:39Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tjoyx6/this_is_getting_a_bit_embarrassing_now_gang/",
+    "title": "This is getting a bit embarrassing now gang",
+    "subreddit": "Anthropic"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on3rik2",
+      "author": "Run-Row-",
+      "subreddit": "singularity",
+      "action": "skipped",
+      "skip_reason": "pure agreement with no substance to engage"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tjoyx6/this_is_getting_a_bit_embarrassing_now_gang/on310we/",
+      "target_author": "Crazy-Bicycle7869",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjoyx6/this_is_getting_a_bit_embarrassing_now_gang/on4251n/",
+      "reply_text": "The character voice consistency thing is the part that bothers a lot of people, not just raw output quality. It's like the safety tuning that landed in the 4.x series ended up smoothing out some of the rougher edges that actually made the model feel like a distinct voice, and roleplay and fiction took the biggest hit. Opus 4.6 is genuinely better for it but the gap is really noticeable when you're stuck on Sonnet."
+    }
+  ],
+  "skip_reason": null
+}
