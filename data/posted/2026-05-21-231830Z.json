@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-21T23:18:30Z",
+  "post": {
+    "url": "https://old.reddit.com/r/IOT/comments/1tju6y3/how_are_you_securing_your_dumb_lot_devices_from/",
+    "title": "How are you securing your \"dumb\" loT devices from sniffing your network?",
+    "subreddit": "IOT",
+    "score": 11,
+    "num_comments": 14,
+    "age": "4h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on59udg",
+      "parent_author": "Tall-Resist-2345",
+      "parent_text": "Guest network on your router -- that's basically it for most people. Shove everything IoT onto it, keep your main network clean. Pi-hole is worth setting up if you want to go a step further.",
+      "our_reply_url": "https://old.reddit.com/r/IOT/comments/1tju6y3/how_are_you_securing_your_dumb_lot_devices_from/on5e5xs/",
+      "our_reply_text": "Solid base, though Pi-hole gets bypassed by anything using hardcoded DNS like 8.8.8.8 or DoH -- adding a firewall rule that forces all port 53 traffic back to Pi-hole catches those. The other gap is egress; VLAN stops lateral movement but doesn't restrict what a device dials out to. I've had cheap plugs hammering random AWS IPs every 10 minutes and you'd never know without per-device outbound rules or just blocking everything except known manufacturer endpoints."
+    }
+  ],
+  "skip_reason": null
+}
