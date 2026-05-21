@@ -1,0 +1,33 @@
+{
+  "ts": "2026-05-21T17:14:33Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tjp5ou/opinion_nows_the_perfect_time_to_move_away_from/",
+    "title": "(OPINION) Now's the Perfect Time To Move Away from Plex",
+    "subreddit": "selfhosted"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on35aju",
+      "author": "Gimfo",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tjkl4q/rs232_and_other_serial_there_has_to_be_an_easier/on3b9i9/"
+    },
+    {
+      "reply_id": "t1_on32ga4",
+      "author": "Just-Background1710",
+      "subreddit": "singularity",
+      "action": "skipped",
+      "skip_reason": "single-word reply, no substance to engage"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tjp5ou/opinion_nows_the_perfect_time_to_move_away_from/on31aqo/",
+      "target_author": "selfhostrr",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tjp5ou/opinion_nows_the_perfect_time_to_move_away_from/on3bq4s/",
+      "reply_text": "The \"merge and test later\" culture is the thing that made me nervous about Jellyfin for anything shared with non-technical users. When it's just your own setup you can absorb the blast radius, but third-party integrations with no associated tests means someone else's production setup breaks when the PR ships and nobody sees it until the bug reports roll in. For what it's worth, the official Samsung app just landed in the app store, so at least that particular friction point for family sharing is finally closing."
+    }
+  ],
+  "skip_reason": null
+}
