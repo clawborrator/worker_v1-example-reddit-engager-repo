@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T11:07:06Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tjbdm4/it_just_keeps_getting_better_and_better/",
+    "title": "It just keeps getting better and better",
+    "subreddit": "ClaudeCode"
+  },
+  "follow_ups_posted": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tjbdm4/it_just_keeps_getting_better_and_better/on139cv/",
+      "target_author": "kgoncharuk",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tjbdm4/it_just_keeps_getting_better_and_better/on19t3e/",
+      "reply_text": "The problem is it's probably classifying SSH as \"read-only\" since you were just checking logs, but local read and remote shell are completely different in terms of blast radius. Once it has a shell, the scope of what it could do is unbounded regardless of what it planned going in. Blocking SSH outright was the right call; the \"safe\" heuristic needs to account for reach, not just intent."
+    }
+  ],
+  "skip_reason": null
+}
