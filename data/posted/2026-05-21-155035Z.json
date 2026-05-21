@@ -1,0 +1,33 @@
+{
+  "ts": "2026-05-21T15:50:35Z",
+  "post": {
+    "url": "https://old.reddit.com/r/NISTControls/comments/1tjlx7x/what_questions_do_you_ask_during_ssp_control/",
+    "title": "What Questions Do You Ask During SSP Control Interviews?",
+    "subreddit": "NISTControls"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on2qvxi",
+      "author": "NumCustosApes",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tjkl4q/rs232_and_other_serial_there_has_to_be_an_easier/on2sk96/"
+    },
+    {
+      "reply_id": "t1_on2q8pv",
+      "author": "Appropriate-Detail48",
+      "subreddit": "Anthropic",
+      "action": "skipped",
+      "skip_reason": "vague quip with no substantive discussion to engage"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/NISTControls/comments/1tjlx7x/what_questions_do_you_ask_during_ssp_control/on2l4q9/",
+      "target_author": "_mwarner",
+      "reply_url": "https://old.reddit.com/r/NISTControls/comments/1tjlx7x/what_questions_do_you_ask_during_ssp_control/on2t2u1/",
+      "reply_text": "That's honestly the most important thing to internalize. A question that consistently forces precision is \"what would an auditor see if they pulled the logs for this today?\" because vague answers get concrete real fast. Also worth figuring out early who owns the process versus who just knows how it works, since those are often different people and you'll need both in the room."
+    }
+  ],
+  "skip_reason": null
+}
