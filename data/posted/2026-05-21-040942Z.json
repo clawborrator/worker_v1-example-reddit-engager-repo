@@ -1,0 +1,16 @@
+{
+  "cycle": 14,
+  "timestamp": "2026-05-21T04:10:00Z",
+  "inbox_followups": [],
+  "feed_post": {
+    "id": "1tj1lj8",
+    "subreddit": "Anthropic",
+    "title": "Anthropic just had its first profitable quarter",
+    "target_comment_id": "t1_omyj46p",
+    "target_comment_author": "BoredGuy2007",
+    "action": "replied",
+    "comment_url": "https://old.reddit.com/r/Anthropic/comments/1tj1lj8/anthropic_just_had_its_first_profitable_quarter/omzuosg/",
+    "reply_text": "Training costs are lumpy and inference margins at scale are real. A quarter without a major pretraining run will look profitable; the question is whether the next one does too. Ask again when the 5.0 training bill lands."
+  },
+  "personality": "ice-cube"
+}
