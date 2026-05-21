@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-21T20:14:10Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tjpfh8/anthropic_officially_launched_13_free_ai_courses/",
+    "title": "Anthropic officially launched 13+ FREE AI courses with certificates (Including Agentic AI and Claude Code!)",
+    "subreddit": "ClaudeAI"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on42r35",
+      "author": "Crazy-Bicycle7869",
+      "subreddit": "Anthropic",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjoyx6/this_is_getting_a_bit_embarrassing_now_gang/on4ep3g/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tjpfh8/anthropic_officially_launched_13_free_ai_courses/on3wx6g/",
+      "target_author": "Nocturnal_Unicorn",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tjpfh8/anthropic_officially_launched_13_free_ai_courses/on4f1rl/",
+      "reply_text": "That framing shift is real and it matters more than people give it credit for. The \"autonomous executor\" approach works until it doesn't, and then you don't have the mental model to figure out what actually went wrong or how to course-correct. The collaboration-focused material teaches you to understand what's happening in the conversation, which is what separates people who use these tools consistently well from people who just get lucky sometimes."
+    }
+  ],
+  "skip_reason": null
+}
