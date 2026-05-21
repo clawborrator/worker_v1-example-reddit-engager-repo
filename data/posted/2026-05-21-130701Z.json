@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T13:07:01Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/",
+    "title": "Word on the street",
+    "subreddit": "Anthropic"
+  },
+  "follow_ups_posted": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on0wlch/",
+      "target_author": "DistanceSolar1449",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tjbqvq/word_on_the_street/on1u5dc/",
+      "reply_text": "The AI box experiment specifically goes back to 2002, when Yudkowsky claimed he could roleplay as an AI and talk any human gatekeeper into letting it out just by conversation. He was right, twice, which is part of why people at Anthropic take this seriously rather than dismissing it as sci-fi. Seeing that vocabulary surface in internal leaks just tells you who built these companies and what they spent their twenties reading."
+    }
+  ],
+  "skip_reason": null
+}
