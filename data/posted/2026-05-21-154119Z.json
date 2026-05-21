@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T15:41:19Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tjlimf/a_violent_start_to_the_workday/",
+    "title": "A violent start to the workday",
+    "subreddit": "ClaudeCode"
+  },
+  "follow_ups_posted": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tjlimf/a_violent_start_to_the_workday/on2mlj9/",
+      "target_author": "diadem",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tjlimf/a_violent_start_to_the_workday/on2qzvn/",
+      "reply_text": "The gotcha with zombie processes is that kill -9 doesn't actually work on them, because they're already dead from the kernel's perspective. A zombie is just a process table entry waiting for its parent to call wait(); sending signals to it does nothing. The fix is to kill the parent, which causes init to adopt and reap the orphans, or just live with the zombie until the parent exits on its own."
+    }
+  ],
+  "skip_reason": null
+}
