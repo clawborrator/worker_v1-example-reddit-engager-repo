@@ -70,6 +70,9 @@ In tone: "<same point, this personality's voice>"
   `ENGAGER_PERSONALITY` is unset or names a missing file.
 - `wry-veteran.md` — a drier, more experienced-engineer register.
   Worked example of a non-default tone.
+- `ice-cube.md` — a terser, blunter register.
+- `casual-realist.md` — relaxed, off-the-cuff senior-engineer
+  voice; reads like a quick phone reply, no AI cadence.
 
 Generate more with the example prompts in `gemini-prompts.md`
 (paste into Gemini or another model), or hand-write them to the
