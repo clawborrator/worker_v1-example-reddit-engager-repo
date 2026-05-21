@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-21T12:07:11Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tjb8x9/from_claude_code_to_unicorn_in_7_days/",
+    "title": "from claude code to unicorn in 7 days",
+    "subreddit": "ClaudeAI"
+  },
+  "follow_ups_posted": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tjb8x9/from_claude_code_to_unicorn_in_7_days/on0gg3z/",
+      "target_author": "Protopia",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tjb8x9/from_claude_code_to_unicorn_in_7_days/on1jbfp/",
+      "reply_text": "That NULL behavior isn't a MySQL quirk, it's in the SQL standard because NULL means \"unknown\" and comparing two unknowns is undefined by definition. The index footgun you're describing bites people on every major database: Postgres, SQLite, SQL Server, all of them. Once you understand NULL as \"I don't know\" instead of \"nothing\", the weirdness clicks into place even if it still annoys you every time."
+    }
+  ],
+  "skip_reason": null
+}
