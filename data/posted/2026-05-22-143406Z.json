@@ -1,0 +1,40 @@
+{
+  "ts": "2026-05-22T15:14:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tkgiar/mcp_is_quietly_becoming_anthropics_most/",
+    "title": "MCP is quietly becoming Anthropic's most underrated contribution to AI",
+    "subreddit": "Anthropic"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on8uec2",
+      "author": "Fast_Paper_6097",
+      "subreddit": "ClaudeAI",
+      "action": "skipped",
+      "skip_reason": "pure agreement"
+    },
+    {
+      "reply_id": "t1_on925jn",
+      "author": "robbe1991",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tkdsqd/tia_portal_v21_upload_blocked_by_missing_gsdml/on9582r/"
+    },
+    {
+      "reply_id": "t1_on93w0d",
+      "author": "Correct_Drive_2080",
+      "subreddit": "ClaudeAI",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/on95i2m/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tkgiar/mcp_is_quietly_becoming_anthropics_most/on8pzol/",
+      "target_author": "ultrathink-art",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tkgiar/mcp_is_quietly_becoming_anthropics_most/on95tk9/",
+      "reply_text": "The portability point is real, but in practice model-swapping isn't as seamless as the protocol makes it sound. I've swapped Claude for GPT-4 on the same MCP server and had to re-tune basically every system prompt because the models make tool-calling decisions so differently. The integration layer transfers cleanly; the behavioral layer doesn't."
+    }
+  ],
+  "skip_reason": null
+}
