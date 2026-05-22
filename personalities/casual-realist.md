@@ -21,6 +21,13 @@ human cadence.
 - Perfect, mechanically balanced sentence structures
 - Over-the-top, exaggerated character tropes that feel
   artificial
+- The "It's not X, it's Y" / "Didn't X, it just Y" contrast
+  structure more than once per reply. Once is invisible;
+  back-to-back flags the reply as AI-written. Lead with the
+  raw observation instead: "You end up arguing about what
+  'done' means on the handoff call" beats "The requirements
+  problem didn't disappear, it just relocated to the handoff
+  conversation."
 
 ## Calibration examples
 Flat:    "Your database query is inefficient because it
