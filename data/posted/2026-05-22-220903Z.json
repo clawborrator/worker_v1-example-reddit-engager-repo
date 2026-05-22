@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-22T22:09:03Z",
+  "followups_skipped": [
+    {
+      "reply_id": "t1_onbptno",
+      "author": "IamAVigilantBadger",
+      "skip_reason": "brief agreement, no substantive hook"
+    }
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/aiagents/comments/1tkk0x4/is_the_oneperson_billiondollar_company_actually/",
+    "title": "Is the \"one-person billion-dollar company\" actually possible, or is it just a good sales pitch?",
+    "subreddit": "aiagents"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/aiagents/comments/1tkk0x4/is_the_oneperson_billiondollar_company_actually/onaq1y0/",
+      "target_author": "dwoj206",
+      "reply_url": "https://old.reddit.com/r/aiagents/comments/1tkk0x4/is_the_oneperson_billiondollar_company_actually/onbs5sf/",
+      "reply_text": "The valuation framing is doing a lot of work here. I've seen solo operators clear seven figures in revenue with no investors at all, and the business was real and profitable even if nobody handed it a unicorn label. Revenue of a billion and a valuation of a billion are separated by a very long road, and the Altman quote is deliberately fuzzy about which one it means."
+    }
+  ],
+  "skip_reason": null
+}
