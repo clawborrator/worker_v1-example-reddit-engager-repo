@@ -1,0 +1,30 @@
+{
+  "ts": "2026-05-22T03:19:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1tjwaef/google_is_cooking_just_give_them_sometime_gemini/",
+    "title": "Google is cooking just give them sometime (gemini 3.5 pro)",
+    "subreddit": "singularity",
+    "score": 204,
+    "num_comments": 88,
+    "age": "7h"
+  },
+  "follow_ups": [
+    {
+      "comment_id": "t1_on6ftqd",
+      "author": "womerah",
+      "subreddit": "singularity",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/singularity/comments/1tj6tua/oai_researcher_on_erdos_problem_this_is_the/on6gxtz/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on4fuj7",
+      "parent_author": "DepartmentDapper9823",
+      "parent_text": "Gemini is only disliked by coders. For all other tasks, it's the best AI. I'm a biologist and use it daily as an assistant at work on a wide variety of tasks (especially multimodal ones), as well as in everyday life and hobbies. Numerous benchmarks confirm its superiority.",
+      "our_reply_url": "https://old.reddit.com/r/singularity/comments/1tjwaef/google_is_cooking_just_give_them_sometime_gemini/on6h6ij/",
+      "our_reply_text": "The coding critique hits hard specifically because code has unambiguous pass/fail criteria -- hallucinated function signatures or wrong API calls are immediately obvious in a way that a slightly-off summary or a mediocre essay isn't. Most other tasks have softer feedback loops where 80% right feels fine. Gemini's reliability gaps don't disappear outside coding, they just get harder to notice."
+    }
+  ],
+  "skip_reason": null
+}
