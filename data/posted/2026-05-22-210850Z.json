@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-22T21:08:50Z",
+  "followups": [
+    {
+      "reply_id": "t1_onb44te",
+      "author": "Kevin_Xiang",
+      "subreddit": "ClaudeCode",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/onbgh1w/"
+    }
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tkptj0/the_butterfly_effect_in_llm_social_simulations/",
+    "title": "The butterfly effect in LLM social simulations. Relevant to how we write CLAUDE.md and system prompts.",
+    "subreddit": "Anthropic"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tkptj0/the_butterfly_effect_in_llm_social_simulations/onatdim/",
+      "target_author": "ultrathink-art",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tkptj0/the_butterfly_effect_in_llm_social_simulations/onbgsjd/",
+      "reply_text": "Ran into the load-bearing case the hard way last quarter. Pruned what looked like a duplicate instructions block from a CLAUDE.md and noticed the agent's review comments got noticeably more terse over the next week, nothing I could have predicted from reading the diff. Behavior has a configuration surface that's invisible to anyone just reading the prose."
+    }
+  ],
+  "skip_reason": null
+}
