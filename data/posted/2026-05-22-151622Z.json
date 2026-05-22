@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-22T15:58:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/",
+    "title": "Claude Code dropped /workflows",
+    "subreddit": "ClaudeCode"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/on9by5w/",
+      "target_author": "geek180",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/on9eoyl/",
+      "reply_text": "The 1m window argument makes sense for reading-heavy tasks, but I've found isolation is still valuable when sub-agents are writing code in parallel and you don't want their intermediate state bleeding into each other. Fitting more into one window doesn't solve the problem of one agent's half-finished refactor making another agent's analysis incoherent. The real win is the independence, not the token budget."
+    }
+  ],
+  "skip_reason": null
+}
