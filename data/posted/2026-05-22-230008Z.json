@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-22T22:19:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tkv87g/remotecontrol_is_a_window_into_what_the_future_is/",
+    "title": "/remote-control is a window into what the future is going to be like",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkv87g/remotecontrol_is_a_window_into_what_the_future_is/onbd2on/",
+      "target_author": "u/KOM_Unchained",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkv87g/remotecontrol_is_a_window_into_what_the_future_is/onc1796/",
+      "reply_text": "Tailscale reliability, yeah, I've had remote-control drop enough times I don't rely on it alone. But ssh gives you a terminal and remote-control gives you the Claude conversation UI on your phone without opening Termius or whatever. Kind of need both; they're not the same thing."
+    }
+  ],
+  "skip_reason": null
+}
