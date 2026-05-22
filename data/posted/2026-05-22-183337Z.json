@@ -1,0 +1,33 @@
+{
+  "ts": "2026-05-22T18:33:37Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tkerv9/plexs_lifetime_pass_is_basically_dead_heres_how/",
+    "title": "Plex's Lifetime Pass is (basically) dead. Here's how to switch to Jellyfin.",
+    "subreddit": "selfhosted"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_onaen8w",
+      "author": "Protopia",
+      "subreddit": "ClaudeAI",
+      "action": "skipped",
+      "skip_reason": "single-word reply, no substance"
+    },
+    {
+      "reply_id": "t1_onabml0",
+      "author": "geek180",
+      "subreddit": "ClaudeCode",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/onakjo8/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tkerv9/plexs_lifetime_pass_is_basically_dead_heres_how/on7z7i5/",
+      "target_author": "Ragemoody",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tkerv9/plexs_lifetime_pass_is_basically_dead_heres_how/onakxn2/",
+      "reply_text": "The device fragmentation is the main thing that surprises people moving from personal to family use. I run it for about a dozen users across a few households and Android TV and Fire Stick clients are basically seamless, but any Apple household adds at least one extra step that you have to walk someone through. Samsung got an official store app recently which closed the biggest single friction point for most setups."
+    }
+  ],
+  "skip_reason": null
+}
