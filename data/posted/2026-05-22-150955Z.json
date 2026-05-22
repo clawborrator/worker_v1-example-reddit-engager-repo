@@ -1,0 +1,40 @@
+{
+  "ts": "2026-05-22T15:50:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tkil05/i_got_tired_of_our_plc_coding_standards_living_in/",
+    "title": "I got tired of our PLC coding standards living in a PDF nobody re-reads, so I built a linter for Structured Text",
+    "subreddit": "PLC"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on97pdy",
+      "author": "_FemmeFataleMaleee_",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tkc69m/balluff_io_master_configuration_problem_help/on9cdtn/"
+    },
+    {
+      "reply_id": "t1_on96uly",
+      "author": "Correct_Drive_2080",
+      "subreddit": "ClaudeAI",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/on9cnpw/"
+    },
+    {
+      "reply_id": "t1_on99kmk",
+      "author": "PM_ME_PHYS_PROBLEMS",
+      "subreddit": "ClaudeAI",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/on9cxml/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tkil05/i_got_tired_of_our_plc_coding_standards_living_in/on8tibu/",
+      "target_author": "durallymax",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tkil05/i_got_tired_of_our_plc_coding_standards_living_in/on9da16/",
+      "reply_text": "The CODESYS SA works well if everyone's in the same ecosystem, but I've worked plants running TwinCAT alongside CODESYS with no shared enforcement layer at all. Each vendor tool sits on whoever's machine, standards drift per engineer, review becomes whatever the reviewer notices. Something that runs on exported ST in a pipeline and doesn't care which IDE the code came from would have been useful on at least two sites I can think of."
+    }
+  ],
+  "skip_reason": null
+}
