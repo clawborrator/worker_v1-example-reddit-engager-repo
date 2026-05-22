@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-22T04:19:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/SCADA/comments/1tjr14e/ignition_boom/",
+    "title": "Ignition boom!",
+    "subreddit": "SCADA",
+    "score": 0,
+    "num_comments": 7,
+    "age": "11h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on4b2ui",
+      "parent_author": "roejiley",
+      "parent_text": "Data centers are using ignition to monitor cooling and utilities. It will continue to grow imo.",
+      "our_reply_url": "https://old.reddit.com/r/SCADA/comments/1tjr14e/ignition_boom/on6ph2c/",
+      "our_reply_text": "Data centers are a big one -- saw it push into pharma validation and building management the last couple years too, basically anywhere that needs historian data plus dashboarding without the FactoryTalk or WinCC licensing headache. The Python scripting layer is what's really expanding the footprint; people who'd normally write a custom app are just building it in Ignition instead because it deploys faster and IT already knows how to manage the infrastructure."
+    }
+  ],
+  "skip_reason": null
+}
