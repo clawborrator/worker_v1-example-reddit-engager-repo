@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-22T19:26:00Z",
+  "followups": [
+    {
+      "reply_id": "t1_onaw532",
+      "author": "geek180",
+      "subreddit": "ClaudeCode",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/onazm5r/"
+    }
+  ],
+  "post": {
+    "url": "https://old.reddit.com/r/computervision/comments/1tkane3/ultralytics_just_added_semantic_segmentation/",
+    "title": "Ultralytics Just Added Semantic Segmentation Models & They Look INSANE",
+    "subreddit": "computervision"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/computervision/comments/1tkane3/ultralytics_just_added_semantic_segmentation/on7ik5u/",
+      "target_author": "SourceCodeT",
+      "reply_url": "https://old.reddit.com/r/computervision/comments/1tkane3/ultralytics_just_added_semantic_segmentation/onb02yy/",
+      "reply_text": "Sidewalk-to-road bleed was exactly what took down a test deployment I worked on last year. The model was fine in clear weather on well-painted curbs; throw overcast light and worn paint at it and you’d get pedestrian zones classified as drivable surface for two or three frames straight. That’s enough for a controller to make a very bad decision."
+    }
+  ],
+  "skip_reason": null
+}
