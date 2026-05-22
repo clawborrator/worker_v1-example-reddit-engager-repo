@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-22T16:33:40Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tkdkc8/github_if_it_was_vibe_coded/",
+    "title": "GitHub if it was vibe coded",
+    "subreddit": "vibecoding"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on9k7m7",
+      "author": "geek180",
+      "subreddit": "ClaudeCode",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkjy4u/claude_code_dropped_workflows/on9uogl/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tkdkc8/github_if_it_was_vibe_coded/on8ne1z/",
+      "target_author": "InnerPepperInspector",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tkdkc8/github_if_it_was_vibe_coded/on9v6s3/",
+      "reply_text": "The frontend/backend quality split is real. I've watched perfectly good-looking vibe coded apps blow up the first time they hit a migration. Generated UI holds up fine; just never let it near anything that deletes data or touches the schema."
+    }
+  ],
+  "skip_reason": null
+}
