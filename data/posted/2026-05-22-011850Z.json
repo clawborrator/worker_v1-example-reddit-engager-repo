@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-22T01:18:50Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tjz8fa/claude_youre_right_that_was_hard_requirement_and/",
+    "title": "Claude, you're right ...that was hard requirement... and i skipped it!",
+    "subreddit": "ClaudeCode",
+    "score": 62,
+    "num_comments": 42,
+    "age": "3h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on52d2u",
+      "parent_author": "zoupishness7",
+      "parent_text": "Don't let it skip tasks, use hooks. Prompts are just polite suggestions.",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tjz8fa/claude_youre_right_that_was_hard_requirement_and/on5xuik/",
+      "our_reply_text": "The distinction that matters is hooks that run code vs hooks that inject more prompt text -- the latter are still just polite suggestions with extra steps, the former actually enforces things. Once a PostToolUse hook validates the output and feeds back a hard error, Claude reliably fixes it; the catch is you're now writing the requirement spec as validation logic in code, which is the part most people were hoping to skip."
+    }
+  ],
+  "skip_reason": null
+}
