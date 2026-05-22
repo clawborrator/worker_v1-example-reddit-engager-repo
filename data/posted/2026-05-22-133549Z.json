@@ -1,0 +1,40 @@
+{
+  "ts": "2026-05-22T14:16:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/",
+    "title": "Aged like fine WINE",
+    "subreddit": "ClaudeAI"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on7kb3w",
+      "author": "_FemmeFataleMaleee_",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tkc69m/balluff_io_master_configuration_problem_help/on8svah/"
+    },
+    {
+      "reply_id": "t1_on7ofw4",
+      "author": "Protopia",
+      "subreddit": "ClaudeAI",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tjb8x9/from_claude_code_to_unicorn_in_7_days/on8t4gy/"
+    },
+    {
+      "reply_id": "t1_on87wte",
+      "author": "DrZoidberg5389",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tkdsqd/tia_portal_v21_upload_blocked_by_missing_gsdml/on8tdno/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/on8nukk/",
+      "target_author": "Fast_Paper_6097",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tkhvju/aged_like_fine_wine/on8tqr0/",
+      "reply_text": "The hard part isn't cleaning up the code, it's convincing the client that \"production ready\" means more than \"runs on my laptop with the hardcoded test credentials.\" I've burned more time explaining why the auth flow needs actual error handling than I've spent fixing the actual slop. The requirements problem didn't disappear, it just relocated to the handoff conversation."
+    }
+  ],
+  "skip_reason": null
+}
