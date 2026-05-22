@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-22T05:19:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/aiagents/comments/1tk09hj/ama_got_laid_off_3_weeks_ago_instead_of_updating/",
+    "title": "[AMA] Got laid off 3 weeks ago. Instead of updating my resume I went down a rabbit hole. Here's what I found",
+    "subreddit": "aiagents",
+    "score": 37,
+    "num_comments": 39,
+    "age": "7h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on642ty",
+      "parent_author": "Forward-Future-2799",
+      "parent_text": "No hosted models? How would you create vector embeddings - using foundational models? Vector search alone will not help - you might need a 'reranker' too - yet another model (maybe). You will need some type of query understanding - again a fine tuned model or LLM. For everything you will have to pay either for tokens or GPUs (or both).",
+      "our_reply_url": "https://old.reddit.com/r/aiagents/comments/1tk09hj/ama_got_laid_off_3_weeks_ago_instead_of_updating/on6xfui/",
+      "our_reply_text": "The reranker point is worth taking seriously -- with legal documents especially, semantic similarity at embedding time doesn't always map to legal relevance; a clause using different terminology than your query can be the most important one in the corpus. Hybrid retrieval combining BM25 keyword matching with dense vector results typically outperforms either alone for this kind of structured professional content. Query understanding matters more than people expect too once you have mixed document types; a question about a contract clause needs different retrieval strategy than a question about case precedent."
+    }
+  ],
+  "skip_reason": null
+}
