@@ -1,0 +1,54 @@
+{
+  "ts": "2026-05-22T13:03:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/",
+    "title": "HTML instead of Markdown",
+    "subreddit": "ClaudeCode"
+  },
+  "follow_ups": [
+    {
+      "reply_id": "t1_on88c85",
+      "author": "Gimfo",
+      "subreddit": "PLC",
+      "action": "skipped",
+      "skip_reason": "pure agreement, no substance to extend"
+    },
+    {
+      "reply_id": "t1_on7dqcv",
+      "author": "atrawog",
+      "subreddit": "ClaudeCode",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tk9sxa/46_was_so_much_better_than_47_to_be_honest/on8m896/"
+    },
+    {
+      "reply_id": "t1_on7j86r",
+      "author": "GandhiTheDragon",
+      "subreddit": "PLC",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1tkc69m/balluff_io_master_configuration_problem_help/on8mh7k/"
+    },
+    {
+      "reply_id": "t1_on7darv",
+      "author": "0bi_nx",
+      "subreddit": "computervision",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/computervision/comments/1tjusgj/did_sam3_changed_the_image_annotation_game/on8mpup/"
+    },
+    {
+      "reply_id": "t1_on7qg97",
+      "author": "MetaCognitio",
+      "subreddit": "singularity",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/singularity/comments/1tjllk7/elon_musks_pay_package_reveals_what_spacex/on8mynf/"
+    }
+  ],
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/on7vifj/",
+      "target_author": "Kevin_Xiang",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/on8ncxj/",
+      "reply_text": "The diff cleanliness point is underrated. I've had markdown plans living in version control where the team would actually PR them and comment on specific lines, and swapping to HTML there would've broken the whole workflow, no meaningful diff, no inline review. For a one-shot handoff that a PM opens once in Chrome and never touches again, though, the collapsible sections alone are worth the extra tokens."
+    }
+  ],
+  "skip_reason": null
+}
