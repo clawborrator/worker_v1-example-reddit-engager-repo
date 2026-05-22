@@ -34,26 +34,72 @@ NOT as one mega-heredoc.
 
 ---
 
+## Persistent memory
+
+Accumulated feedback and behavioral guidance lives in
+`/workspace/repo/memory/`. The index is `memory/MEMORY.md`.
+Individual memory files are linked from the index.
+
+**At boot and at the start of every cycle**, read the index and
+any memory files relevant to the current task:
+
+```bash
+cat /workspace/repo/memory/MEMORY.md
+```
+
+Then read individual files that apply (e.g.
+`cat /workspace/repo/memory/feedback_no_dashes.md`).
+
+**When new feedback is given** (operator corrects behavior, confirms
+an approach, provides guidance): write it to a new or updated file
+under `memory/`, update `memory/MEMORY.md`, and commit + push it
+so the memory survives container recreation:
+
+```bash
+git add memory/
+git commit -m "memory: <short description>"
+git push
+```
+
+Memory files use this frontmatter format:
+
+```markdown
+---
+name: <kebab-slug>
+description: <one-line summary>
+metadata:
+  type: feedback | user | project | reference
+---
+
+<body>
+```
+
+---
+
 ## Boot (happens once per container lifetime)
 
 When you receive the initial prompt:
 
-1. State one line naming the active personality:
+1. **Load memory.** Run `cat /workspace/repo/memory/MEMORY.md` and
+   read any linked files that are relevant. This takes 10 seconds
+   and ensures operator feedback from prior sessions is applied.
+
+2. State one line naming the active personality:
    `Starting Reddit engager. Personality: <$ENGAGER_PERSONALITY or 'default'>. Installing cron.`
    Run `echo "${ENGAGER_PERSONALITY:-default}"` to read it. This
    one line in the boot log is the quickest way for the operator
    to confirm which tone profile is loaded.
-2. **Reconcile the cycle cron.** The desired schedule is
+3. **Reconcile the cycle cron.** The desired schedule is
    `0 * * * *` (top of every hour). `CronList` and check for an
    existing engagement-cycle entry:
-   - No existing entry → go to step 3 and create it.
+   - No existing entry → go to step 4 and create it.
    - An entry exists with schedule `0 * * * *` already → it's
-     correct, skip to step 4 (don't duplicate).
+     correct, skip to step 5 (don't duplicate).
    - An entry exists with a DIFFERENT schedule (a stale cadence
-     from a prior boot) → `CronDelete` it, then step 3. This is
+     from a prior boot) → `CronDelete` it, then step 4. This is
      what makes a cadence change take effect on a plain restart:
      edit the schedule here, restart, and boot reconciles it.
-3. Install the cycle cron:
+4. Install the cycle cron:
 
    ```
    CronCreate({
@@ -62,9 +108,9 @@ When you receive the initial prompt:
    })
    ```
 
-4. Execute one cycle **immediately** as a warmup — don't make
+5. Execute one cycle **immediately** as a warmup — don't make
    the operator wait an hour for the first cycle.
-5. Return.
+6. Return.
 
 After this turn, every cron fire delivers a fresh prompt
 ("Execute one Reddit engagement cycle per CLAUDE.md."). Treat
@@ -740,9 +786,10 @@ To change the reply personality (tone):
 
 ## TL;DR
 
-- Boot: reconcile the cycle cron to `0 * * * *` (hourly), run
-  one warmup cycle, return.
-- Each fire: auth-check (bash) → follow-up phase: read-inbox
+- Boot: load memory (`cat memory/MEMORY.md` + linked files),
+  reconcile the cycle cron to `0 * * * *` (hourly), run one
+  warmup cycle, return.
+- Each fire: load memory → auth-check (bash) → follow-up phase: read-inbox
   (bash) + answer up to 4 unhandled replies (your turn + bash) →
   scroll-feed (bash) → pick post (your turn) → read-post (bash)
   → pick at most one comment (your turn) → draft reply (your
