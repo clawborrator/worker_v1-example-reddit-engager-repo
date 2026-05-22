@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-22T02:17:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1tk22mo/what_metric_did_your_shop_optimize_that_quietly/",
+    "title": "What metric did your shop optimize that quietly broke something else?",
+    "subreddit": "manufacturing",
+    "score": 0,
+    "num_comments": 8,
+    "age": "2h"
+  },
+  "follow_ups": [],
+  "replies_posted": [
+    {
+      "parent_comment_id": "t1_on5wzkc",
+      "parent_author": "Sometimes_Stutters",
+      "parent_text": "Our purchasing department had separate budgets than our freight team. Purchasing was tracking per unit cost, freight was tracking OTD. So everything got sourced overseas for lowest unit cost, then shipped air to hit OTD numbers.",
+      "our_reply_url": "https://old.reddit.com/r/manufacturing/comments/1tk22mo/what_metric_did_your_shop_optimize_that_quietly/on67nop/",
+      "our_reply_text": "Seen this exact pattern in a few orgs -- the root cause is always that nobody owns total landed cost, only their slice of it. Procurement hits unit cost, freight hits OTD, the plant shows great absorption, and the CFO is quietly watching working capital climb with no clean answer. Fix is usually embarrassingly obvious once someone puts the full cost waterfall on one page, but getting there takes about six months of stepping on everyone's budget territory."
+    }
+  ],
+  "skip_reason": null
+}
