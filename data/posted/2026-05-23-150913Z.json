@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-23-150913Z",
+  "cycle": 17,
+  "skip_reason": "read-post command_timeout on t3_1tlfm7h (r/singularity)",
+  "attempted_post": {
+    "id": "t3_1tlfm7h",
+    "title": "As someone in manufacturing, here's what I don't understand",
+    "subreddit": "singularity",
+    "url": "https://old.reddit.com/r/singularity/comments/1tlfm7h/as_someone_in_manufacturing_heres_what_i_dont/"
+  },
+  "inbox_followups": 1,
+  "inbox_followup_details": [
+    {
+      "id": "t1_onfphhy",
+      "action": "replied",
+      "reply_id": "t1_onfuo7a"
+    }
+  ],
+  "feed_posts_seen": 20
+}
