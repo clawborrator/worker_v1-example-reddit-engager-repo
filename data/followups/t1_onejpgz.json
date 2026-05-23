@@ -1,0 +1,10 @@
+{
+  "id": "t1_onejpgz",
+  "author": "Kevin_Xiang",
+  "permalink": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/onejpgz/?context=3",
+  "body": "Yeah, this is exactly the failure mode I worry about. HTML is fine for a demo artifact, but the moment it starts carrying decisions I want the source of truth in git, reviewable as text. A pattern that has worked better for me is Markdown as the canonical plan, then generate HTML/views from it when the audience needs a nicer read.",
+  "action": "replied",
+  "reply_id": "t1_oner20r",
+  "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tkcci7/html_instead_of_markdown/oner20r/",
+  "ts": "2026-05-23-110845Z"
+}
