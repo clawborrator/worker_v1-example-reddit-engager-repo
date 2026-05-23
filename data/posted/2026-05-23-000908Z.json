@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-23T00:09:08Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1tkstc0/anthropic_cofounder_jack_clarks_recent/",
+    "title": "Anthropic Co-founder Jack Clark's recent predictions: AI will help make a Nobel Prize-winning discovery within the next year, bipedal robots doing useful work in 2 years, RSI by end of 2028",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1tkstc0/anthropic_cofounder_jack_clarks_recent/onaxemi/",
+      "target_author": "u/AngleAccomplished865",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1tkstc0/anthropic_cofounder_jack_clarks_recent/onccuqn/",
+      "reply_text": "The distinction that actually matters is whether the discovery still happens if you take the AI out of the loop. I've seen papers where a model flagged an unexpected pattern that triggered the whole line of inquiry, and that's a different thing from running your analysis through a script. The prediction has teeth only if Clark meant that second version."
+    }
+  ],
+  "followups_posted": [
+    {
+      "target_reply_id": "t1_onc7mck",
+      "target_author": "u/dwoj206",
+      "reply_url": "https://old.reddit.com/r/aiagents/comments/1tkk0x4/is_the_oneperson_billiondollar_company_actually/oncceo7/"
+    }
+  ],
+  "skip_reason": null
+}
