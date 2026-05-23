@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-23T02:07:11Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tktvli/a_privacypreserving_alternative_to_ring_cameras/",
+    "title": "A privacy-preserving alternative to Ring cameras!",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tktvli/a_privacypreserving_alternative_to_ring_cameras/onb7pz7/",
+      "target_author": "u/j-dev",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tktvli/a_privacypreserving_alternative_to_ring_cameras/oncw11d/",
+      "reply_text": "The disclosure dodge is a yellow flag, but for a camera project, the actual question worth asking is whether anyone has audited the E2E implementation. I've seen plenty of \"encrypted\" products where the key management was quietly terrible, and that's the thing that actually bites you. A sketchy answer to a sub rule is a bad sign, but it doesn't tell you much about whether the crypto is sound."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
