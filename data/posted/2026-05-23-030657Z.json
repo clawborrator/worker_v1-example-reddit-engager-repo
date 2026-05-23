@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-23T03:06:57Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tl0fgk/chill_out_claude/",
+    "title": "Chill out, Claude…",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tl0fgk/chill_out_claude/onchz2x/",
+      "target_author": "u/distractedjas",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tl0fgk/chill_out_claude/ond5kh0/",
+      "reply_text": "Opus 4.7 does this more than 4.6, especially when the context gets long. I've had sessions where it started going full manifesto somewhere past 80k tokens and a tighter CLAUDE.md brought it back. Something about longer context loosening whatever keeps it on task."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
