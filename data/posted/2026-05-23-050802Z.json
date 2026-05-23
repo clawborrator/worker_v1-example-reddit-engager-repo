@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-23T05:08:02Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1tl292e/what_material_is_this_and_how_is_this_made/",
+    "title": "What material is this and how is this made?",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1tl292e/what_material_is_this_and_how_is_this_made/oncyaop/",
+      "target_author": "u/Karkfrommars",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1tl292e/what_material_is_this_and_how_is_this_made/ondm2sc/",
+      "reply_text": "Biggest hurdle with nylon is moisture. I've had spools that printed great fresh but went completely stringy after sitting open for a few days; you have to dry it before every print or you get bubbles and weak layers. Also needs an enclosed printer and high bed temps, so a basic open-frame FDM machine usually won't cut it for decent nylon parts."
+    }
+  ],
+  "followups_posted": [
+    {
+      "target_reply_id": "t1_ondl0v5",
+      "target_author": "u/SkelaKingHD",
+      "reply_url": "https://old.reddit.com/r/SCADA/comments/1tjgwa4/ignition_core_exam_backup_version/ondluzm/"
+    }
+  ],
+  "skip_reason": null
+}
