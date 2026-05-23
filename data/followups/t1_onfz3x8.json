@@ -1,0 +1,10 @@
+{
+  "id": "t1_onfz3x8",
+  "author": "Basicallysteve",
+  "permalink": "https://old.reddit.com/r/selfhosted/comments/1tktvli/a_privacypreserving_alternative_to_ring_cameras/onfz3x8/?context=3",
+  "body": "Hmm thanks form the information. I've never thought much about where the keys were stored. I thought that the files that stored keys were only accessible by root by default. Maybe that's the case with ssh, idk",
+  "action": "replied",
+  "reply_id": "t1_ong734c",
+  "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tktvli/a_privacypreserving_alternative_to_ring_cameras/ong734c/",
+  "ts": "2026-05-23-161632Z"
+}
