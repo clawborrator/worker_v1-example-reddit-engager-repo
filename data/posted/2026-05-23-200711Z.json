@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-05-23-200711Z",
+  "cycle": 23,
+  "personality": "casual-realist",
+  "post": {
+    "id": "t3_1tlmmyn",
+    "title": "Best self-hosted ebook server for a very large library (~150k books)?",
+    "subreddit": "selfhosted",
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tlmmyn/best_selfhosted_ebook_server_for_a_very_large/",
+    "score": 50,
+    "num_comments": 29,
+    "age_hours": 3,
+    "author": "MysteriousPizza8390"
+  },
+  "target_comment": {
+    "id": "t1_onh3542",
+    "author": "tonyboi76",
+    "score": 5,
+    "permalink": "https://old.reddit.com/r/selfhosted/comments/1tlmmyn/best_selfhosted_ebook_server_for_a_very_large/onh3542/",
+    "body": "at 150k books most of the popular options hit the same wall: ui rendering and full-library queries against sqlite..."
+  },
+  "reply": {
+    "id": "t1_onhhziq",
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tlmmyn/best_selfhosted_ebook_server_for_a_very_large/onhhziq/",
+    "text": "SQLite itself handles millions of rows fine; the actual bottleneck at 150k is usually the app layer doing full-table scans through the ORM combined with server-side cover rendering that tries to hit the disk on every request without a proper thumbnail cache. The 30-50k test slice is a bit optimistic though, I've seen apps that run clean at 40k fall apart past 80k because their pagination queries don't hit the right indexes at scale. Worth pulling a random sample from across the library rather than the first chunk, since those tend to be the oldest and most consistently formatted entries."
+  },
+  "inbox_followups": 1,
+  "inbox_followup_details": [
+    {
+      "id": "t1_onhd7vr",
+      "action": "replied",
+      "reply_id": "t1_onhhri9"
+    }
+  ],
+  "feed_posts_seen": 20
+}
