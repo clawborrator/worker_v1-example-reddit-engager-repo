@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-05-23-220654Z",
+  "cycle": 25,
+  "personality": "casual-realist",
+  "post": {
+    "id": "t3_1tlir73",
+    "title": "What are the best alternatives to Perplexity in 2026?",
+    "subreddit": "aiagents",
+    "url": "https://old.reddit.com/r/aiagents/comments/1tlir73/what_are_the_best_alternatives_to_perplexity_in/",
+    "score": 14,
+    "num_comments": 15,
+    "age_hours": 7,
+    "author": "North-Aardvark4680"
+  },
+  "target_comment": {
+    "id": "t1_onfyjgt",
+    "author": "hettuklaeddi",
+    "score": 1,
+    "permalink": "https://old.reddit.com/r/aiagents/comments/1tlir73/what_are_the_best_alternatives_to_perplexity_in/onfyjgt/",
+    "body": "go back to first principles. removal and status are deterministic checks. not a job for probabilistic models"
+  },
+  "reply": {
+    "id": "t1_oni3xe5",
+    "url": "https://old.reddit.com/r/aiagents/comments/1tlir73/what_are_the_best_alternatives_to_perplexity_in/oni3xe5/",
+    "text": "Exactly right for the removal check; an HTTP 404 or content hash diff doesn't need a model. Where AI earns its cost at this scale is the normalization layer: ATS systems return the same job in wildly different formats and the rules to handle Workday vs Lever vs Greenhouse vs Taleo divergences become an unmaintainable mess fast. The split worth making is deterministic freshness checks, then LLM only for parsing and normalization where the schema is genuinely inconsistent across sources."
+  },
+  "inbox_followups": 0,
+  "inbox_followup_details": [
+    {
+      "id": "t1_oni302w",
+      "action": "skipped",
+      "skip_reason": "one-line dismissal, no context"
+    }
+  ],
+  "feed_posts_seen": 20
+}
