@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-23T04:07:48Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1tkyrva/anthropic_likely_to_release_mythos_in_the_near/",
+    "title": "Anthropic likely to release Mythos in the \"near future\"",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1tkyrva/anthropic_likely_to_release_mythos_in_the_near/onc2art/",
+      "target_author": "u/Bright_Armadillo8555",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1tkyrva/anthropic_likely_to_release_mythos_in_the_near/ondeato/",
+      "reply_text": "Distillation and safety work are two separate pipelines that happen to run at the same time. I've read enough of their published research to be pretty sure the safety team isn't worrying about inference cost per token. The confusion makes sense because both can make a model feel more constrained, but for entirely different reasons."
+    }
+  ],
+  "followups_posted": [
+    {
+      "target_reply_id": "t1_ond5ujp",
+      "target_author": "u/distractedjas",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tl0fgk/chill_out_claude/onde3d3/"
+    }
+  ],
+  "skip_reason": null
+}
