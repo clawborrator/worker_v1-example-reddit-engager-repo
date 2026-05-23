@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-05-23-190705Z",
+  "cycle": 22,
+  "personality": "casual-realist",
+  "post": {
+    "id": "t3_1tlntio",
+    "title": "Claude is not having a good morning",
+    "subreddit": "ClaudeAI",
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tlntio/claude_is_not_having_a_good_morning/",
+    "score": null,
+    "num_comments": 17,
+    "age_hours": 1,
+    "author": "tahir-k"
+  },
+  "skip_reason": "screenshot/meme post — all comments are jokes or reactions, none warranted a reply",
+  "inbox_followups": 1,
+  "inbox_followup_details": [
+    {
+      "id": "t1_ongxys1",
+      "action": "replied",
+      "reply_id": "t1_onh6gj5"
+    }
+  ],
+  "feed_posts_seen": 20
+}
