@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-05-23-120627Z",
+  "cycle": 14,
+  "personality": "casual-realist",
+  "post": {
+    "id": "t3_1tldoin",
+    "title": "Comparison between Sonnet 4.6 and Opus 4.7",
+    "subreddit": "Anthropic",
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tldoin/comparison_between_sonnet_46_and_opus_47/",
+    "score": null,
+    "num_comments": 13,
+    "age_hours": 1,
+    "author": "hamehad"
+  },
+  "target_comment": {
+    "id": "t1_onetuin",
+    "author": "Internal-Dig9239",
+    "score": 9,
+    "permalink": "https://old.reddit.com/r/Anthropic/comments/1tldoin/comparison_between_sonnet_46_and_opus_47/onetuin/",
+    "body": "Sonnet with thinking on also figures it out as well"
+  },
+  "reply": {
+    "id": "t1_onez847",
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tldoin/comparison_between_sonnet_46_and_opus_47/onez847/",
+    "text": "That's the important nuance most of these comparisons miss. The gap you're seeing isn't really about capability ceiling, it's about what the default reasoning budget is when there's no explicit instruction to think harder. I've seen Sonnet 4.6 outperform Opus 4.7 on the same problems once extended thinking is on for both, so benchmarks like this mostly tell you how each model behaves out of the box, which is genuinely useful, but it's a different question from what either model can actually do."
+  },
+  "inbox_followups": 0,
+  "feed_posts_seen": 20
+}
