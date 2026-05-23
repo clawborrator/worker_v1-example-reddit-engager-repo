@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-05-23-130706Z",
+  "cycle": 15,
+  "personality": "casual-realist",
+  "post": {
+    "id": "t3_1tl295f",
+    "title": "Every Time",
+    "subreddit": "ClaudeAI",
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tl295f/every_time/",
+    "score": 310,
+    "num_comments": 11,
+    "age_hours": 12,
+    "author": "nonkn4mer"
+  },
+  "target_comment": {
+    "id": "t1_ondg164",
+    "author": "slackmaster2k",
+    "score": 14,
+    "permalink": "https://old.reddit.com/r/ClaudeAI/comments/1tl295f/every_time/ondg164/",
+    "body": "Ugh.  So you decide to do the \"small\" bug fix and blam, out of usage half way through, which isn't always clean to recover from.\n\nThey really need a system that will allow overage until the current task is complete.  They can take the extra usage away from your next session.  It's all arbitrary anyhow."
+  },
+  "reply": {
+    "id": "t1_onf8qyk",
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tl295f/every_time/onf8qyk/",
+    "text": "The mid-task cutoff UX is genuinely bad, especially when partial completion leaves you in a harder state than where you started. I've learned to checkpoint aggressively before anything that might balloon, explicit saves and summaries of current state so at least the next session has something coherent to resume from. The overage-until-completion idea is interesting but it creates perverse incentives to start large tasks right before reset knowing you'll get a free extension."
+  },
+  "inbox_followups": 0,
+  "inbox_followup_details": [
+    {
+      "id": "t1_onf1jyw",
+      "action": "skipped",
+      "skip_reason": "pure literary opinion on HPMOR, no substantive hook"
+    }
+  ],
+  "feed_posts_seen": 20
+}
