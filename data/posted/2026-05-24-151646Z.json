@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-24T15:17:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/singularity/comments/1tmb7mz/inaudible_sounds_to_humans_can_be_hidden_in/",
+    "title": "Inaudible sounds to humans can be hidden in YouTube videos, podcasts, or music and used to secretly trigger AI voice assistants",
+    "subreddit": "singularity"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/singularity/comments/1tmb7mz/inaudible_sounds_to_humans_can_be_hidden_in/onlxkte/",
+      "target_author": "u/rwrife",
+      "reply_url": "https://old.reddit.com/r/singularity/comments/1tmb7mz/inaudible_sounds_to_humans_can_be_hidden_in/onm75uw/",
+      "reply_text": "The codec concern is real but it doesn't fully stop it. I've read through a few of the adversarial audio papers (Carlini's work especially) and the attacks are explicitly optimized to survive MP3 and similar compression; the model isn't processing it the way human hearing does, it's picking up spectral features that compress differently than speech. The attack doesn't need high accuracy either, just reliable trigger detection on a short wake-phrase sequence."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_onlwlqe",
+      "author": "john200ok",
+      "subreddit": "vibecoding",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/vibecoding/comments/1tm0oya/my_vibe_coded_app_just_hit_575_downloads_in_3_days/onm6m9l/"
+    }
+  ],
+  "skip_reason": null
+}
