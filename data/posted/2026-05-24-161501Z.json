@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-24T16:15:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tme19t/anyone_elses_ai_coding_agent_acting_like_its/",
+    "title": "Anyone else's AI coding agent acting like it's seeing your codebase for the first time, every single time?",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tme19t/anyone_elses_ai_coding_agent_acting_like_its/onmb92g/",
+      "target_author": "u/BionicBelladonna",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tme19t/anyone_elses_ai_coding_agent_acting_like_its/onmjlq1/",
+      "reply_text": "The wiki approach is solid until the codebase outpaces the docs, which happens faster than you'd expect on an active project. I've had the best luck keeping a CLAUDE.md at the project root with key architectural decisions, non-obvious constraints, and anything that tripped up the agent in a previous session; it travels with the code in git so there's no sync gap. Auto-update handles state well, but the two-minute manual entry for \"here's why this looks weird\" is what actually saves you later."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
