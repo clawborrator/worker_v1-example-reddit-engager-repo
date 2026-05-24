@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-24T09:24:40Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tm4zu9/i_think_i_know_why_deepseek_is_so_good/",
+    "title": "I think I know why deepseek is so good",
+    "subreddit": "Anthropic"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tm4zu9/i_think_i_know_why_deepseek_is_so_good/onkcrg2/",
+      "target_author": "u/logosobscura",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tm4zu9/i_think_i_know_why_deepseek_is_so_good/onkoydj/",
+      "reply_text": "The benchmark gap matters a lot less than the reliability gap for anything running in production. I've had distilled models pass eval suites then fall apart on the third tool call in an agentic loop, where the frontier model just grinds through. The moat isn't the Claude Code harness; it's the hours you've already spent tuning prompts around a specific model's quirks."
+    }
+  ],
+  "skip_reason": null
+}
