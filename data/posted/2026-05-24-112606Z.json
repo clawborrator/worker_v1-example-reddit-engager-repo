@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-24T11:26:06Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tm66c4/simatic_manager_step7_how_to_keep_actual_values/",
+    "title": "Simatic Manager (Step7) how to keep actual values in DB's when downloading project?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tm66c4/simatic_manager_step7_how_to_keep_actual_values/onknef2/",
+      "target_author": "u/Fit_Patient_4745",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tm66c4/simatic_manager_step7_how_to_keep_actual_values/onl3ap2/",
+      "reply_text": "The instance DB mismatch is the one that bites hardest because the PLC doesn't immediately fault on it. I've seen setpoints that looked right on the watch table but were writing into the wrong memory offset for days before anyone caught it. When you change FB structure, flag every instance DB that needs regenerating before you download anything, not after."
+    }
+  ],
+  "skip_reason": null
+}
