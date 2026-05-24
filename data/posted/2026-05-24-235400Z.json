@@ -1,0 +1,24 @@
+{
+  "ts": "2026-05-24T23:54:00Z",
+  "cycle": 13,
+  "post": {
+    "id": "t3_1tmo1sz",
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tmo1sz/fav_desk_gadget_claude_code_usage_display/",
+    "title": "Fav Desk Gadget: Claude Code Usage Display, codeMeter",
+    "subreddit": "r/ClaudeAI",
+    "comment_count": 51,
+    "age": "2h"
+  },
+  "replied_to": {
+    "id": "t1_onoaxmd",
+    "author": "MarathonHampster",
+    "permalink": "https://old.reddit.com/r/ClaudeAI/comments/1tmo1sz/fav_desk_gadget_claude_code_usage_display/onoaxmd/"
+  },
+  "our_comment": {
+    "id": "t1_onoutva",
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tmo1sz/fav_desk_gadget_claude_code_usage_display/onoutva/",
+    "body": "The status bar solves the same information problem but it requires being in a terminal window to see it. I've found that something visible in peripheral vision without any screen focus breaks the cognitive cycle of stopping, context-switching, checking, then getting back; a dedicated device off to the side doesn't interrupt flow the same way. Whether that's worth $160 is a different question, but the use case is real for certain setups."
+  },
+  "personality": "casual-realist",
+  "inbox_followups": []
+}
