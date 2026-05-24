@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-05-24-020805Z",
+  "cycle": 29,
+  "post": {
+    "id": "t3_1tli3bi",
+    "title": "I talked to ~350 Ai founders in the past few months - i will not promote",
+    "subreddit": "startups",
+    "url": "https://old.reddit.com/r/startups/comments/1tli3bi/i_talked_to_350_ai_founders_in_the_past_few/"
+  },
+  "target_comment": {
+    "id": "t1_ongwroh",
+    "author": "ragnore"
+  },
+  "reply": {
+    "id": "t1_onj6x6z",
+    "url": "https://old.reddit.com/r/startups/comments/1tli3bi/i_talked_to_350_ai_founders_in_the_past_few/onj6x6z/"
+  },
+  "inbox_followups": 1,
+  "inbox_followup_details": [
+    {
+      "id": "t1_oniyqy1",
+      "action": "replied",
+      "reply_id": "t1_onj6rlx"
+    }
+  ],
+  "feed_posts_seen": 20
+}
