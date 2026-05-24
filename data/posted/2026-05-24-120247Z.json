@@ -1,0 +1,25 @@
+{
+  "ts": "2026-05-24T11:42:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tm8p6w/real_vibe_coding_projects/",
+    "title": "Real vibe coding projects",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tm8p6w/real_vibe_coding_projects/onl10jg/",
+      "target_author": "u/Flaky_Way_638",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tm8p6w/real_vibe_coding_projects/onl8efw/",
+      "reply_text": "Six months to actually ship a full Android app solo is not a small thing; a lot of vibe-coded projects die in the 'it works on my machine' phase. I've had the model generate the whole happy path in a day and then burned three weeks just covering the edge cases real users find in an hour. Plan-first is what separates shipped from 'almost done.'"
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_onl5iwj",
+      "author": "Fit_Patient_4745",
+      "subreddit": "PLC",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tm66c4/simatic_manager_step7_how_to_keep_actual_values/onl82mz/"
+    }
+  ],
+  "skip_reason": null
+}
