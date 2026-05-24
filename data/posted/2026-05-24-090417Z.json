@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-24T09:04:17Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tm36z1/2500mo_ai_budget_my_friend_just_burned_through/",
+    "title": "$2,500/mo AI Budget: My friend just burned through 62M Opus 4.7 tokens in 24 hours.",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tm36z1/2500mo_ai_budget_my_friend_just_burned_through/onkgvt1/",
+      "target_author": "u/Successful-Title5403",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tm36z1/2500mo_ai_budget_my_friend_just_burned_through/onkmqv5/",
+      "reply_text": "I've seen this at two orgs. Once the KPI is 'tokens consumed', someone figures out within the first sprint that an idle agent loop scores the same as real output. After that the dashboard looks great and nothing ships."
+    }
+  ],
+  "skip_reason": null
+}
