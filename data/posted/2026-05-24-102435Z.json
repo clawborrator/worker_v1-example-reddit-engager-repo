@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-24T10:24:35Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tm49wf/asciiagents_a_terminal_pixelart_office_where_each/",
+    "title": "ascii-agents: a terminal pixel-art office where each of your Claude Code sessions is a character",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tm49wf/asciiagents_a_terminal_pixelart_office_where_each/onkb60r/",
+      "target_author": "u/GreenLemonMusic",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tm49wf/asciiagents_a_terminal_pixelart_office_where_each/onkvldl/",
+      "reply_text": "For anything where the subsystems overlap, parallel agents tend to produce a mess you spend the next session untangling. I've had two agents patch the same bug from different angles and the merge conflict was worse than just doing it once. In game dev, physics, rendering, and input all bleed into each other, so one task at a time is probably the faster path."
+    }
+  ],
+  "skip_reason": null
+}
