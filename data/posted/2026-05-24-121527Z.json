@@ -1,0 +1,26 @@
+{
+  "ts": "2026-05-24T12:07:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tm0oya/my_vibe_coded_app_just_hit_575_downloads_in_3_days/",
+    "title": "My vibe coded app just hit 575 downloads in 3 days!",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tm0oya/my_vibe_coded_app_just_hit_575_downloads_in_3_days/onjkxrb/",
+      "target_author": "u/john200ok",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tm0oya/my_vibe_coded_app_just_hit_575_downloads_in_3_days/onlaaxc/",
+      "reply_text": "55% conversion on a first launch is genuinely good. I've watched the Threads distribution thing work for a few indie apps now; my read is the algorithm still surfaces posts to non-followers in a way X basically stopped doing two years ago. The follower count probably matters less than you're giving it credit for."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_onl9cw9",
+      "author": "Flaky_Way_638",
+      "subreddit": "vibecoding",
+      "action": "skipped",
+      "skip_reason": "pure thanks, no substantive continuation"
+    }
+  ],
+  "skip_reason": null
+}
