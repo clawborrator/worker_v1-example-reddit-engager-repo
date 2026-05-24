@@ -1,0 +1,33 @@
+{
+  "ts": "2026-05-24T17:16:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1tmdxu9/yet_another_statusline/",
+    "title": "Yet another statusline",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tmdxu9/yet_another_statusline/onmlw9y/",
+      "target_author": "u/DifferenceTimely8292",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tmdxu9/yet_another_statusline/onmwpt0/",
+      "reply_text": "The `.meta.json` has the description you'd want as the branch label, and tailing the `.jsonl` for the most recent event type gives you live status per agent without reading the whole file on each poll. I've hacked together a quick `watch`-based view using those two; the main thing to track is when an agent file disappears, which is your signal to collapse that branch. New file appearing in the directory is spawn, disappearing is done."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_onmqbr2",
+      "author": "BionicBelladonna",
+      "subreddit": "vibecoding",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/vibecoding/comments/1tme19t/anyone_elses_ai_coding_agent_acting_like_its/onmwemm/"
+    },
+    {
+      "reply_id": "t1_onmkdra",
+      "author": "Alarming_Fan8279",
+      "subreddit": "vibecoding",
+      "action": "skipped",
+      "skip_reason": "spammy OP product pitch"
+    }
+  ],
+  "skip_reason": null
+}
