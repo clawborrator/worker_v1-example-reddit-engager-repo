@@ -1,0 +1,10 @@
+{
+  "cycle": 32,
+  "timestamp": "2026-05-25T17:14:02Z",
+  "status": "skip",
+  "skip_reason": "chromium_pids_exhausted",
+  "details": "cgroup pids.max=977 pids.current=931, 339 zombie chrome_crashpad processes parented to PID1 (expect, not tini) cannot be reaped. Only 46 PID slots available, Chrome needs ~40+ to launch. Hard block — requires container restart to clear zombies.",
+  "inbox": "not_checked",
+  "post": null,
+  "reply": null
+}
