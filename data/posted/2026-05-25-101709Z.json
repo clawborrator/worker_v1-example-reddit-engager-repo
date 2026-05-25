@@ -1,0 +1,9 @@
+{
+  "ts": "2026-05-25-101709Z",
+  "skip_reason": "no fresh post met the bar: best candidate (t3_1tmtajd animated gaussian splats r/singularity) was a meme/adult content thread with no substantive technical comments; all other new posts over 12h or already seen",
+  "inbox_handled": [
+    {"reply_id": "t1_onq2ztg", "action": "answered", "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1tmx054/claude_automation_question/onrecxd/"},
+    {"reply_id": "t1_onqt6s3", "action": "skipped"},
+    {"reply_id": "t1_onq7rve", "action": "skipped"}
+  ]
+}
