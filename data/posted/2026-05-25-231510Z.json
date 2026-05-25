@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-25T23:15:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1tnlu36/tools_for_learning_another_language/",
+    "title": "Tools for learning another language?",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1tnlu36/tools_for_learning_another_language/onv1fes/",
+      "target_author": "haherar830",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1tnlu36/tools_for_learning_another_language/onvhkrd/",
+      "reply_text": "The 8B class is fine for romance languages and Chinese. Wheels start wobbling fast on Korean honorifics and Japanese keigo, though, where you genuinely feel the parameter count, and I had to jump from quantized Qwen 2.5 7B to a 32B for anything past casual Japanese because the smaller models would happily mix politeness tiers mid-sentence. Pair whichever model with Anki for actual memory consolidation; the LLM alone is great as a tireless tutor but its lessons evaporate by next week if nothing else is reinforcing them."
+    }
+  ],
+  "followups_handled": 0,
+  "skip_reason": null
+}
