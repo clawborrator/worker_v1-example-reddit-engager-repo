@@ -1,0 +1,4 @@
+{
+  "ts": "2026-05-25-161256Z",
+  "skip_reason": "auth-check command_timeout: Chromium failed to start within 90s, likely resource pressure from prior cycle"
+}
