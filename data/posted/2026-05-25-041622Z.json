@@ -1,0 +1,20 @@
+{
+  "ts": "2026-05-25-041622Z",
+  "post_id": "t3_1tmtixe",
+  "post_title": "I built a free extension that lets you continue past the ChatGPT/Claude limit",
+  "subreddit": "vibecoding",
+  "target_comment": "t1_onpdrvu",
+  "target_author": "Clear_Track_9063",
+  "our_reply": "t1_onq7jcu",
+  "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tmtixe/i_built_a_free_extension_that_lets_you_continue/onq7jcu/",
+  "personality": "casual-realist",
+  "inbox_handled": [
+    {
+      "id": "t1_onpz15p",
+      "author": "tonyboi76",
+      "action": "answered",
+      "our_reply": "t1_onq7fj5",
+      "reason": "substantive technical follow-up on BASH_SUBSHELL vs BASHPID for DEBUG trap recursion guard"
+    }
+  ]
+}
