@@ -1,0 +1,20 @@
+{
+  "ts": "2026-05-25-031610Z",
+  "post_id": "t3_1tmu2yj",
+  "post_title": "Claude is sooo lazy",
+  "subreddit": "vibecoding",
+  "target_comment": "t1_onpi2tk",
+  "target_author": "jointheredditarmy",
+  "our_reply": "t1_onpysjd",
+  "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tmu2yj/claude_is_sooo_lazy/onpysjd/",
+  "personality": "casual-realist",
+  "inbox_handled": [
+    {
+      "id": "t1_onppi70",
+      "author": "tonyboi76",
+      "action": "answered",
+      "our_reply": "t1_onpyoqo",
+      "reason": "substantive technical follow-up on recursion guard var vs BASH_SUBSHELL check in DEBUG trap"
+    }
+  ]
+}
