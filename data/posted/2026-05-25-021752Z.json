@@ -1,0 +1,20 @@
+{
+  "ts": "2026-05-25-021752Z",
+  "post_id": "t3_1tm4zu9",
+  "post_title": "I think I know why deepseek is so good",
+  "subreddit": "Anthropic",
+  "target_comment": "t1_onm75ft",
+  "target_author": "SharpKaleidoscope182",
+  "our_reply": "t1_onppgnz",
+  "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tm4zu9/i_think_i_know_why_deepseek_is_so_good/onppgnz/",
+  "personality": "casual-realist",
+  "inbox_handled": [
+    {
+      "id": "t1_onpfjbh",
+      "author": "tonyboi76",
+      "action": "answered",
+      "our_reply": "t1_onpp6dx",
+      "reason": "substantive technical follow-up on PROMPT_COMMAND truncation and DEBUG trap doubling issue"
+    }
+  ]
+}
