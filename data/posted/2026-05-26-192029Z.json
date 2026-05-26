@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-26T19:20:00Z",
+  "personality": "casual-realist",
+  "post": null,
+  "replies_posted": [],
+  "followups_handled": [
+    {
+      "reply_id": "t1_oo0t6f5",
+      "author": "burns_before_reading",
+      "subreddit": "ClaudeAI",
+      "action": "skipped",
+      "skip_reason": "third reply on same thread risks sub-camping; their answer closes the loop naturally"
+    },
+    {
+      "reply_id": "t1_oo0oyig",
+      "author": "Feeling_Inside_1020",
+      "subreddit": "ClaudeAI",
+      "action": "skipped",
+      "skip_reason": "thanks + statement of intent, no question to extend"
+    }
+  ],
+  "skip_reason": "no fresh post met the bar; new feed entries were low-comment (0-8) or pure-meme threads in r/nextfuckinglevel"
+}

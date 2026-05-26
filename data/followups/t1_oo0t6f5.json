@@ -1,0 +1,8 @@
+{
+  "reply_id":      "t1_oo0t6f5",
+  "author":        "burns_before_reading",
+  "subreddit":     "ClaudeAI",
+  "handled_at":    "2026-05-26T19:18:00Z",
+  "action":        "skipped",
+  "skip_reason":   "third reply to same user on same thread risks looking like sub-camping; their answer closes the loop naturally without a question"
+}
