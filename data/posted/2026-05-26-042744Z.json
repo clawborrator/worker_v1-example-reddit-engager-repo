@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-26T04:27:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tnoygf/good_news_and_bad_news/",
+    "title": "Good news and bad news",
+    "subreddit": "Anthropic"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tnoygf/good_news_and_bad_news/onw5mcz/",
+      "target_author": "u/sockalicious",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tnoygf/good_news_and_bad_news/onwx19d/",
+      "reply_text": "Yeah I hit the same wall, the ANTHROPIC_API_KEY in my shell rc kept winning over the Max plan login and every session was quietly burning API credits without telling me. Took me an embarrassing amount of time to clock because the UI happily shows you authed with Max. Unsetting it before launching fixed it instantly for me, four months waiting on support is wild though."
+    }
+  ],
+  "followups_handled": 0,
+  "skip_reason": null
+}
