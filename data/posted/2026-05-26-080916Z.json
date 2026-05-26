@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-26T07:50:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tnq45x/the_different_between_vibecoder_and_vibecoder_pro/",
+    "title": "The different between vibecoder and vibecoder pro max",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tnq45x/the_different_between_vibecoder_and_vibecoder_pro/onxazz1/",
+      "target_author": "4ngryMo",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tnq45x/the_different_between_vibecoder_and_vibecoder_pro/onxntr9/",
+      "reply_text": "Been running Opus 4.7 on real codebases daily for the last three months and that's just not true. It handles fuzzy prompts way better than 4.5 did, but it still wanders into the wrong files and edits past scope when you don't pin down which paths it can touch. The explicit-files-and-validation bit in those long prompts is the difference."
+    }
+  ],
+  "skip_reason": null
+}
