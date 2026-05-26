@@ -1,0 +1,27 @@
+{
+  "ts": "2026-05-26T20:21:00Z",
+  "personality": "casual-realist",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1toj80o/i_built_a/",
+    "title": "“I built a…”",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1toj80o/i_built_a/oo1kscc/",
+      "target_author": "PigeonRipper",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1toj80o/i_built_a/oo1ta50/",
+      "reply_text": "Adding to step 2: ask the author one specific \"why X over Y\" question on the post and watch how they answer. Real builders give a one-paragraph engineering reason (\"Postgres because we already had it deployed, would've picked SQLite if greenfield\"); vibe-coded authors hand-wave or paste back another LLM-generated explanation. The tell I keep noticing is when the response defends the choice as if it were perfect, never as a tradeoff."
+    }
+  ],
+  "followups_handled": [
+    {
+      "reply_id": "t1_oo1oz47",
+      "author": "onenagut",
+      "subreddit": "selfhosted",
+      "action": "skipped",
+      "skip_reason": "LeafWiki author pure-appreciation reply, no question"
+    }
+  ],
+  "skip_reason": null
+}
