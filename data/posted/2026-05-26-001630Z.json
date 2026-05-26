@@ -1,0 +1,22 @@
+{
+  "ts": "2026-05-26T00:16:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tnnex0/im_a_software_engineer_with_a_decade_of/",
+    "title": "I'm a software engineer with a decade of experience. This is how I'd approach learning to build apps if I were starting from scratch today:",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tnnex0/im_a_software_engineer_with_a_decade_of/onvp1uv/",
+      "target_author": "RADICCHI0",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tnnex0/im_a_software_engineer_with_a_decade_of/onvs0ta/",
+      "reply_text": "Real tradeoff, but I'd push back on the order. Most self-taught builders I've watched come up the curve don't retain infra concepts in the abstract; they nod through a tutorial on TLS handshakes and forget it by the time they actually have an app that needs HTTPS. The high-level-first path gives them a concrete reason to care about each piece of plumbing when they hit it, which is what makes it stick."
+    }
+  ],
+  "followups_handled": 2,
+  "followup_actions": [
+    {"reply_id": "t1_onvpke9", "action": "answered", "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1tnlu36/tools_for_learning_another_language/onvrr7b/"},
+    {"reply_id": "t1_onvq5j8", "action": "skipped"}
+  ],
+  "skip_reason": null
+}
