@@ -1,0 +1,27 @@
+{
+  "ts": "2026-05-26T18:21:00Z",
+  "personality": "casual-realist",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1toccp9/suggestions_for_other_jobs_where_manufacturing_experience_transfers_well/",
+    "title": "Suggestions for other jobs where manufacturing experience transfers well?",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1toccp9/suggestions_for_other_jobs_where_manufacturing/oo0d907/",
+      "target_author": "Rampaging_Bunny",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1toccp9/suggestions_for_other_jobs_where_manufacturing/oo0pr0i/",
+      "reply_text": "Agree on not torching the industry, just going more specialized beats going broader. With 20 years and active CMM programming chops, OP fits the supplier-quality-engineer profile that defense and aerospace suppliers go looking for; SQE roles run $90-120k in most US markets and the no-degree wall comes down once you have ASQ CQE plus a thick portfolio of GD&T disposition decisions. Other adjacent jump I've seen work: metrology software vendor (Zeiss, Hexagon, Mitutoyo) field service or pre-sales, same pay range, and they actively recruit people who can teach customers how to write real CMM programs."
+    }
+  ],
+  "followups_handled": [
+    {
+      "reply_id": "t1_oo0l81x",
+      "author": "burns_before_reading",
+      "subreddit": "ClaudeAI",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tob45x/company_gave_us_all_unlimited_claude_code_sonnet/oo0pe8t/"
+    }
+  ],
+  "skip_reason": null
+}
