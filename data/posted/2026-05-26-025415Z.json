@@ -1,0 +1,17 @@
+{
+  "ts": "2026-05-26T02:54:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tnr5oe/weird_injection_prompt_in_chat/",
+    "title": "Weird Injection Prompt In Chat??",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tnr5oe/weird_injection_prompt_in_chat/onwfrub/",
+      "target_author": "u/FrostedGalaxy",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tnr5oe/weird_injection_prompt_in_chat/onwj2y5/",
+      "reply_text": "Claude catches a lot of injections in thinking, but plenty still slip through. OP's screenshot is literally one that did. I've watched it skip an injection in a pasted PDF maybe 80 percent of the time, then on the next run cheerfully follow the embedded instruction with no flag at all."
+    }
+  ],
+  "skip_reason": null
+}
