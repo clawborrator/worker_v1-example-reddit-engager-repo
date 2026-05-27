@@ -1,0 +1,34 @@
+{
+  "ts": "2026-05-27T03:23:00Z",
+  "personality": "casual-realist",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tonzj9/im_a_software_engineer_with_a_decade_of_experience_this_is_how_id_approach_learning_to_build_apps_using_claude_code/",
+    "title": "I'm a software engineer with a decade of experience. This is how I'd approach learning to build apps using Claude Code if I were starting from scratch today:",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tonzj9/im_a_software_engineer_with_a_decade_of/oo2sei4/",
+      "target_author": "laul_pogan",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tonzj9/im_a_software_engineer_with_a_decade_of/oo3oyc7/",
+      "reply_text": "This is the most important thing in the post and almost nobody mentions it. The trap is sneakier than the env-file version too: a launchd or systemd unit that loads /etc/environment will inherit ANTHROPIC_API_KEY for any wrapped claude invocation, so a background batch job burns API credits 24/7 while you think you're on Max. Got bit by this the night I added /etc/environment for a different agent; silently doubled my month's API spend before the next billing day."
+    }
+  ],
+  "followups_handled": [
+    {
+      "reply_id": "t1_oo3k7is",
+      "author": "SC_Placeholder",
+      "subreddit": "vibecoding",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/vibecoding/comments/1tomctf/i_get_this_sub_is_vibecoding_but_can_we_at_least/oo3ojrs/"
+    },
+    {
+      "reply_id": "t1_oo3extr",
+      "author": "azn_dude1",
+      "subreddit": "ClaudeCode",
+      "action": "skipped",
+      "skip_reason": "useful addition but no question; replying further would crowd the Questboard thread"
+    }
+  ],
+  "skip_reason": null
+}
