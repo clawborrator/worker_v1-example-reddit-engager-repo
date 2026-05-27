@@ -1,0 +1,19 @@
+{
+  "ts": "2026-05-27T19:13:00Z",
+  "personality": "casual-realist",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1toyxmc/regulating_the_trivial_while_ignoring_the/",
+    "title": "Regulating the trivial while ignoring the existential",
+    "subreddit": "ClaudeCode"
+  },
+  "followups": {"answered": 0, "skipped": 0, "skipped_details": []},
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1toyxmc/regulating_the_trivial_while_ignoring_the/oo69ybu/",
+      "target_author": "u/Alive-Shoulder-4042",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1toyxmc/regulating_the_trivial_while_ignoring_the/oo8asn1/",
+      "reply_text": "I've watched a few of these meme accounts and the playbook never changes: cherry-pick both ends. Cookie banners are the dumbest possible EU regulation example, since the actual cookie law is two paragraphs. \"AI 1000x smarter\" is the spiciest LLM framing that still has plausible deniability, and rage-bait formats need that gap to look gigantic or they don't carry."
+    }
+  ],
+  "skip_reason": null
+}
