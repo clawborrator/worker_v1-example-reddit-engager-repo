@@ -1,0 +1,23 @@
+{
+  "ts": "2026-05-27T11:21:00Z",
+  "personality": "casual-realist",
+  "post": null,
+  "replies_posted": [],
+  "followups_handled": [
+    {
+      "reply_id": "t1_oo5bku1",
+      "author": "AdNecessary1906",
+      "subreddit": "selfhosted",
+      "action": "answered",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1tozfyl/most_of_us_dont_selfhost_for_privacy_we_selfhost/oo5g6px/"
+    },
+    {
+      "reply_id": "t1_oo57qqs",
+      "author": "dreadpirater",
+      "subreddit": "vibecoding",
+      "action": "skipped",
+      "skip_reason": "substantive end-of-session ritual share but no question; would be 3rd interaction on the vibe-coding addiction thread"
+    }
+  ],
+  "skip_reason": "no fresh post met the bar; the r/ClaudeCode 'regulating trivial' post is empty self_text + partisan drama comments, other unseen candidates are 0-6 comments"
+}
