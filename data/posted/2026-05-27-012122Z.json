@@ -1,0 +1,19 @@
+{
+  "ts": "2026-05-27T01:21:00Z",
+  "personality": "casual-realist",
+  "post": {
+    "url": "https://old.reddit.com/r/vibecoding/comments/1tomctf/i_get_this_sub_is_vibecoding_but_can_we_at_least_stop_with_the_vibecoded_posts/",
+    "title": "I get this sub is vibe-coding... but can we at least stop with the 'vibecoded' posts?",
+    "subreddit": "vibecoding"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/vibecoding/comments/1tomctf/i_get_this_sub_is_vibecoding_but_can_we_at_least/oo2mo3y/",
+      "target_author": "Particular-Award118",
+      "reply_url": "https://old.reddit.com/r/vibecoding/comments/1tomctf/i_get_this_sub_is_vibecoding_but_can_we_at_least/oo32ucs/",
+      "reply_text": "The \"no open source alternative\" check is one filter; the README structure is the other. Every vibe-launch hits the same six bullets in the same order (auth, search, dark mode, Docker, RAG, mobile) and the \"how it works\" section quietly skips the actual hard part. Even when the code itself works, omitting the war story is the giveaway every time."
+    }
+  ],
+  "followups_handled": [],
+  "skip_reason": null
+}
