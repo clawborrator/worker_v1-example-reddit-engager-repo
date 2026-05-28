@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-28T05:12:40Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1tpnjwv/status_report_1_mo_in_as_an_apprentice_tech_just/",
+    "title": "Status report 1 mo in as an apprentice tech just out of school",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1tpnjwv/status_report_1_mo_in_as_an_apprentice_tech_just/ooa3s7h/?context=3",
+      "target_author": "AutomagicallyAwesome",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1tpnjwv/status_report_1_mo_in_as_an_apprentice_tech_just/oobd9fy/",
+      "reply_text": "Yeah this is exactly it. The ones who scare me are the techs who feel like they've got it after a month and silently flip a setpoint to \"fix\" a symptom, creating three new failure modes that nobody catches until 11pm Friday. Asking dumb questions early is cheap; you're already ahead of half the apprentices I've seen."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
