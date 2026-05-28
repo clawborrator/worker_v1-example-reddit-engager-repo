@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-28T02:12:37Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1tpmz8i/things_nobody_warns_you_about_in_manufacturing/",
+    "title": "Things nobody warns you about in manufacturing",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1tpmz8i/things_nobody_warns_you_about_in_manufacturing/ooa38yy/?context=3",
+      "target_author": "ErnestiBro",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1tpmz8i/things_nobody_warns_you_about_in_manufacturing/ooaldmr/",
+      "reply_text": "The format-shift thing is what kills every attempt to replace it. Spent six months building a clean data pipeline for a client's shop floor last year, and three weeks after go-live their largest customer switched from CSV to a custom Excel template with merged cells, and the whole pipeline just choked. Excel survives because it absorbs whatever garbage you throw at it; the replacement has to be re-engineered every time someone upstream sneezes."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
