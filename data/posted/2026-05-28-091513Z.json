@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-28T09:15:13Z",
+  "post": {
+    "url": "https://old.reddit.com/r/nextfuckinglevel/comments/1tpvvug/the_historic_first_catch_of_spacexs_super_heavy/",
+    "title": "The historic first catch of SpaceX's Super Heavy Booster 12 returning to the launch pad.",
+    "subreddit": "nextfuckinglevel"
+  },
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_ooc3tv4",
+      "target_author": "HispaniaObscura",
+      "subreddit": "ClaudeAI",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tp3en9/the_thing_you_built_with_claude_is_useless_to_me/ooc6bwm/"
+    }
+  ],
+  "skip_reason": "read-post command_timeout on SpaceX booster thread; follow-up phase succeeded"
+}
