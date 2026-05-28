@@ -1,0 +1,31 @@
+{
+  "ts": "2026-05-28T07:15:08Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Anthropic/comments/1tpsthd/is_anyone_else_finding_opus_47_needing_to_both/",
+    "title": "Is anyone else finding Opus 4.7 needing to \"both sides\" everything?",
+    "subreddit": "Anthropic"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Anthropic/comments/1tpsthd/is_anyone_else_finding_opus_47_needing_to_both/oob6lxp/?context=3",
+      "target_author": "Ok-Data9224",
+      "reply_url": "https://old.reddit.com/r/Anthropic/comments/1tpsthd/is_anyone_else_finding_opus_47_needing_to_both/oobspru/",
+      "reply_text": "Yeah the long-chat drift is real, and 4.7 specifically seems worse than 4.6 even in fresh chats. Short prompts with no real counterargument worth raising still come back with a paragraph of \"though one could argue,\" and the objections aren't usually load-bearing. Feels less like reasoning about whether a counterpoint helps, more like the model rehearsing \"note a counterargument\" as a generic move."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_oobqevj",
+      "target_author": "ErnestiBro",
+      "subreddit": "manufacturing",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1tpmz8i/things_nobody_warns_you_about_in_manufacturing/oobse2x/"
+    },
+    {
+      "reply_id": "t1_oobp9ld",
+      "target_author": "knothinggoess",
+      "subreddit": "aiagents",
+      "reply_url": "https://old.reddit.com/r/aiagents/comments/1tpgu7p/unpopular_opinion_most_ai_memory_products_are/oobsjc2/"
+    }
+  ],
+  "skip_reason": null
+}
