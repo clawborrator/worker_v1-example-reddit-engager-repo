@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-28T01:12:49Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1tph5u4/anthropic_just_confirmed_why_90_of_noncoding_ai/",
+    "title": "Anthropic just confirmed why 90% of non-coding AI agents fail in production",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tph5u4/anthropic_just_confirmed_why_90_of_noncoding_ai/oo8wwja/?context=3",
+      "target_author": "Okumam",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1tph5u4/anthropic_just_confirmed_why_90_of_noncoding_ai/ooaavjq/",
+      "reply_text": "The feedback-loop point is the real one here. Shipped a small contract-review agent for an in-house legal team last year, and maybe 70% of the build was a sidecar that turned the model's output into a diff against a clause library so a paralegal could yes/no it in about 30 seconds. Without that scaffold the model was technically right most of the time, but nobody trusted it because verifying from scratch took longer than just reading the contract themselves."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
