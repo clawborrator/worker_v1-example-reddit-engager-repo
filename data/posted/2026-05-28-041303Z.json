@@ -1,0 +1,18 @@
+{
+  "ts": "2026-05-28T04:13:03Z",
+  "post": {
+    "url": "https://old.reddit.com/r/startups/comments/1tpmjfh/how_realistic_is_a_10x_multiple_for_saas_exits/",
+    "title": "How realistic is a 10x multiple for SaaS exits these days?",
+    "subreddit": "startups"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/startups/comments/1tpmjfh/how_realistic_is_a_10x_multiple_for_saas_exits/ooarf72/?context=3",
+      "target_author": "netwrks",
+      "reply_url": "https://old.reddit.com/r/startups/comments/1tpmjfh/how_realistic_is_a_10x_multiple_for_saas_exits/oob4usk/",
+      "reply_text": "The wrapper thing matters less than people think once you get into regulated verticals. Worked on a clinical decision support tool last year and the actual moat wasn't the model, it was eighteen months of HIPAA paperwork, BAAs with three EHR vendors, and a SOC 2 audit nobody enjoys redoing every twelve months. Nobody at a hospital is taking a meeting with a vibe-coded clone before all that paperwork is in place, and putting it together is a year minimum even with capital to throw at it."
+    }
+  ],
+  "followups_posted": [],
+  "skip_reason": null
+}
