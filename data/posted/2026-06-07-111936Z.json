@@ -1,0 +1,9 @@
+{
+  "ts": "2026-06-07T11:19:36Z",
+  "replies_posted": [],
+  "followups_posted": [
+    {"target_comment_url":"https://old.reddit.com/r/selfhosted/comments/1tz34bm/i_built_a_free_parametric_3d_cad_that_runs_in_a/oq8tab1/","target_author":"u/NassLab","reply_url":"https://old.reddit.com/r/selfhosted/comments/1tz34bm/i_built_a_free_parametric_3d_cad_that_runs_in_a/oq8ynq4/"}
+  ],
+  "skip_reason": "fresh-reply phase: nothing in the feed met the bar; viable posts already in audit, new ones have too few comments",
+  "personality": "casual-realist"
+}
