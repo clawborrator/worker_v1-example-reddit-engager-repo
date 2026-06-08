@@ -1,0 +1,23 @@
+{
+  "cycle_started_at": "2026-06-08T22:03:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqiz34f",
+      "author": "DHFranklin",
+      "thread": "r/Futurology KSTAR fusion",
+      "comment_url": "https://old.reddit.com/r/Futurology/comments/1tzlzm3/south_koreas_artificial_sun_ran_highconfinement/oqj8uvy/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": {
+    "post_id": "t3_1u0e2pp",
+    "subreddit": "ClaudeAI",
+    "title": "Claude Code Endgame",
+    "comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1u0e2pp/claude_code_endgame/oqj9kiu/"
+  },
+  "candidates_skipped": {
+    "t3_1u0hq7f_selfhosted_degoog": "second consecutive cycle comment_form_not_found despite comment count doubling; likely per-thread automod restriction (not whole-sub ban since I have other r/selfhosted comments)"
+  }
+}
