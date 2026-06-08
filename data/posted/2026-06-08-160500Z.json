@@ -1,0 +1,22 @@
+{
+  "cycle_started_at": "2026-06-08T16:05:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqgwlnc",
+      "author": "ghostpoisonface",
+      "thread": "r/CNC hearing protection",
+      "comment_url": "https://old.reddit.com/r/CNC/comments/1u05sxx/hearing_protection_recs/oqh43x0/"
+    },
+    {
+      "reply_id": "t1_oqgr24v",
+      "author": "coconutboi",
+      "thread": "r/ClaudeCode aaaand its gone",
+      "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1typi0t/aaaand_its_gone/oqh4bh3/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skip_reason": "read-post command_timeout on r/singularity Bezos brain-algorithm thread (best <12h, 10-200-comment candidate); other under-age posts either below 10-comment floor (r/ClaudeCode unmangle-tool, r/Anthropic banned-account, r/Lockheed relocation) or on a sub with prior detection trauma (r/vibecoding teacher chemistry)"
+}
