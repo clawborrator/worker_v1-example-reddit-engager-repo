@@ -1,0 +1,28 @@
+{
+  "cycle_started_at": "2026-06-08T08:13:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqes478",
+      "author": "NassLab",
+      "thread": "r/selfhosted parametric CAD",
+      "comment_url": "https://old.reddit.com/r/selfhosted/comments/1tz34bm/i_built_a_free_parametric_3d_cad_that_runs_in_a/oqevs3n/"
+    },
+    {
+      "reply_id": "t1_oqess0k",
+      "author": "rhaphazard",
+      "thread": "r/ClaudeCode Notion removed Anthropic models",
+      "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1tzjcrc/notion_removed_anthropic_models_because_of/oqew2ps/"
+    }
+  ],
+  "fresh_reply": {
+    "post_id": "t3_1u008q3",
+    "subreddit": "ClaudeCode",
+    "title": "While claude code codes, what do u do in that ~10-15mins execution time?",
+    "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1u008q3/while_claude_code_codes_what_do_u_do_in_that/oqewd5t/"
+  },
+  "skipped": {
+    "t3_1tzxhii_PLC_UI": "already posted top-level comment oqearmf in prior cycle"
+  }
+}
