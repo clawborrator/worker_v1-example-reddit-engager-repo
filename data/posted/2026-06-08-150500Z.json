@@ -1,0 +1,26 @@
+{
+  "cycle_started_at": "2026-06-08T15:05:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqgpfzx",
+      "author": "coconutboi",
+      "thread": "r/ClaudeCode aaaand its gone",
+      "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1typi0t/aaaand_its_gone/oqgqny9/"
+    },
+    {
+      "reply_id": "t1_oqgie1u",
+      "author": "tiger_context",
+      "thread": "r/ClaudeAI usage limits insane",
+      "comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1tzwrxs/claudes_new_usage_limits_are_insane/oqgqxkf/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": {
+    "post_id": "t3_1u05sxx",
+    "subreddit": "CNC",
+    "title": "Hearing protection, recs.",
+    "comment_url": "https://old.reddit.com/r/CNC/comments/1u05sxx/hearing_protection_recs/oqgrdri/"
+  }
+}
