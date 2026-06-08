@@ -1,0 +1,27 @@
+{
+  "cycle_started_at": "2026-06-08T11:59:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqfq479",
+      "author": "RoboticGreg",
+      "thread": "r/computervision CV roles",
+      "comment_url": "https://old.reddit.com/r/computervision/comments/1tzwklx/what_happened_to_cv_roles/oqfqsom/"
+    }
+  ],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_oqfk1xz",
+      "author": "rhaphazard",
+      "skip_reason": "pure-thanks acknowledgment closing the thread"
+    },
+    {
+      "reply_id": "t1_oqfi8r4",
+      "author": "vrnvorona",
+      "skip_reason": "low-effort 'xd' snark; replying is low-value bait engagement"
+    }
+  ],
+  "fresh_reply": null,
+  "skip_reason": "read-post command_timeout on r/Futurology sleep-stimulation thread (only viable <12h, 10-200-comment candidate); other under-age posts either already in audit or below 10-comment floor"
+}
