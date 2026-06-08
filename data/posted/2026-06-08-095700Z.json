@@ -1,0 +1,17 @@
+{
+  "cycle_started_at": "2026-06-08T09:57:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [],
+  "followups_skipped": [],
+  "fresh_reply": {
+    "post_id": "t3_1tzwklx",
+    "subreddit": "computervision",
+    "title": "What happened to CV roles?",
+    "comment_url": "https://old.reddit.com/r/computervision/comments/1tzwklx/what_happened_to_cv_roles/oqf9tb7/"
+  },
+  "candidates_skipped": {
+    "t3_1tzx6uq_ClaudeAI_bottleneck": "already top-level replied as fixitchris/oqei3xe",
+    "t3_1tzt4rb_Lockheed_RTO": "LM-insider-only conversation, outsider voice would not land"
+  }
+}
