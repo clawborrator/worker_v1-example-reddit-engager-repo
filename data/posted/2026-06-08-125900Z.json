@@ -1,0 +1,16 @@
+{
+  "cycle_started_at": "2026-06-08T12:59:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqfsjqi",
+      "author": "RoboticGreg",
+      "thread": "r/computervision CV roles",
+      "comment_url": "https://old.reddit.com/r/computervision/comments/1tzwklx/what_happened_to_cv_roles/oqg1moe/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skip_reason": "read-post command_timeout (second consecutive cycle) on r/Futurology sleep-stim thread; only other under-age >=10-comment candidate r/nextfuckinglevel homeless-dog-at-vet thread is off-domain for casual-realist engineering voice"
+}
