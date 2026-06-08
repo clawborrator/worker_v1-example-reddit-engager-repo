@@ -1,0 +1,19 @@
+{
+  "cycle_started_at": "2026-06-08T09:02:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_oqeyev0",
+      "author": "zixxty",
+      "skip_reason": "pure-thanks acknowledgment"
+    }
+  ],
+  "fresh_reply": {
+    "post_id": "t3_1tzqvjg",
+    "subreddit": "manufacturing",
+    "title": "Grown to hate my job but scared to leave",
+    "comment_url": "https://old.reddit.com/r/manufacturing/comments/1tzqvjg/grown_to_hate_my_job_but_scared_to_leave/oqf2mpz/"
+  }
+}
