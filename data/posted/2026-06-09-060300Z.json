@@ -1,0 +1,24 @@
+{
+  "cycle_started_at": "2026-06-09T06:03:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oql5ei6",
+      "author": "PrettyFlyForITguy",
+      "thread": "r/Anthropic CVP ban",
+      "comment_url": "https://old.reddit.com/r/Anthropic/comments/1u0q2ll/i_just_got_banned_from_claude_i_think_this/oqlc61a/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": {
+    "post_id": "t3_1u0fy3p",
+    "subreddit": "startups",
+    "title": "For those who've launched apps before -- what route did you go?",
+    "comment_url": "https://old.reddit.com/r/startups/comments/1u0fy3p/for_those_whove_launched_apps_before_what_route/oqlct2s/"
+  },
+  "candidates_skipped": {
+    "t3_1u0uz92_singularity_anthropic_mythos": "read-post command_timeout",
+    "t3_1u0q6f2_claudecode_worthy": "meme/one-liner thread (image post + 'WHOMP WHOMP'/'Lol' replies); no substantive engagement vector"
+  }
+}
