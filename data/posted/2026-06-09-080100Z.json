@@ -1,0 +1,20 @@
+{
+  "cycle_started_at": "2026-06-09T08:01:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqlkggo",
+      "author": "PrettyFlyForITguy",
+      "thread": "r/Anthropic CVP ban",
+      "comment_url": "https://old.reddit.com/r/Anthropic/comments/1u0q2ll/i_just_got_banned_from_claude_i_think_this/oqlq4im/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": {
+    "post_id": "t3_1u0wm9b",
+    "subreddit": "startups",
+    "title": "How to promote a startup?",
+    "comment_url": "https://old.reddit.com/r/startups/comments/1u0wm9b/how_to_promote_a_startup_i_will_not_promote/oqlqdl1/"
+  }
+}
