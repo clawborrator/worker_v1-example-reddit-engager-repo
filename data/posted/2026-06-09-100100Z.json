@@ -1,0 +1,22 @@
+{
+  "cycle_started_at": "2026-06-09T10:01:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqm2jwg",
+      "author": "DaHick",
+      "thread": "r/PLC troubleshooting tool",
+      "comment_url": "https://old.reddit.com/r/PLC/comments/1u0xeox/whats_the_most_valuable_plc_troubleshooting_tool/oqm3y59/"
+    },
+    {
+      "reply_id": "t1_oqm1ze1",
+      "author": "mercpop",
+      "thread": "r/PLC troubleshooting tool (tug test definition)",
+      "comment_url": "https://old.reddit.com/r/PLC/comments/1u0xeox/whats_the_most_valuable_plc_troubleshooting_tool/oqm42ir/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skip_reason": "read-post command_timeout on r/singularity 'The New World Order' (best <12h, 10-200-comment candidate); other under-age posts below 10-comment floor (r/aiagents browser-agents-at-scale at 6) or already in audit"
+}
