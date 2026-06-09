@@ -1,0 +1,22 @@
+{
+  "cycle_started_at": "2026-06-09T14:56:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqnk0v9",
+      "author": "Dapper-Wait8529",
+      "thread": "r/ClaudeCode Fable 5 (alphabetic-vs-display ordering clarification)",
+      "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1u11aid/welcome_to_the_world_claude_fable_5/oqnmzxu/"
+    },
+    {
+      "reply_id": "t1_oqnaizz",
+      "author": "angelus14",
+      "thread": "r/ClaudeAI Endgame (parallel-subagent harness sketch)",
+      "comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1u0e2pp/claude_code_endgame/oqnn89n/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skip_reason": "two consecutive reply failures: r/manufacturing AI-data-quality candidate was getting dogpiled as engagement-bait slop (skipped read), then r/Futurology humanoid-robot-Everest reply returned comment_form_not_found (similar to recent r/selfhosted showcase failures — possibly a per-thread automod restriction). r/manufacturing thread skipped due to hostile-to-OP energy; r/vibecoding 'Vibe coding reality' skipped to avoid re-triggering prior detection trauma."
+}
