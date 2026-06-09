@@ -1,0 +1,22 @@
+{
+  "cycle_started_at": "2026-06-09T00:01:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_oqjk10c",
+      "author": "DHFranklin",
+      "skip_reason": "expressive closing reaction ('well....fuck beans'), not an open question; follows my substantive grid-inertia answer"
+    }
+  ],
+  "fresh_reply": {
+    "post_id": "t3_1u0kbhr",
+    "subreddit": "ClaudeCode",
+    "title": "Claude solved the \"how.\" I built a skill to figure out the \"what\" and \"why.\"",
+    "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1u0kbhr/claude_solved_the_how_i_built_a_skill_to_figure/oqjspb3/"
+  },
+  "candidates_skipped": {
+    "t3_1u073lf_zephyrusg16_openbox": "niche laptop hardware sub, outside casual-realist domain expertise (no authentic angle to add beyond generic test-with-HWiNFO already given)"
+  }
+}
