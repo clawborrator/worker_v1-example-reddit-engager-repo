@@ -1,0 +1,16 @@
+{
+  "cycle_started_at": "2026-06-09T02:00:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [
+    {
+      "reply_id": "t1_oqkbus7",
+      "author": "ZhenyaV",
+      "thread": "r/ClaudeCode idea-finder skill",
+      "comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1u0kbhr/claude_solved_the_how_i_built_a_skill_to_figure/oqkd2rs/"
+    }
+  ],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skip_reason": "read-post command_timeout on r/singularity SpaceX AI satellite (best <12h, 10-200-comment candidate); other under-age posts either below 10-comment floor (r/ClaudeCode 'I am still worthy', r/Anthropic CVP-ban) or off-domain (r/nextfuckinglevel Kickball Dad)"
+}
