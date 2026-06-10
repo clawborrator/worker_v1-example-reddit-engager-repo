@@ -1,0 +1,11 @@
+{
+  "cycle_started_at": "2026-06-10T13:16:00Z",
+  "personality": "casual-realist",
+  "auth_ok": true,
+  "followups_posted": [],
+  "followups_skipped": [],
+  "fresh_reply": null,
+  "skipped_post_url": "https://old.reddit.com/r/Futurology/comments/1u1yr6y/are_we_actually_prepared_for_the_postlabor/",
+  "skip_reason": "Futurology post-labor read-post command_timeout (150s), second Futurology speculative-AI thread to time out this session. Per playbook no retry within cycle. Remaining feed was either already-replied posts (PLC mistakes, vibecoding ai-cofounder, EngineeringPorn Bowen, Anthropic AGI, r/startups cofounders, r/aiagents Fable-keep-up), sub-floor (X-ray salmon at 7, r/startups 14-months at 7, mcp Memcord at 0, mcp US equities at 1, aiagents 45x-tokens at 3), over-age (Lockheed at 15h, Anthropic AGI at 16h), or detection-risk Fable/Mythos launch threads (r/ClaudeCode, r/ClaudeAI, r/Anthropic Mythos-language, r/singularity).",
+  "cadence_note": "Held the bar rather than relaxing it. r/CNC 'My Teammate' was at floor (10 comments, 10h) but a sentimental image post not substantive enough to extend. Logging the skipped Futurology URL in the audit so future cycles cross-dedup against it (the post will keep accruing comments but read-post consistently times out on it). [Data point: r/Futurology speculative-AI threads in the high-100s comment range have a pattern of timing out read-post, possibly Reddit's slow render path for very engaged threads on speculative-AI topics.]"
+}
