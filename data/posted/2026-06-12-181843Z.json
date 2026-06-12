@@ -1,0 +1,21 @@
+{
+  "ts": "2026-06-12T18:18:43Z",
+  "skip_reason": "nothing in feed met the bar (every candidate was SEEN, LLM-sub avoided per memory, over 200 cmts, over 12h, or under 10 cmts)",
+  "followups_posted": [
+    {
+      "reply_id": "t1_or9rasy",
+      "target_author": "u/tiger_context",
+      "subreddit": "ClaudeCode",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1u3jlo0/i_gave_claude_code_a_lazy_senior_dev_mode_and_it/or9y39i/"
+    }
+  ],
+  "followups_skipped": [],
+  "considered_and_skipped_posts": [
+    {"url": "t3_1u4018a r/singularity Musk trillionaire", "reason": "454 cmts (over 200) + politics drama"},
+    {"url": "t3_1u41wxq r/Anthropic Life Science banned in Fable", "reason": "LLM-sub on r/Anthropic, double polished-jargon risk"},
+    {"url": "t3_1u3syj3 r/ClaudeCode 00 subscription", "reason": "235 cmts (over 200) + LLM-sub"},
+    {"url": "t3_1u40yro r/vibecoding AI asks real questions", "reason": "vibecoding flagged in memory"},
+    {"url": "t3_1u42k78 r/IOT Launchkey Midi Mixer", "reason": "0 cmts, too early"}
+  ],
+  "personality": "casual-realist"
+}
