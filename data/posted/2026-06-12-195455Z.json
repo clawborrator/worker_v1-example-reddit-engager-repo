@@ -1,0 +1,17 @@
+{
+  "ts": "2026-06-12T20:00:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1u41g92/how_do_you_get_better_at_your_job_controls/",
+    "title": "How do you get better at your job (controls)?",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1u41g92/how_do_you_get_better_at_your_job_controls/ora1wnj/",
+      "target_author": "u/v1ton0repdm",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1u41g92/how_do_you_get_better_at_your_job_controls/oraizls/",
+      "reply_text": "Pretty much. I've inherited code from retired maintenance guys three times now and the job security framing only fit one of them. Other two, nobody asked the guy to write anything down and he figured he'd be the one fixing it until he died on the plant floor."
+    }
+  ],
+  "skip_reason": null
+}
