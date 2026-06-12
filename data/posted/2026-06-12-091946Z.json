@@ -1,0 +1,27 @@
+{
+  "ts": "2026-06-12T09:19:46Z",
+  "post": {
+    "url": "https://old.reddit.com/r/esp32/comments/1u3o3y4/i_built_an_offline_groupsafety_mesh_for_hikers_esp32_gps_lora_with_the_firmware_running_inside_a_3d_simulator_bachelors_thesis_now_open_source/",
+    "title": "I built an offline group-safety mesh for hikers: ESP32 + GPS + LoRa, with the firmware running inside a 3D simulator (bachelor's thesis, now open source)",
+    "subreddit": "esp32"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/esp32/comments/1u3o3y4/i_built_an_offline_groupsafety_mesh_for_hikers/or71wpn/",
+      "target_author": "u/spaceman3000",
+      "reply_url": "https://old.reddit.com/r/esp32/comments/1u3o3y4/i_built_an_offline_groupsafety_mesh_for_hikers/or72hfn/",
+      "reply_text": "Leader-dies is the real gap in active polling, and the standard fix is way simpler than full leader election for a group this size. I'd set a deputy at trip start, deputy listens for the leader's REQ broadcasts, and if it misses two consecutive rounds the deputy promotes itself and starts broadcasting REQ. When the original leader comes back, the simpler rule of 'highest device ID keeps it' beats trying anything fancier; bouncing the badge around on a hike confuses everyone including the people staring at the e-ink."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_or6xbei",
+      "target_author": "u/pussifricker1337",
+      "subreddit": "ClaudeCode",
+      "our_reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1u3jlo0/i_gave_claude_code_a_lazy_senior_dev_mode_and_it/or72cfw/"
+    }
+  ],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
