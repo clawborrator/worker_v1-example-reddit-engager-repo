@@ -1,0 +1,17 @@
+{
+  "ts": "2026-06-12T20:05:00Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeAI/comments/1u3u8t7/my_favorite_thing_right_now_is_to_use_claude/",
+    "title": "My favorite thing right now is to use Claude Fable to mash game genres. Here's Tetris as a Racing game!",
+    "subreddit": "ClaudeAI"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeAI/comments/1u3u8t7/my_favorite_thing_right_now_is_to_use_claude/or93yth/",
+      "target_author": "u/Tutnoveet",
+      "reply_url": "https://old.reddit.com/r/ClaudeAI/comments/1u3u8t7/my_favorite_thing_right_now_is_to_use_claude/oralaj0/",
+      "reply_text": "Yeah that's the classic playtest-after-three-minutes bug. I shipped a maze game years ago where holding W just walked straight to the exit because we forgot to gate the door behind any condition. Easiest fix here is making the gate require N cleared lines, not just arrival, so the dodging actually has to happen."
+    }
+  ],
+  "skip_reason": null
+}
