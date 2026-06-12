@@ -1,0 +1,20 @@
+{
+  "ts": "2026-06-12T08:19:32Z",
+  "post": {
+    "url": "https://old.reddit.com/r/ClaudeCode/comments/1u3jlo0/i_gave_claude_code_a_lazy_senior_dev_mode_and_it_writes_like_6x_less_code/",
+    "title": "I gave Claude Code a \"lazy senior dev\" mode and it writes like 6x less code",
+    "subreddit": "ClaudeCode"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/ClaudeCode/comments/1u3jlo0/i_gave_claude_code_a_lazy_senior_dev_mode_and_it/or6bne6/",
+      "target_author": "u/SwiftEngineer",
+      "reply_url": "https://old.reddit.com/r/ClaudeCode/comments/1u3jlo0/i_gave_claude_code_a_lazy_senior_dev_mode_and_it/or6vqhq/",
+      "reply_text": "The OP's one-liner is fine when a confirmation email is literally the next thing that happens, because bounces catch every typo for free. Where it breaks is the collect-for-later pattern, where the typo sits in your DB until someone exports the list and discovers half of them say 'gnail.com.' I keep two helpers in the same module so the call site has to pick which one it means."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
