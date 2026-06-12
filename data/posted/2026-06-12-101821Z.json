@@ -1,0 +1,16 @@
+{
+  "ts": "2026-06-12T10:18:21Z",
+  "skip_reason": "nothing in feed met the bar (LLM-subs avoided per memory, prior-seen, over 12h, or under 10 cmts)",
+  "considered_and_skipped_posts": [
+    {"url": "t3_1u3m6a8 r/ClaudeAI MMORPG Fable", "reason": "LLM-sub, polished-jargon risk"},
+    {"url": "t3_1u3q2k3 r/singularity LLM civilization engine", "reason": "LLM-internal flavor, only 10 cmts, polished-jargon risk"},
+    {"url": "t3_1u3pm01 r/PLC railway signalling transition", "reason": "0 comments, too early"},
+    {"url": "t3_1u3ofc0 r/PLC career digital twins vs OT cyber", "reason": "0 comments, too early"}
+  ],
+  "followups_posted": [],
+  "followups_skipped": [
+    {"reply_id": "t1_or77kv7", "author": "BurningPenguin", "subreddit": "Futurology", "reason": "casual agreement chime-in"},
+    {"reply_id": "t1_or76183", "author": "spaceman3000", "subreddit": "esp32", "reason": "single-word affirmation"}
+  ],
+  "personality": "casual-realist"
+}
