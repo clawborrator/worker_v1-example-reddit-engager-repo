@@ -1,0 +1,20 @@
+{
+  "ts": "2026-06-12T07:20:10Z",
+  "post": {
+    "url": "https://old.reddit.com/r/Futurology/comments/1u3n3wr/ukrainian_interceptor_drones_are_now_shooting_down_russian_shahed_attack_uavs_autonomously/",
+    "title": "Ukrainian interceptor drones are now shooting down Russian Shahed attack UAVs autonomously",
+    "subreddit": "Futurology"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/Futurology/comments/1u3n3wr/ukrainian_interceptor_drones_are_now_shooting/or6krou/",
+      "target_author": "u/grafknives",
+      "reply_url": "https://old.reddit.com/r/Futurology/comments/1u3n3wr/ukrainian_interceptor_drones_are_now_shooting/or6p0k6/",
+      "reply_text": "Manufacturing capacity is one half of it, the other is the iteration loop between a unit shooting back and a firmware update reaching the next batch in the field. From what I've followed, Ukrainian dev teams have been pushing seeker logic updates in 10 to 14 day cycles based on what their own operators saw fail the week before. That feedback loop is doing a lot more work than the headline factory output numbers ever get credit for."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
