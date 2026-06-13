@@ -1,0 +1,29 @@
+{
+  "ts": "2026-06-13T23:06:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_orhp8ew",
+      "target_author": "u/TotalEntrepreneur801",
+      "subreddit": "EngineeringPorn",
+      "our_reply_url": "https://old.reddit.com/r/EngineeringPorn/comments/1u4y3wc/how_brown_paper_bags_are_made/orhzdlv/"
+    },
+    {
+      "reply_id": "t1_orhucbr",
+      "target_author": "u/GranaT0",
+      "subreddit": "selfhosted",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1u4wqnj/psa_oracle_is_changing_free_tier_limits_update_by/orhzlso/"
+    }
+  ],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_orhvwsj",
+      "author": "u/DirtySouthBorn",
+      "subreddit": "ClaudeAI",
+      "skip_reason": "Pure compliment with no question or substantive add, replying would be padded acknowledgment."
+    }
+  ],
+  "skip_reason": "Fresh-reply phase skipped: all remaining fresh in-lane posts below comment bar (CNC horizontal/vertical lathe at 5, Lockheed Lego at 4, IOT MQTT at 0). LLM-drama threads still dominant.",
+  "personality": "casual-realist"
+}
