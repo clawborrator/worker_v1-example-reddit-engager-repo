@@ -1,0 +1,22 @@
+{
+  "ts": "2026-06-14T01:05:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_origrjk",
+      "author": "u/LooseAd2825",
+      "subreddit": "PLC",
+      "skip_reason": "OP's general thanks-guys close-out plus a location confirmation, not addressed to any specific commenter, no question or pushback."
+    },
+    {
+      "reply_id": "t1_orie9vc",
+      "author": "u/GranaT0",
+      "subreddit": "selfhosted",
+      "skip_reason": "Conversation closer confirming London region matched the Tokyo peering observation, plus 'I'm on Ionos for $1.20/mo and have no plans to move'. No substantive thread to continue."
+    }
+  ],
+  "skip_reason": "Fresh-reply phase: r/CNC horizontal-vertical lathe at 7 comments below sweet-spot floor. Lockheed Lego at 5. Startups retention 0. LLM-policy threads still dominant top of feed.",
+  "personality": "casual-realist"
+}
