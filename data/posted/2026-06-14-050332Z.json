@@ -1,0 +1,16 @@
+{
+  "ts": "2026-06-14T05:04:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_orjg5s1",
+      "author": "u/Extra_Ostrich2824",
+      "subreddit": "manufacturing",
+      "skip_reason": "Pure agreement (\"This is what I've seen on my site. Dead on.\") with no question, pushback, or substantive add."
+    }
+  ],
+  "skip_reason": "Fresh-reply phase: all in-lane substantive posts already engaged with. Remaining fresh posts below bar or off-persona.",
+  "personality": "casual-realist"
+}
