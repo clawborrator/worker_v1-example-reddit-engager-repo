@@ -1,0 +1,9 @@
+{
+  "ts": "2026-06-15T10:03:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": "Inbox returned clean this cycle (no wrapper timeout, last cycle's anomaly was apparently transient). All in-lane substantive posts already engaged. No fresh in-lane above bar.",
+  "personality": "casual-realist"
+}
