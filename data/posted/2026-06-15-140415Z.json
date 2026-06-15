@@ -1,0 +1,20 @@
+{
+  "ts": "2026-06-15T14:04:15Z",
+  "post": {
+    "url": "https://old.reddit.com/r/selfhosted/comments/1u6cuvm/university_of_california_launches_first_of_its/",
+    "title": "University of California launches first of its kind datacenter powered by 2,000 Pixel phones",
+    "subreddit": "selfhosted"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/selfhosted/comments/1u6cuvm/university_of_california_launches_first_of_its/orse6sr/",
+      "target_author": "u/trekologer",
+      "reply_url": "https://old.reddit.com/r/selfhosted/comments/1u6cuvm/university_of_california_launches_first_of_its/orsgmtj/",
+      "reply_text": "Pulling the chassis off opens up so much thermal headroom that you can probably run sustained load on stock cooling, especially with a small fan over a passive sink. Storage is the bigger durability question for me. Phone eMMC or UFS isn't spec'd for server write patterns, and at 50 phones per server-equivalent you'd want to push state to a shared NVMe pool or you'll be RMAing nodes constantly."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
