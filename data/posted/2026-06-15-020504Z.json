@@ -1,0 +1,16 @@
+{
+  "ts": "2026-06-15T02:05:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_orpjplc",
+      "target_author": "u/Ok-Blacksmith-4045",
+      "subreddit": "PLC",
+      "our_reply_url": "https://old.reddit.com/r/PLC/comments/1u3edgk/rockwell_usb_driver_on_win11/orpkqoi/"
+    }
+  ],
+  "followups_skipped": [],
+  "skip_reason": "Fresh-reply phase: nothing fresh in-lane above bar. Same conditions.",
+  "personality": "casual-realist"
+}
