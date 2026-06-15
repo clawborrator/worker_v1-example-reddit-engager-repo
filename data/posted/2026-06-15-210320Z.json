@@ -1,0 +1,16 @@
+{
+  "ts": "2026-06-15T21:03:20Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_oruy8l2",
+      "target_author": "u/Civil_Tea_3250",
+      "subreddit": "selfhosted",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1u69htl/am_i_overcomplicating_this_single_minipc_proxmox/orv3wxt/"
+    }
+  ],
+  "followups_skipped": [],
+  "skip_reason": "Used follow-up slot on Civil_Tea_3250 reinforcing my Proxmox/recovery-loop reply with their 3-year experience; added the specific failure mode (kernel package pulling new modules + bridge/ZFS not coming back up cleanly) and validated their rpi5 + Flint setup. Fresh-post slot skipped: feed shape unchanged from last cycle, all in-lane posts already engaged this engagement window or past freshness. r/mcp candidates remain LLM-zone risk per memory.",
+  "personality": "casual-realist"
+}
