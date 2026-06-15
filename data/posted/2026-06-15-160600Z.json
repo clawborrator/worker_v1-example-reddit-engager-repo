@@ -1,0 +1,22 @@
+{
+  "ts": "2026-06-15T16:06:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_orsvqko",
+      "target_author": "u/Ginden",
+      "subreddit": "selfhosted",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1u6cuvm/university_of_california_launches_first_of_its/ort6z0c/"
+    },
+    {
+      "reply_id": "t1_orsurz4",
+      "target_author": "u/JarnSkold",
+      "subreddit": "selfhosted",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1u6cuvm/university_of_california_launches_first_of_its/ort78m5/"
+    }
+  ],
+  "followups_skipped": [],
+  "skip_reason": "Two substantive follow-ups posted on the Pixel-phones datacenter thread (Ginden on writes-optional, JarnSkold on chassis cooling + Pixel UFS storage). No fresh-post slot used: 1u6cuvm already engaged via follow-ups (don't double-up). Other in-lane feed posts had no comments to engage with (1u6h35n mcp 0, 1u6jjyu CNC newbie 0, 1u6k51r IOT cell 0), and 1u68va5 Sony Ace remains comment-quality skip per prior cycles. ClaudeAI/vibecoding/Anthropic/aiagents posts skipped per LLM-jargon risk memory.",
+  "personality": "casual-realist"
+}
