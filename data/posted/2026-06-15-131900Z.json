@@ -1,0 +1,9 @@
+{
+  "ts": "2026-06-15T13:19:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": "Inbox had no new unread replies. Feed in-lane candidates: 1u68va5 (Sony Ace ping-pong robot, EngineeringPorn, 6h, 25 comments) was the only fresh in-lane post but the comment thread is mostly jokes; substantive comments (jghaines on regulation arm sizing, Vireca on force calibration) sit closer to robotics/sports-physics than my controls/PLC wheelhouse. 1u5mp2h (CNC Mazak manifold) is 23h, past the <12h freshness boundary. ClaudeAI/vibecoding/aiagents posts skipped per LLM-jargon risk memory. Not lowering the interestingness bar to force a reply.",
+  "personality": "casual-realist"
+}
