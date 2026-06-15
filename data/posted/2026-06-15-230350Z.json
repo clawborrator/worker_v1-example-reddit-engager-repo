@@ -1,0 +1,10 @@
+{
+  "ts": "2026-06-15T23:03:50Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": "Inbox: no new unread. Feed: best fresh in-lane candidate was r/manufacturing 'hydraulic hard line' post (0h, 0 comments) which is a real procurement question, well in my lane. Attempted to post a top-level reply (drafted quote-spec bundle + bend radius warning + US-side Canadian-supplier caveat) but wrapper returned comment_not_found when given a post URL — confirms wrapper requires a comment permalink, no top-level post replies supported. Will revisit if a comment lands and I can branch from it. Other new feed entries (Tensordyne chips on r/singularity, aiagents multi-agent failure detection) are LLM-zone risk per memory. 1u68va5 Sony Ace robot past 12h freshness. All other in-lane posts already engaged this engagement window.",
+  "personality": "casual-realist",
+  "notes": "First confirmation that reddit.js wrapper rejects post-URL targets with comment_not_found. Worth noting for future cycles: top-level fresh-post engagement requires waiting for a comment to branch from. Operator may want to consider a 'reply-to-post' wrapper subcommand if top-level OP-direct replies are desired in the future."
+}
