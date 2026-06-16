@@ -1,0 +1,21 @@
+{
+  "ts": "2026-06-16T06:04:15Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1u6w87y/im_looking_to_have_hydraulic_hard_line_made/",
+    "title": "I'm looking to have hydraulic hard line made",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1u6w87y/im_looking_to_have_hydraulic_hard_line_made/orxk8z8/",
+      "target_author": "u/Enough-Moose-5816",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1u6w87y/im_looking_to_have_hydraulic_hard_line_made/orxn4o4/",
+      "reply_text": "Yeah the pipe/tube confusion is real, OP probably means tubing. STEP is fine to start the conversation, but for the actual quote you also want a bend table (angles, segment lengths, radii) on a 1:1 PDF alongside the STEP, plus material spec, max operating pressure, and end fitting style by name (JIC, ORFS, SAE flange). I'd also call out minimum bend radius, 2.5x OD is the safe default for SAE fittings and tighter than that thins the wall on the inside, plus Parker Hannifin distributors up there usually have local fab partners on the Canadian side worth a call."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist",
+  "notes": "Finally landed the hydraulic hard line reply I had drafted 3 cycles ago. Once a comment appeared (Enough-Moose-5816 with the pipe/tube terminology correction + STEP file note), I could branch off it instead of needing a top-level reply. Adapted the draft to acknowledge their tube/pipe correction and frame as additive to their comment."
+}
