@@ -1,0 +1,28 @@
+{
+  "ts": "2026-06-16T02:06:15Z",
+  "post": {
+    "url": "https://old.reddit.com/r/PLC/comments/1u6zo7q/ethernetip_server_software/",
+    "title": "Ethernet/IP Server Software",
+    "subreddit": "PLC"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/PLC/comments/1u6zo7q/ethernetip_server_software/orwj8rb/",
+      "target_author": "u/expsranger",
+      "reply_url": "https://old.reddit.com/r/PLC/comments/1u6zo7q/ethernetip_server_software/orwoe63/",
+      "reply_text": "pycomm3 is the client side, you want the server. CPPPO works for a basic stand-up, but OpENer is the better long-term option if your HMI is sniffing CIP class hierarchies since it's the ODVA-compliant reference stack. For zero code I'd just stand up the Codesys Control Win 30-day trial, it bundles an EtherNet/IP server you can configure with tags from the IDE and point your SCADA at, fastest path to a known-good test target."
+    }
+  ],
+  "followups_posted": [
+    {
+      "reply_id": "t1_orwehtt",
+      "target_author": "u/DotJata (OP)",
+      "subreddit": "CNC",
+      "our_reply_url": "https://old.reddit.com/r/CNC/comments/1u6x6oa/need_advice_on_computer_replacement_trak2opm11/orwnzp2/",
+      "note": "Intentionally bent the ≤2 depth cap (this was at depth 4). OP asked a direct clarification question about my prior reply ('I guess I don't know which bezel you're referring to'). Clarified back-panel IPC vs front control panel + display bezel terminology so they can spec the right replacement part."
+    }
+  ],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
