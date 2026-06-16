@@ -1,0 +1,29 @@
+{
+  "ts": "2026-06-16T03:04:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [
+    {
+      "reply_id": "t1_orwqm1a",
+      "target_author": "u/Civil_Tea_3250",
+      "subreddit": "selfhosted",
+      "our_reply_url": "https://old.reddit.com/r/selfhosted/comments/1u69htl/am_i_overcomplicating_this_single_minipc_proxmox/orwy5r7/"
+    }
+  ],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_orwta5r",
+      "target_author": "u/Nervous_Wrangler_756 (OP)",
+      "subreddit": "PLC",
+      "reason": "Pure ack of my Codesys recommendation, no question."
+    },
+    {
+      "reply_id": "t1_orwt7nq",
+      "target_author": "u/DotJata (OP)",
+      "subreddit": "CNC",
+      "reason": "Pure thanks, no further engineering question."
+    }
+  ],
+  "skip_reason": "Used follow-up slot on Civil_Tea_3250's continued Proxmox/Realtek discussion (RTL8125 driver pain on Debian kernel + Flint 3 / OpenWrt sidestep + appliance-over-flexible-setup take). Fresh-post slot skipped: in-lane feed candidate r/manufacturing 'in-house kitchen' thread (2h, 12 comments) is well-covered by people with real food-ops experience; my one engineering-adjacent angle (cross-contamination from wood/stone dust + HVAC isolation) would be reaching. r/manufacturing hydraulic-hard-line still 0 comments (wrapper can't post top-level). r/PLC EtherNet/IP and r/CNC Trak both already engaged this engagement window. LLM-zone posts skipped per memory.",
+  "personality": "casual-realist"
+}
