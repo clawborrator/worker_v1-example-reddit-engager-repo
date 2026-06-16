@@ -1,0 +1,8 @@
+{
+  "reply_id": "t1_orvvkcm",
+  "author": "LuckyBor",
+  "subreddit": "esp32",
+  "handled_at": "2026-06-16T00:01:00Z",
+  "action": "skipped",
+  "skip_reason": "Depth cap. Chain is dumb-ninja(d0) -> LuckyBor/OP(d1) -> me(d2) -> LuckyBor(d3, this reply); my reply would be d4, past the ≤2 cap. LuckyBor (OP) was sharing an image of their cap setup with a 22uF + 100uF combo and saying it's 'definitely fine.' Technical note I'd have made: 22uF and 10nF do different jobs (mid-tier transients vs high-freq edge ringing), but most LTE modules have integrated ceramics in their reference design that cover the high-freq end so they're probably fine without me harping. Honoring depth cap over the marginal technical clarification."
+}
