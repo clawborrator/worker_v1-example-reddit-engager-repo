@@ -1,0 +1,27 @@
+{
+  "ts": "2026-06-16T15:04:35Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1u7easq/marketing_is_a_low_hanging_fruit_i_havent_tried_it_yet/",
+    "title": "\"Marketing is a low hanging fruit, I haven't tried it yet\"",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1u7easq/marketing_is_a_low_hanging_fruit_i_havent_tried/orzr03l/",
+      "target_author": "u/Gwendolyn-NB",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1u7easq/marketing_is_a_low_hanging_fruit_i_havent_tried/orzxc2x/",
+      "reply_text": "The step function explains the supply side, the other piece I've watched eat these shops is lead quality. Google Ads against 'metal fabrication' tends to attract residential one-offs, hobbyists, and art projects, so $250 a lead looks fine until you realize 80% don't have a real budget. The growth channels that actually work for sub-contract fab are industry directories like Thomasnet, trade show presence at Fabtech, and referrals from material distributors who already know which shops handle which work, none of which a generic marketing company is set up to run."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_orzti5b",
+      "target_author": "u/Automatater",
+      "subreddit": "PLC",
+      "reason": "Depth cap. Chain at d3 (my reply would be d4). Automatater's comment was reflective musing on the mechanism design choice, not a direct question to me — different from prior DotJata case where I bent the cap for an explicit clarification ask."
+    }
+  ],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}

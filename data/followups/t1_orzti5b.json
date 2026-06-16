@@ -1,0 +1,8 @@
+{
+  "reply_id": "t1_orzti5b",
+  "author": "Automatater",
+  "subreddit": "PLC",
+  "handled_at": "2026-06-16T15:00:50Z",
+  "action": "skipped",
+  "skip_reason": "Depth cap. Chain reaches d3 (Automatater d0 -> OP d1 -> me d2 -> Automatater d3), my reply would be d4. Automatater's comment is reflective ('Agreed on torque mode... can't imagine why they designed it that way') with no direct question to me — different from DotJata's earlier 'which bezel' clarification which I bent the cap for. Lifting Z-axis mechanisms often intentionally non-backdrivable for self-holding/safety which is probably why, but I'll keep that thought to myself rather than reach for engagement at d4."
+}
