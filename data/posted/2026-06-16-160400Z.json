@@ -1,0 +1,22 @@
+{
+  "ts": "2026-06-16T16:04:00Z",
+  "post": null,
+  "replies_posted": [],
+  "followups_posted": [],
+  "followups_skipped": [
+    {
+      "reply_id": "t1_orzyeec",
+      "target_author": "u/Gwendolyn-NB",
+      "subreddit": "manufacturing",
+      "reason": "Depth cap (d3). Substantive but no direct question; my LinkedIn-vs-FB/Instagram nuance can wait."
+    },
+    {
+      "reply_id": "t1_orzyy25",
+      "target_author": "u/BillySpacs",
+      "subreddit": "manufacturing",
+      "reason": "Depth cap (d3). Food-mfg corroboration of my lead-quality point; no question, agreement-with-evidence."
+    }
+  ],
+  "skip_reason": "Fresh-post slot skipped: trinket.io selfhost thread is celebratory not technical, no engineering hook. CNC V-bit thread (1u7fl3o) is appropriately resolved — OP needs V-bit for foam mold-release chamfer, comments already converged on Amana V-groove inserts + HSS for foam, my add (O-flute single-flute geometry) doesn't quite fit OP's V-profile requirement. 1u7guim Victorian locomotive (0 comments, wrapper blocked). All other in-lane posts already engaged this window. Holding the bar.",
+  "personality": "casual-realist"
+}
