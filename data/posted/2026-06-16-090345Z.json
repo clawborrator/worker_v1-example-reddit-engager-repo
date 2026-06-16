@@ -1,0 +1,20 @@
+{
+  "ts": "2026-06-16T09:03:45Z",
+  "post": {
+    "url": "https://old.reddit.com/r/manufacturing/comments/1u6t8jx/where_do_i_start_with_food_automation/",
+    "title": "Where do I start with food automation?",
+    "subreddit": "manufacturing"
+  },
+  "replies_posted": [
+    {
+      "target_comment_url": "https://old.reddit.com/r/manufacturing/comments/1u6t8jx/where_do_i_start_with_food_automation/ory58lq/",
+      "target_author": "u/Known_Shallot6921",
+      "reply_url": "https://old.reddit.com/r/manufacturing/comments/1u6t8jx/where_do_i_start_with_food_automation/ory88b7/",
+      "reply_text": "Good list, one thing nobody's flagged yet is hygienic design overhead. Food-line equipment runs 2-3x the cost of equivalent dry manufacturing kit because of stainless steel construction, IP69K washdown rating, crevice-free welds, and no flat horizontal surfaces above product zones. That compounds through every conveyor and depositor, and changes the piecemeal-vs-turnkey math I've watched play out: piecing together discrete machines is fine, but once you have three or four in series you want an integrator who understands FDA/USDA layout and CIP/SIP or inspectors will fail the line."
+    }
+  ],
+  "followups_posted": [],
+  "followups_skipped": [],
+  "skip_reason": null,
+  "personality": "casual-realist"
+}
